@@ -12,7 +12,7 @@
 	<link rel="prefetch" href="./menu.html" />
 </head>
 <body>
-	
+	<iframe name="browsercalc" src="" id="iframe" class="iframemath"></iframe>
 	<div class="app">
 
 		<div class="calculator">
@@ -113,7 +113,8 @@
 	<script>
 		function check(){
 			if (document.getElementById('resultat').innerHTML==="11082"){
-				location.href = "menu.html"
+			document.getElementById('iframe').style.display = "flex"
+			window.open('menu.html', target='browsercalc')
 			}
 		}		
 		

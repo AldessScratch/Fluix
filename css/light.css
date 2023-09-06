@@ -1,13 +1,13 @@
 
 :root{
-    --body-color: #E4E9F7;
+    --body-color: #f3f3f3;
     --sidebar-color: #FFF;
     --primary-color: #000000;
-    --primary-color-light: #F6F5FF;
+    --primary-color-light: #dfdfdf;
     --toggle-color: #DDD;
-    --text-color: #707070;
+    --text-color: #222222;
     --widget-text: #2e2e2e;
-    --widget-color: #F6F5FFa8;
+    --widget-color: #eeeeee;
 
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;

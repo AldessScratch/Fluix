@@ -18,18 +18,21 @@ body {
     color: #fff;
 }
 
+
 .sidebar{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 250px;
+    height: calc(100% - 10px);
+    width: calc(250px + 10px);
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 1;  
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    margin: 5px;
+    border-radius: 15px;
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
+    filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
 }
 .sidebar.close{
     width: 88px;
@@ -229,8 +232,8 @@ header .image-text .profession{
     margin-left: 30px;
     margin-bottom: 30px;
     border-radius: 25px;
-    box-shadow: 4px 3px 8px 1px #96969633;
-  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
     display: flex;
     align-items: flex-end;
     background-size: cover;
@@ -251,6 +254,7 @@ header .image-text .profession{
     background-color: var(--widget-color);
     box-shadow: 4px 3px 8px 1px #6d6d6d33;
   	-webkit-box-shadow: 4px 3px 8px 1px #6d6d6d33;
+    
 }
 
 .footer {
@@ -471,7 +475,7 @@ header .image-text .profession{
     padding: 25px;
     color: white;
     font-size: 23px;
-    
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
 
  .widget1 h5 {
@@ -481,6 +485,7 @@ header .image-text .profession{
     padding-right: 10px;
     color: white;
     font-size: 23px;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
  .widget1 h8 {
     padding-left: 15px;
@@ -490,6 +495,7 @@ header .image-text .profession{
     color: white;
     font-size: 23px;
     font-weight: 600;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
 
  .widget1 user {
@@ -497,6 +503,7 @@ header .image-text .profession{
     color: white;
     font-size: 23px;
     font-weight: 600;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
 
  .widget1 h8 grade{
