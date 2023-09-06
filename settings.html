@@ -81,12 +81,7 @@
 
             <div class="bottom-content">
 
-                <li class="nav-link">
-                    <a href="info.html">
-                        <i class='bx bx-info-circle icon'></i>
-                        <span class="text nav-text">Infos</span>
-                    </a>
-                </li>
+
                 <li class="nav-link">
                     <a href="settings.html" class="hover">
                         <i class='bx bx-cog icon' ></i>
@@ -132,13 +127,6 @@
              <select id="themeSelect">
                 <option value="light">Clair</option>
                 <option value="dark">Sombre</option>
-                <option value="pink">Rose accentué</option>
-                <option value="bleu">Bleu accentué</option>
-                <option value="orange">Noir et orange</option>
-                <option value="minuit">Minuit</option>
-                <option value="green">Noir et vert</option>
-                <option value="vert">Vert accenuté</option>
-                <option value="violet">Violet sombre</option>
              </select>
              <script>
                 function initThemeSelector () {
@@ -161,28 +149,7 @@
                 }
                 initThemeSelector();
              </script>
-             <br><br>
-             <h4>Position du tchat :</h4>
-             <select id="tchatpos">
-                <option value="topright">En haut à droite</option>
-                <option value="bottomright">En bas à droite</option>
-                <option value="topleft">En haut à gauche</option>
-                <option value="bottomleft">En bas à gauche</option>
-             </select>
-             <script>
-                function initposSelector () {
-                const tchatpos = document.getElementById("tchatpos")
-                const currentpos = localStorage.getItem("chatpos") || "bottomright";
-
-                tchatpos.addEventListener("change", () => {
-                    localStorage.setItem("chatpos", tchatpos.value)
-                });
-
-                tchatpos.value = currentpos;
-
-                }
-                initposSelector();
-             </script>
+             
              <br><br>
              <h4>Ouvrir une URL :</h4>
              <div class="a">
@@ -213,7 +180,7 @@
         </div>
         <br>
        <div class="footer">
-        <div class="footer-text">GetTechno-V2/main &copy; GetTechno 2023</div>
+        <div class="footer-text">GetTechno-Reborn/main &copy; GetTechno 2024</div>
         </div>
     </section>
 

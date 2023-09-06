@@ -133,9 +133,8 @@ header .image-text .profession{
 }
 
 .sidebar .menu{
-    margin-top: 40px;
+    margin-top: 120px;
 }
-
 .sidebar li.search-box{
     border-radius: 15px;
     background-color: var(--primary-color-light);
@@ -364,7 +363,7 @@ header .image-text .profession{
     background-image: url("../img/apps/qwant.png");
 }
 .cards .tv {
-    background-image: url("../img/apps/twittch.png");
+    background-image: url("../img/apps/twitch.png");
 }
 .cards .piped {
     background-image: url("../img/apps/piped.png");
@@ -690,9 +689,11 @@ header .image-text .profession{
     background-image: url("../img/apps/duckduckgo.png");
 }
 .cards .aternos{
-    background-image: url("../img/apps/magmanode.png");
+    background-image: url("../img/apps/aternos.jpg");
 }
-
+.cards .womginx{
+    background-image: url("../img/apps/womginx.png");
+}
 
 .iframe {
     display: flex;

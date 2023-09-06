@@ -50,62 +50,16 @@
             
         </script>
         <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async>
-            if (localStorage.getItem('chatpos')==="topright"){
+
                 const discord = new Crate({
                 server: '1086990232349581434',
                 channel: '1087008199363805345',
                 glyph: ['./img/widgetbot.png', '100%'],
-                location: [50, -150],
+                location: [0, -200],
                 username: localStorage.getItem('nickname'),
                 
                 
                 })
-
-                
-
-            
-            }else{
-                if (localStorage.getItem('chatpos')==="bottomright"){
-                const discord = new Crate({
-                server: '1086990232349581434',
-                channel: '1087008199363805345',
-                glyph: ['./img/widgetbot.png', '100%'],
-                location: [200, -10],
-                username: localStorage.getItem('nickname')
-                })
-            }else{
-                if (localStorage.getItem('chatpos')==="topleft"){
-                const discord = new Crate({
-                server: '1086990232349581434',
-                channel: '1087008199363805345',
-                glyph: ['./img/widgetbot.png', '100%'],
-                location: [50, 150],
-                username: localStorage.getItem('nickname')
-                })
-            }else{
-                if (localStorage.getItem('chatpos')==="bottomleft"){
-                const discord = new Crate({
-                server: '1086990232349581434',
-                channel: '1087008199363805345',
-                glyph: ['./img/widgetbot.png', '100%'],
-                location: [200, 10],
-                username: localStorage.getItem('nickname')
-                })
-            }else{
-                const discord = new Crate({
-                server: '1086990232349581434',
-                channel: '1087008199363805345',
-                glyph: ['./img/widgetbot.png', '100%'],
-                username: localStorage.getItem('nickname')
-
-                
-                })
-
-            }
-        }
-            }
-        }
-        
         
           </script>
         </div>
