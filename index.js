@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 
 form.addEventListener('submit', async event => {
+  localStorage.setItem('proxyurl', 'lunanombareserver.onrender.com')
     event.preventDefault();
     window.navigator.serviceWorker.register('./sw.js', {
         scope: __uv$config.prefix
