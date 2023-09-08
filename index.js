@@ -23,6 +23,21 @@ function isUrl(val = '') {
 };
 
 
+function openCloud(url) {
+    window.navigator.serviceWorker
+    .register("./sw.js", {
+      scope: __uv$config.prefix,
+    })
+    .then(() => {
+      if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
+      else if (!(url.startsWith("https://") || url.startsWith("http://")))
+          url = "http://" + url;
+        localStorage.setItem('proxyurl', 'https://gg.lolmath.tk/bare/')
+          localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
+          window.location.href = "./iframe.html";
+  
+    });
+};
 function openURL(url) {
     window.navigator.serviceWorker
     .register("./sw.js", {
@@ -32,9 +47,9 @@ function openURL(url) {
       if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
       else if (!(url.startsWith("https://") || url.startsWith("http://")))
           url = "http://" + url;
+          localStorage.setItem('proxyurl', 'https://lunanombareserver.onrender.com/bare/')
           localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
           window.location.href = "./iframe.html";
   
     });
 };
-
