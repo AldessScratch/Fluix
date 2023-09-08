@@ -32,7 +32,7 @@ function openCloud(url) {
       if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
       else if (!(url.startsWith("https://") || url.startsWith("http://")))
           url = "http://" + url;
-        localStorage.setItem('proxyurl', 'https://gg.lolmath.tk/bare/')
+        localStorage.setItem('proxyurl', 'gg.lolmath.tk')
           localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
           window.location.href = "./iframe.html";
   
@@ -47,7 +47,7 @@ function openURL(url) {
       if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
       else if (!(url.startsWith("https://") || url.startsWith("http://")))
           url = "http://" + url;
-          localStorage.setItem('proxyurl', 'https://lunanombareserver.onrender.com/bare/')
+          localStorage.setItem('proxyurl', 'lunanombareserver.onrender.com')
           localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
           window.location.href = "./iframe.html";
   
