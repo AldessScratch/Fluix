@@ -24,6 +24,7 @@ function isUrl(val = '') {
 
 
 function openCloud(url) {
+  localStorage.setItem('proxyurl', 'gg.lolmath.tk')
     window.navigator.serviceWorker
     .register("./sw.js", {
       scope: __uv$config.prefix,
@@ -32,13 +33,14 @@ function openCloud(url) {
       if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
       else if (!(url.startsWith("https://") || url.startsWith("http://")))
           url = "http://" + url;
-        localStorage.setItem('proxyurl', 'gg.lolmath.tk')
+        
           localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
           window.location.href = "./iframe.html";
   
     });
 };
 function openURL(url) {
+  localStorage.setItem('proxyurl', 'lunanombareserver.onrender.com')
     window.navigator.serviceWorker
     .register("./sw.js", {
       scope: __uv$config.prefix,
@@ -47,7 +49,7 @@ function openURL(url) {
       if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
       else if (!(url.startsWith("https://") || url.startsWith("http://")))
           url = "http://" + url;
-          localStorage.setItem('proxyurl', 'lunanombareserver.onrender.com')
+          
           localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
           window.location.href = "./iframe.html";
   
