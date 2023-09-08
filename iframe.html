@@ -33,7 +33,7 @@
         </div>
         <div class="right">
             <i onclick="document.getElementById('iframeurl').contentWindow.location.reload(true);" class='bx bx-refresh medium'></i>
-            <a href="" id="external"><i class='bx bx-link-external small'></i></a>
+            <a target="_blank" href="" id="external"><i class='bx bx-link-external small'></i></a>
             <i onclick="window.location.href = './settings.html'" class='bx bx-cog small' ></i>
             <i onclick="window.location.href = './calculatrice.html'" class='bx bx-exit small'></i>
         </div>
@@ -51,6 +51,21 @@
         </script>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async>
+
+            const discord = new Crate({
+            location: [0, -200],
+            server: '1086990232349581434',
+            channel: '1087008199363805345',
+            glyph: ['./img/widgetbot.png', '100%'],
+            username: localStorage.getItem('nickname')
+
+            
+            })
+
+    
+    
+      </script>
     <script>
         if (localStorage.getItem("theme")===null){
             localStorage.setItem("theme", "light")
