@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/service/',
-    bare: `https://gg.lolmath.tk/bare/`,
+    bare: `${localStorage.getItem("proxyurl")}`,
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
