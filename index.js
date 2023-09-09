@@ -2,7 +2,6 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 
 form.addEventListener('submit', async event => {
-  localStorage.setItem('proxyurl', 'https://lunanombareserver.onrender.com/bare/')
     event.preventDefault();
     window.navigator.serviceWorker.register('./sw.js', {
         scope: __uv$config.prefix
@@ -25,7 +24,6 @@ function isUrl(val = '') {
 
 
 function openCloud(url) {
-  localStorage.setItem('proxyurl', 'https://gg.lolmath.tk/bare/')
     window.navigator.serviceWorker
     .register("./sw.js", {
       scope: __uv$config.prefix,
@@ -41,7 +39,6 @@ function openCloud(url) {
     });
 };
 function openURL(url) {
-  localStorage.setItem('proxyurl', 'https://lunanombareserver.onrender.com/bare/')
     window.navigator.serviceWorker
     .register("./sw.js", {
       scope: __uv$config.prefix,
