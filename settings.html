@@ -103,26 +103,6 @@
         <div class="text">Paramètres</div>
         <br>
         <div class="parametre">
-            <button class="reset" onclick="localStorage.setItem('nickname', 'Guest')">Réinitialiser son nom d'utilisateur</button>
-            <br>
-            <br>
-            <button id="resetusername" class="reset" onclick="setusername(); checkbutton()">Login</button>
-            <script>
-                checkbutton()
-                function checkbutton(){
-                        if (localStorage.getItem('nickname')===Guest){
-                        document.getElementById("resetusername").innerHTML = "Login"
-                    }else{
-                        if (localStorage.getItem('nickname')==="Guest"){
-                        document.getElementById("resetusername").innerHTML = "Login"
-                    }else{
-                        document.getElementById("resetusername").innerHTML = localStorage.getItem('nickname')
-                    }   
-                }
-                } 
-            </script>
-             <br>
-             <br>
              <h4>Choisir un theme :</h4>
              <select id="themeSelect">
                 <option value="light">Clair</option>
@@ -153,27 +133,12 @@
              <br><br>
              <h4>Ouvrir une URL :</h4>
              <div class="a">
-                <label for="URL" class="URL">URL :</label>
                 <input type="text" id="domUrlToOpen" name="urlToOpen" size="150" value="https://"></input>
-                <button onclick="getValueInput()">Go To</button>
+                <button onclick="getValueInput()">Aller à</button>
                 <script>
                     const getValueInput = () =>{
                         var urlInputValue = document.getElementById("domUrlToOpen").value;
                     open(urlInputValue, "_self")
-                    }
-                </script>
-              </div>
-             <h4>Ouvrir une URL dans une iFrame :</h4>
-             <div class="a">
-                <label for="URL" class="URL">URL :</label>
-                <input type="text" id="iframeurla" name="urlToOpen" size="150" value="https://"></input>
-                <button onclick="getiframe()">Go To</button>
-                <script>
-                    const getiframe = () =>{
-                        var urliframe = document.getElementById("iframeurla").value;
-                        localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/logo.PNG');localStorage.setItem('appname', 'Recherche')
-                        localStorage.setItem('iframeurl', urliframe)
-                        open("./iframe.html", "_self")
                     }
                 </script>
               </div>
