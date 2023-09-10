@@ -15,7 +15,7 @@ function checktheusername(){
 }
 
 if (localStorage.getItem('searchengine')===null){
-    localStorage.setItem('searchengine', 'https://google.com/search?q=%s')
+    localStorage.setItem('searchengine', 'https://google.com/search?q=')
   }
 function setusername(){
     let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans le tchat. Veuillez éviter les caractères spéciaux")
