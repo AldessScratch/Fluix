@@ -42,3 +42,6 @@ if ((localStorage.getItem('searchmode')) === null) {
   }
 
   toggleSwitch.addEventListener('change', switchTheme, false);
+  toggleSwitch.addEventListener('change', switchTheme =>{
+    location.href = 'settings.html'
+  });
