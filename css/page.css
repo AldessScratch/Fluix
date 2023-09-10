@@ -898,3 +898,71 @@ header .image-text .profession{
     background-image: url("../img/cloud/pop.png");
 }
 
+.theme-switch {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 52px;
+    
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: var(--primary-color-light);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .slider i {
+    color: var(--box-bg);
+  }
+  .slider i.globe {
+    margin-left: 7px;
+    color: var(--text-color);
+  }
+  .slider i.mask {
+    margin-right: 6px;
+    color: var(--text-color);
+  }
+  
+  .slider:before {
+    background-color: var(--widget-color);
+    bottom: 4px;
+    content: "";
+    height: 22px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 22px;
+    border-radius: 15px;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--primary-color-light);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(23px);
+  }
+  .mode {
+    display: flex;
+  }
+  .mode h3 {
+    color: var(--widget-text);
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+  }

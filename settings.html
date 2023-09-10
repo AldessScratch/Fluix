@@ -131,6 +131,38 @@
              </script>
              
              <br><br>
+             <div class="mode">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <div class="slider"><i class='bx bx-globe globe'></i></i><i class='bx bxs-face-mask mask' ></i></div>
+                  </label>
+                  <h3>Mode de recherche</h3>
+                </div>
+                <br>
+             <h4>Moteur de recherche :</h4>
+             <select id="searchengine">
+                <option value="https://google.com/search?q=">Google</option>
+                <option value="https://bing.com/search?q=">Bing</option>
+                <option value="https://search.brave.com/search?q=">Brave</option>
+                <option value="https://duckduckgo.com/?q=">DuckduckGo</option>
+                <option value="https://qwant.com/?q=">Qwant</option>
+             </select>
+             <script>
+              function initEngineSelector () {
+              const searchengine = document.getElementById("searchengine")
+              const currentEngine = localStorage.getItem("searchengine") || "https://google.com/search?q=";
+    
+              searchengine.addEventListener("change", () => {
+                  localStorage.setItem("searchengine", searchengine.value)
+                  location.href = 'settings.html'
+              });
+    
+              searchengine.value = currentEngine;
+    
+              }
+              initEngineSelector();
+           </script>
+           <br><br>
              <h4>Ouvrir une URL :</h4>
              <div class="a">
                 <input type="text" id="domUrlToOpen" name="urlToOpen" size="150" value="https://"></input>
