@@ -231,12 +231,11 @@ header .image-text .profession{
 }
 
 .cards .card {
-    justify-content: center;
     margin-left: 30px;
     margin-bottom: 30px;
     border-radius: 25px;
-    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
-    -webkit-filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+    box-shadow: 4px 3px 8px 1px #96969633;
+  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
     display: flex;
     align-items: flex-end;
     background-size: cover;
@@ -245,8 +244,11 @@ header .image-text .profession{
 }
 
 .cards .card h2 {
+    text-align: center;
+    margin-left: 18px;
     margin-bottom: 18px;
     border-radius: 15px;
+    margin-right: 5px;
     padding-right: 10px;
     padding-left: 10px;
     font-size: 18px;
@@ -255,7 +257,6 @@ header .image-text .profession{
     background-color: var(--widget-color);
     box-shadow: 4px 3px 8px 1px #6d6d6d33;
   	-webkit-box-shadow: 4px 3px 8px 1px #6d6d6d33;
-    
 }
 
 .footer {
