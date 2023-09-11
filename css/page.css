@@ -201,6 +201,7 @@ header .image-text .profession{
     transition: var(--tran-05);
 }
 .home .text{
+    text-align: center;
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
@@ -213,6 +214,7 @@ header .image-text .profession{
     width: calc(100% - 78px);
 }
 .cards {
+    justify-content: center;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -229,6 +231,7 @@ header .image-text .profession{
 }
 
 .cards .card {
+    justify-content: center;
     margin-left: 30px;
     margin-bottom: 30px;
     border-radius: 25px;
@@ -242,10 +245,8 @@ header .image-text .profession{
 }
 
 .cards .card h2 {
-    margin-left: 18px;
     margin-bottom: 18px;
     border-radius: 15px;
-    margin-right: 5px;
     padding-right: 10px;
     padding-left: 10px;
     font-size: 18px;
@@ -258,8 +259,12 @@ header .image-text .profession{
 }
 
 .footer {
-    margin-top: 80px;
-    margin-left: 30px;
+    width: 100%;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
 }
 
 .footer .footer-text {
@@ -281,41 +286,11 @@ header .image-text .profession{
 .cards .skkribl {
     background-image: url("../img/games/scribble.png");
 }
-.cards .ctr {
-    background-image: url("../img/games/cuttherope.png");
-}
-.cards .fruit {
-    background-image: url("../img/games/fruitninja.png");
-}
 .cards .stack {
     background-image: url("../img/games/stack.png");
 }
-.cards .battle {
-    background-image: url("../img/games/battledudes.png");
-}
-.cards .taming {
-    background-image: url("../img/games/taming.png");
-}
 .cards .paper {
     background-image: url("../img/games/paper2.png");
-}
-.cards .subway {
-    background-image: url("../img/games/subway.webp");
-}
-.cards .duck {
-    background-image: url("../img/games/ducklings.png");
-}
-.cards .rabbit {
-    background-image: url("../img/games/rabbit.jpg");
-}
-.cards .surf {
-    background-image: url("../img/games/surf.png");
-}
-.cards .stick {
-    background-image: url("../img/games/stickman.png");
-}
-.cards .smash {
-    background-image: url("../img/games/smashkarts.png");
 }
 .cards .yohoho {
     background-image: url("../img/games/yohoho.jpg");
@@ -323,17 +298,8 @@ header .image-text .profession{
 .cards .beans {
     background-image: url("../img/games/lolbeans.png");
 }
-.cards .moto {
-    background-image: url("../img/games/moto3xm.png");
-}
-.cards .jklm {
-    background-image: url("../img/games/jklm.png");
-}
 .cards .school {
     background-image: url("../img/games/schoolbreak.png");
-}
-.cards .bloons {
-    background-image: url("../img/games/bloonstd4.png");
 }
 .cards .sand {
     background-image: url("../img/games/sandspiel.JPG");
@@ -372,9 +338,6 @@ header .image-text .profession{
 .cards .piped {
     background-image: url("../img/apps/piped.png");
 }
-.cards .cytb {
-    background-image: url("../img/apps/cloud.JPG");
-}
 .cards .reddit {
     background-image: url("../img/apps/reddit.png");
 }
@@ -384,23 +347,8 @@ header .image-text .profession{
 .cards .scratch {
     background-image: url("../img/apps/scratch.png");
 }
-.cards .turbo {
-    background-image: url("../img/apps/turbowarp.png");
-}
-.cards .replit {
-    background-image: url("../img/apps/replit.png");
-}
-.cards .github {
-    background-image: url("../img/apps/github.png");
-}
 .cards .eve {
     background-image: url("../img/games/eve.webp");
-}
-.cards .croxy {
-    background-image: url("../img/apps/croxy.png");
-}
-.cards .incognito {
-    background-image: url("../img/apps/incog.png");
 }
 .cards .chatgpt {
     background-image: url("../img/apps/chatgpt.png");
@@ -458,48 +406,48 @@ header .image-text .profession{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .widget1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-left: 30px;
     margin-bottom: 30px;
-    height: 210px;
+    height: 200px;
     width: 90%;
     border-radius: 25px;
     background-color: var(--widget-color);
     box-shadow: 4px 3px 8px 1px #96969633;
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
 }
-
- .widget1 h2 {
-    padding: 25px;
-    color: white;
-    font-size: 23px;
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
- }
-
  .widget1 h5 {
-    padding-left: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 10px;
-    color: white;
+    margin-top: 20px;
+    padding-bottom: 5px;
     font-size: 23px;
+    color: white;
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
- .widget1 h8 {
-    padding-left: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 10px;
-    color: white;
+ .widget1 .username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+ }
+ 
+  
+ .widget1 i {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
     font-size: 23px;
-    font-weight: 600;
+    color: white;
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
 
  .widget1 user {
-    padding-top: 25px;
     color: white;
     font-size: 23px;
     font-weight: 600;
@@ -515,16 +463,13 @@ header .image-text .profession{
     color: var(--widget-text);
     font-size: 15px;
     font-weight: 400;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
-
+ 
  .back {
     background-size: cover;
  }
 
- .username {
-    margin-top: 30px;
-    display: flex;
-}
 .cards .android{
     background-image: url("../img/cloud/android.jpg");
 }
@@ -579,6 +524,7 @@ header .image-text .profession{
 }
 
 .classif {
+    justify-content: center;
     width: 90%;
     margin-left: 15px;
     display: flex;
@@ -601,7 +547,12 @@ header .image-text .profession{
   	-webkit-box-shadow: 4px 3px 8px 1px #6d6d6d33;
 }
 .parametre {
-    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px;
 }
 .parametre .reset{
     border: none;
@@ -959,10 +910,25 @@ header .image-text .profession{
   }
   .mode {
     display: flex;
+    align-items: center;
   }
   .mode h3 {
     color: var(--widget-text);
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     margin-left: 10px;
   }
+  .intro {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #121111;
+    transition: 1s;
+    background-image:url("../img/loading.GIF") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}

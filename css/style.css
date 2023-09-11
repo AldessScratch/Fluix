@@ -199,10 +199,11 @@ header .image-text .profession{
     transition: var(--tran-05);
 }
 .home .text{
+    text-align: center;
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
-    padding: 12px 60px;
+    padding: 30px;
 
 }
 
@@ -212,12 +213,17 @@ header .image-text .profession{
     width: calc(100% - 78px);
 }
 .widget{
-    margin-top: 60px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .widget1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-left: 30px;
     margin-bottom: 30px;
     height: 200px;
@@ -227,56 +233,35 @@ header .image-text .profession{
     box-shadow: 4px 3px 8px 1px #96969633;
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
 }
-
- .widget1 h2 {
-    padding: 25px;
-    color: white;
-    font-size: 23px;
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
-    
- }
-
  .widget1 h5 {
-    padding-left: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 10px;
+    margin-top: 20px;
+    padding-bottom: 5px;
     font-size: 23px;
     color: white;
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+ }
+ .widget1 .username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
  }
  
  .widget1 icon {
-    padding-left: 25px;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    padding-right: 10px;
+    margin: 20px;
     font-size: 23px;
     color: white;
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
  .widget1 .text5 {
-    padding-left: 25px;
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 25px;
-    padding-right: 10px;
     font-size: 23px;
     color: var(--widget-text);
     font-weight: 700;
  }
- .widget1 h8 {
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    padding-right: 10px;
-    color: white;
-    font-size: 23px;
-    font-weight: 600;
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
- }
 
  .widget1 user {
-    padding-top: 15px;
     color: white;
     font-size: 23px;
     font-weight: 600;
@@ -295,35 +280,32 @@ header .image-text .profession{
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
 
- .back {
-    background-size: cover;
- }
-
  .datetime .timetext {
+    justify-content: center;
     display: flex;
-    padding-top: 25px;
-    padding-left: 25px;
-    color: var(--widget-text);
+    color: white;
     font-size: 30px;
     font-weight: 700;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
  .datetime i {
     padding-top: 7px;
  }
 
- .datetime .time {
-    margin-left: 10px;
- }
 
  .datetime .datetext {
     padding-left: 25px;
     padding-top: 25px;
-    color: var(--widget-text);
-    font-size: 23px;
+    color: white;
+    font-size: 20px;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
-
+ .activite .activity {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
 .activite .activity a{
-    margin-left: 25px;
     display: flex;
     align-items: center;
 }
@@ -334,13 +316,7 @@ header .image-text .profession{
     color: var(--widget-text);
 
 }
-.activite .activity i{
-    margin-left: 25px;
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--widget-text);
 
-}
 .activite .activity .imgcont {
     width: 80px;
     height: 80px;
@@ -350,20 +326,14 @@ header .image-text .profession{
     background-size: cover;
 }
 
-.stats {
-    margin-left: 25px;
-    margin-top: 5px;
-    font-size: 20px;
-    color: var(--widget-text);
-
-}
-.username {
-    margin-top: 30px;
-    display: flex;
-}
 
 .footer {
-    margin-left: 30px;
+    width: 100%;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
 }
 
 .footer .footer-text {
@@ -371,12 +341,6 @@ header .image-text .profession{
     padding-bottom: 20px;
 }
 
-.widgetbot {
-    border: 0;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-}
 
 .part {
     margin-left: 60px;
@@ -395,56 +359,7 @@ header .image-text .profession{
     transition: 1s;
     background-image:url("../img/loading.GIF") ;
     background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 100%;
+    background-position: center;
     background-size: 50%;
 }
 
-.logo-header {
-    position: absolute;
-    top: 33%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 50px;
-    font-weight: 300;
-}
-.logo-ok {
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 30px;
-    font-weight: 200;
-}
-
-.logo {
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-    color:white ;
-}
-
-.logo.active {
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-}
-
-.logo.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
-}
-.intro p {
-    margin-top: 50%;
-    color: white;
-}
-.intro img {
-    width: 100px;
-    height: 100px;
-    margin-top: 70px;
-    margin-left: calc(50% - 50px);
-}

@@ -30,7 +30,7 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name">GetTechno 2</span>
+                    <span class="name">GetTechno</span>
                     <span class="profession">Unblock The WEB</span>
                 </div>
             </div>
@@ -98,7 +98,7 @@
         </div>
 
     </nav>
-
+    <div id="preloader" class="intro"></div>
     <section class="home">
         <div class="text">Accueil</div>
         <div class="widget">
@@ -106,14 +106,13 @@
                 <h5>Bienvenue sur GetTechno</h5>
                 <div class="username">
                     <icon><i class='bx bx-user'></i></icon>
-                    <h8></i><grade id="grade"></grade></h8>
-                    </i><user id="username">Guest</user>
+                    <user id="username">Guest</user>
                     <icon><i class='bx bx-edit' onclick="setusername(); window.location.href = 'menu.html'"></i></icon>
                 </div>
             </div>
-            <div class="widget1">
+            <div class="widget1" style="background-image: url('./img/bg/dark.jpg')">
                 <div class="datetime">
-                    <div class="timetext"><i class="bx bx-time"></i><div class="time"></div></div>
+                    <div class="timetext"><div class="time"></div></div>
                     <div class="datetext"><div class="date"></div></div>
                 </div>
             </div>
@@ -131,7 +130,7 @@
         </div>
         <br>
         <div class="footer">
-            <div class="footer-text">GetTechno-Reborn/main &copy; GetTechno 2024</div>
+            <div class="footer-text">GetTechno/main | Titanium-Network and 3kh0 </div>
         </div>
     </section>
 
@@ -141,7 +140,6 @@
     <script src="./index.js"></script>
     <script src="./js/time.js"></script>
     <script>
-        document.getElementById("stylebg").style="background-image: url('./img/bg/" + localStorage.getItem('theme') + ".jpg')"
 
         if (localStorage.getItem("theme")===null){
             localStorage.setItem("theme", "light")
@@ -156,7 +154,7 @@
         var loader = document.getElementById("preloader");
         setTimeout(() => {
             loader.style.display = "none";
-      }, 1500);
+      }, 1000);
 
     </script>
 </body>
