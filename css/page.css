@@ -547,11 +547,7 @@ header .image-text .profession{
   	-webkit-box-shadow: 4px 3px 8px 1px #6d6d6d33;
 }
 .parametre {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    margin-left: 45px;
     margin-bottom: 100px;
 }
 .parametre .reset{
