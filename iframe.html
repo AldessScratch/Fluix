@@ -45,23 +45,13 @@
         </script>
     </div>
     <div class="iframe">
-        <iframe id="iframeurl" src="" style="border: 0; height: calc(100vh - 50px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 50px;"></iframe>
+        <iframe id="iframeurl" src="" style="border-radius: 10px;border: 0; height: calc(100vh - 70px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 70px;"></iframe>
         <script>
             document.getElementById("iframeurl").src=(localStorage.getItem('iframeurl'))
             
         </script>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async>
-
-            const discord = new Crate({
-            location: [0, -200],
-            server: '1086990232349581434',
-            channel: '1087008199363805345',
-            glyph: ['./img/widgetbot.png', '100%'],
-            username: localStorage.getItem('nickname')    
-            })
-      </script>
     <script>
         if (localStorage.getItem("theme")===null){
             localStorage.setItem("theme", "light")

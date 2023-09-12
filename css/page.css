@@ -771,13 +771,17 @@ header .image-text .profession{
   }  
 
 .topnav{
+    margin: 10px;
+    border-radius: 15px;
     background-color: var(--sidebar-color);
     height: 50px;
-    width: 100%;
+    width: calc(100% - 20px);
     z-index: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
+    filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
 }
 
 .topnav .left {
@@ -916,12 +920,13 @@ header .image-text .profession{
     margin-left: 10px;
   }
   .intro {
+    border-radius: 10px;
     position: fixed;
     z-index: 200;
-    top: 0;
+    top: 70px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background-color: #121111;
     transition: 1s;
     background-image:url("../img/loading.GIF") ;
