@@ -121,6 +121,7 @@
                 themeSelect.addEventListener("change", () => {
                     activateTheme(themeSelect.value);
                     localStorage.setItem("theme", themeSelect.value)
+                    location.href = 'settings.html'
                 });
 
                 themeSelect.value = currentTheme;
