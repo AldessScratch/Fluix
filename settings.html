@@ -130,7 +130,22 @@
                 }
                 initThemeSelector();
              </script>
-             
+             <br><br>
+             <h4>Fond d'écran personalisé</h4>
+             <div class="inputurl">
+                <input type="text" id="bgurl" name="urlToOpen" size="150" placeholder="URL de l'image"></input>
+                <button onclick="applybg()">Appliquer</button>
+                <button onclick="resetbg()"><i class='bx bx-refresh'></i> Rénitialiser</button>
+              </div>
+              <script>
+                const applybg = () =>{
+                    var bgurl = document.getElementById("bgurl").value;
+                    localStorage.setItem('bgurl', bgurl)
+                }
+                function resetbg(){
+                  localStorage.removeItem('bgurl')
+                }
+            </script>
              <br><br>
              <div class="mode">
                 <label class="theme-switch" for="checkbox">
@@ -177,7 +192,7 @@
         </div>
         <br>
         <div class="footer">
-            <div class="footer-text">GetTechno/main | Titanium-Network and 3kh0 </div>
+            <div class="footer-text">GetTechno-New/main</div>
         </div>
     </section>
 

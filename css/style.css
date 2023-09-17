@@ -246,19 +246,7 @@ header .image-text .profession{
     color: white;
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
- .widget1 .username {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
- }
- 
- .widget1 icon {
-    margin: 20px;
-    font-size: 23px;
-    color: white;
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
- }
+
  .activite .text5 {
     margin-left: 35px;
     padding-top: 20px;
@@ -268,16 +256,6 @@ header .image-text .profession{
     font-weight: 500;
  }
 
- .widget1 user {
-    color: white;
-    font-size: 23px;
-    font-weight: 600;
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
- }
-
- .widget1 h8 grade{
-    color: #e63939;
- }
 
  .widget1 h3 {
     padding-left: 25px;

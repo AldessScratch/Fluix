@@ -101,13 +101,8 @@
     <section class="home">
         <div class="text">Accueil</div>
         <div class="widget">
-            <div class="widget1 back" id="stylebg" style="background-image: url('./img/bg/light.jpg')">
+            <div class="widget1 back" id="stylebg">
                 <h5>Bienvenue sur GetTechno</h5>
-                <div class="username">
-                    <icon><i class='bx bx-user'></i></icon>
-                    <user id="username">Guest</user>
-                    <icon><i class='bx bx-edit' onclick="setusername(); window.location.href = 'menu.html'"></i></icon>
-                </div>
             </div>
             <div class="widget1" style="background-image: url('./img/bg/dark.jpg')">
                 <div class="datetime">
@@ -129,7 +124,7 @@
         </div>
         <br>
         <div class="footer">
-            <div class="footer-text">GetTechno/main | Titanium-Network and 3kh0 </div>
+            <div class="footer-text">GetTechno-New/main</div>
         </div>
     </section>
 
@@ -139,6 +134,11 @@
     <script src="./index.js"></script>
     <script src="./js/time.js"></script>
     <script>
+        if (localStorage.getItem('bgurl')===null){
+            document.getElementById("stylebg").style="background-image: url('./img/bg/" + localStorage.getItem('theme') + ".jpg')"
+        }else{
+            document.getElementById("stylebg").style="background-image: url('" + localStorage.getItem('bgurl') + "')"
+        }
         if (localStorage.getItem("theme")==="light"){
             document.getElementById('svg').style = "filter: brightness(0);"
         }

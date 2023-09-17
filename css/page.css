@@ -266,9 +266,9 @@ header .image-text .profession{
     color: var(--text-color);
     padding-bottom: 20px;
 }
-
-/*backgroud cards for games*/
-
+.cards .tv {
+    background-image: url("../img/apps/twitch.png");
+}
 .cards .narrow {
     background-image: url("../img/games/narrowone.JPG");
 }
@@ -305,18 +305,8 @@ header .image-text .profession{
 .cards .drive {
     background-image: url("../img/games/drivemad.jpg");
 }
-.cards .swerve {
-    background-image: url("../img/games/swerve.JPG");
-}
-
-
-/*backgroud cards for apps */
-
 .cards .ytb {
     background-image: url("../img/apps/youtube.jpg");
-}
-.cards .tktk {
-    background-image: url("../img/apps/tiktok.png");
 }
 .cards .google {
     background-image: url("../img/apps/google.png");
@@ -324,23 +314,8 @@ header .image-text .profession{
 .cards .ds {
     background-image: url("../img/apps/discord.jpg");
 }
-.cards .qwant {
-    background-image: url("../img/apps/qwant.png");
-}
-.cards .tv {
-    background-image: url("../img/apps/twitch.png");
-}
 .cards .piped {
     background-image: url("../img/apps/piped.png");
-}
-.cards .reddit {
-    background-image: url("../img/apps/reddit.png");
-}
-.cards .coflix {
-    background-image: url("../img/apps/coflix.png");
-}
-.cards .scratch {
-    background-image: url("../img/apps/scratch.png");
 }
 .cards .eve {
     background-image: url("../img/games/eve.webp");
@@ -348,13 +323,6 @@ header .image-text .profession{
 .cards .chatgpt {
     background-image: url("../img/apps/chatgpt.png");
 }
-.cards .now {
-    background-image: url("../img/apps/now.png");
-}
-.cards .krunker {
-    background-image: url("../img/games/krunker.png");
-}
-
 .a #domUrlToOpen {
     height: 30px;
     width: 300px;
@@ -365,38 +333,23 @@ header .image-text .profession{
     color: rgb(0, 0, 0);
     background-color: #e7e5e5;
     border: 0;
-    border-radius: 15px;
-    padding: 7px;
+    border-radius: 10px;
+    padding: 5px;
     color: var(--widget-text);
     background-color: var(--widget-color);
-    box-shadow: 4px 3px 8px 1px #96969633;
-  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
 }
 .a .URL{
     color: var(--widget-text)
 }
 
-.cards .ecoledirecte {
-    background-image: url("../img/apps/ecoledirecte.png");
-}
 .cards .nosdevoirs {
     background-image: url("../img/apps/nosdevoirs.png");
-}
-.cards .deepl {
-    background-image: url("../img/apps/deepl.png");
-}
-.cards .trad {
-    background-image: url("../img/apps/trad.png");
 }
 .cards .spotify {
     background-image: url("../img/apps/spotify.png");
 }
-.cards .koyeb{
-    background-image: url("../img/apps/koyeb.png");
-}
-.cards .diep{
-    background-image: url("../img/games/diep.png");
-}
+
 .widget{
     margin-top: 20px;
     display: flex;
@@ -444,20 +397,8 @@ header .image-text .profession{
 .cards .minecraft{
     background-image: url("../img/cloud/minecraft.JPG");
 }
-.cards .render{
-    background-image: url("../img/apps/render.jpg");
-}
-.cards .gitlab{
-    background-image: url("../img/apps/gitlab.png");
-}
-.cards .replit{
-    background-image: url("../img/apps/replit.png");
-}
 .cards .bing{
     background-image: url("../img/apps/bing.png");
-}
-.cards .number{
-    background-image: url("../img/apps/number.jpg");
 }
 .cards .aptoide{
     background-image: url("../img/cloud/aptoide.jpg");
@@ -467,12 +408,6 @@ header .image-text .profession{
 }
 .cards .block{
     background-image: url("../img/cloud/block.jpg");
-}
-.cards .gartic{
-    background-image: url("../img/games/gartic.jpg");
-}
-.cards .slither{
-    background-image: url("../img/games/slither.jpg");
 }
 .ngg {
     display: flex;
@@ -759,6 +694,7 @@ header .image-text .profession{
     margin-top: 5px;
  width: 20px;
  margin-left: 20px;
+ filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 0.4));
 }
 .topnav .left i{
     color: var(--primary-color);
@@ -826,7 +762,7 @@ header .image-text .profession{
     height: 30px;
     position: relative;
     width: 52px;
-    
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
   }
   
   .theme-switch input {
@@ -903,4 +839,16 @@ header .image-text .profession{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
+}
+#bgurl::placeholder {
+    text-align: center;
+}
+
+button {
+    border: 0;
+    color: var(--widget-text);
+    background-color: var(--widget-color);
+    padding: 5px;
+    border-radius: 10px;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
 }
