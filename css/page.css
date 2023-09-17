@@ -379,6 +379,8 @@ header .image-text .profession{
 
 
  .back {
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
  }
 

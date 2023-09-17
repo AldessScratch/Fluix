@@ -235,6 +235,9 @@ header .image-text .profession{
     width: 400px;
     border-radius: 25px;
     background-color: var(--widget-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: 4px 3px 8px 1px #96969633;
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
 }
