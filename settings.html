@@ -146,6 +146,11 @@
                   localStorage.removeItem('bgurl')
                 }
             </script>
+            <h4>Aperçu</h4>
+            <img id="previewbg" alt="Aucune image appliqué" src="">
+            <script>
+                document.getElementById('previewbg').src = localStorage.getItem('bgurl')
+            </script>
              <br><br>
              <div class="mode">
                 <label class="theme-switch" for="checkbox">
@@ -178,17 +183,6 @@
               initEngineSelector();
            </script>
            <br><br>
-             <h4>Ouvrir une URL :</h4>
-             <div class="a">
-                <input type="text" id="domUrlToOpen" name="urlToOpen" size="150" value="https://"></input>
-                <button onclick="getValueInput()">Aller à</button>
-                <script>
-                    const getValueInput = () =>{
-                        var urlInputValue = document.getElementById("domUrlToOpen").value;
-                    open(urlInputValue, "_self")
-                    }
-                </script>
-              </div>
         </div>
         <br>
         <div class="footer">
