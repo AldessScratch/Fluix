@@ -145,11 +145,14 @@
                 const applybg = () =>{
                     var bgurl = document.getElementById("bgurl").value;
                     localStorage.setItem('bgurl', bgurl)
+                    location.href = 'settings.html'
                 }
                 function resetbg(){
                   localStorage.removeItem('bgurl')
+                  location.href = 'settings.html'
                 }
             </script>
+            <br>
             <h4>Aperçu</h4>
             <img id="previewbg" alt="Aucune image appliqué" src="">
             <script>
