@@ -865,4 +865,5 @@ button {
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
     background-color: #121111;
     color: white;
+    object-fit: cover;
 }
