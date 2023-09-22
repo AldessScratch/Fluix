@@ -138,7 +138,7 @@ header .image-text .profession{
 }
 
 .sidebar .menu{
-    margin-top: 120px;
+    margin-top: 90px;
 }
 .sidebar li.search-box{
     border-radius: 15px;
@@ -350,6 +350,7 @@ header .image-text .profession{
     background-image: url("../img/apps/spotify.png");
 }
 
+
 .widget{
     margin-top: 20px;
     display: flex;
@@ -521,7 +522,7 @@ header .image-text .profession{
     background-image: url("../img/apps/analytics.png");
 }
 .cards .nightflix{
-    background-image: url("../img/apps/nightflixx.png");
+    background-image: url("../img/apps/nightflix.png");
 }
 .cards .angry{
     background-image: url("../img/games/angry.png");
@@ -757,6 +758,9 @@ header .image-text .profession{
 }
 .cards .pop{
     background-image: url("../img/cloud/pop.png");
+}
+.cards .nowgg{
+    background-image: url("../img/cloud/nowgg.jpg");
 }
 
 .theme-switch {
