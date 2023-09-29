@@ -115,15 +115,23 @@
                     <div class="datetext"><div class="date"></div></div>
                 </div>
             </div>
-            <div class=" activite">
+            <div class="activite">
                 <div class="text5">Reprendre son activité</div>
-                <div class="activity">
-                    <a target="_blank" id="staturl" href=""><div id="image" class="imgcont"></div><div id="appname" class="appname"></div></a>
+                <div class="activity" onclick="openlastpage()">
+                    <a id="staturl"><div id="image" class="imgcont"></div><div id="appname" class="appname"></div></a>
                 </div>
                 <script>
                     document.getElementById("image").style="background-image: url('" + localStorage.getItem('image') + "')";
-                    document.getElementById("staturl").href= localStorage.getItem('staturl');
                     document.getElementById("appname").innerHTML = localStorage.getItem('appname')
+                </script>
+                <script>
+                    function openlastpage(){
+                        if (localStorage.getItem('staturl').includes('://')){
+                            window.open(localStorage.getItem('staturl'))
+                        }else{
+                            location.href = localStorage.getItem('staturl')
+                        }
+                    }
                 </script>
             </div>
         </div>
@@ -154,7 +162,6 @@
         toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
 })
-
     </script>
 </body>
 </html>
