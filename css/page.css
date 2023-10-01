@@ -213,6 +213,7 @@ header .image-text .profession{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .cards .g {
@@ -226,6 +227,8 @@ header .image-text .profession{
 }
 
 .cards .card {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
     margin-left: 30px;
     margin-bottom: 30px;
     border-radius: 25px;
@@ -237,6 +240,16 @@ header .image-text .profession{
     background-position: center;
     background-color: white;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .cards .card h2 {
     margin-left: 18px;
@@ -260,6 +273,8 @@ header .image-text .profession{
     align-items: center;
     justify-content: center;
     bottom: 0;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
 }
 
 .footer .footer-text {
@@ -370,6 +385,8 @@ header .image-text .profession{
     background-color: var(--widget-color);
     box-shadow: 4px 3px 8px 1px #96969633;
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+      animation-name: fadeIn;
+      animation-duration: 1.5s;
 }
  .widget1 h5 {
     font-size: 30px;
@@ -426,6 +443,8 @@ header .image-text .profession{
     margin-left: 15px;
     display: flex;
     flex-wrap: wrap;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
 }
 
 .classif h2 {
@@ -446,6 +465,8 @@ header .image-text .profession{
 .parametre {
     margin-left: 45px;
     margin-bottom: 100px;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
 }
 .parametre .reset{
     border: none;

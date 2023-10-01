@@ -142,6 +142,13 @@
     <script src="./index.js"></script>
     <script src="./js/time.js"></script>
     <script>
+        if (localStorage.getItem('newtheme')===null){
+            localStorage.setItem('newtheme', 'vu')
+            alert('Les nouveaux thèmes Halloween et Terre sont disponibles dans les paramètres !')
+            location.href = 'settings.html'
+        }
+    </script>
+    <script>
         if (localStorage.getItem('bgurl')===null){
             document.getElementById("stylebg").style="background-image: url('./img/bg/" + localStorage.getItem('theme') + ".jpg')"
         }else{

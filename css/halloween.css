@@ -1,0 +1,43 @@
+
+body {
+    background-image: url('../img/halloween.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.home {
+    background-image: url('../img/halloween.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.activite {
+    backdrop-filter: blur(10px);
+}
+.widget1 {
+    backdrop-filter: blur(10px);
+}
+
+.sidebar {
+    backdrop-filter: blur(5px);
+}
+.text {
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+}
+:root{
+    --body-color: #18191a;
+    --sidebar-color: #0f0f0faf;
+    --primary-color: #ffaa2b;
+    --primary-color-light: #3c3b3a;
+    --toggle-color: #fff;
+    --text-color: #ffaa2b;
+    --widget-text: #ffaa2b;
+    --widget-color: #3a3b3ca8;
+
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
