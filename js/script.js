@@ -5,6 +5,7 @@ const body = document.querySelector('body'),
       modeSwitch = body.querySelector(".toggle-switch");
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
+username()
 
 if (localStorage.getItem('searchengine')===null){
     localStorage.setItem('searchengine', 'https://google.com/search?q=')
@@ -29,3 +30,10 @@ if ((localStorage.getItem('searchmode')) === null) {
   toggleSwitch.addEventListener('change', switchTheme =>{
     location.href = 'settings.html'
   });
+function username(){
+  if (localStorage.getItem('username')===null){
+    let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Veuillez éviter les caractères spéciaux")
+    localStorage.setItem('username', result)
+}
+}
+  

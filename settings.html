@@ -81,7 +81,12 @@
 
             <div class="bottom-content">
 
-    
+                <li class="nav-link">
+                    <a href="ds.html">
+                        <i class='bx bx-chat icon' ></i>
+                        <span class="text nav-text">Discussion</span>
+                    </a>
+                </li>
                 <li class="nav-link">
                     <a href="settings.html" class="hover">
                         <i class='bx bx-cog icon' ></i>
@@ -102,7 +107,10 @@
     <section class="home">
         <div class="text">Paramètres</div>
         <br>
+        
         <div class="parametre">
+            <button onclick="localStorage.removeItem('username');location.href = 'menu.html'"><i class='bx bx-refresh'></i> Réinitialiser son nom d'utilisateur</button>
+            <br><br>
              <h4>Choisir un theme :</h4>
              <select id="themeSelect">
                 <option value="light">Clair</option>
