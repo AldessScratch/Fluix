@@ -17,20 +17,8 @@ body {
     background-color: var(--primary-color);
     color: #fff;
 }
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
-
-.sidebar{
-    
+ .sidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -91,7 +79,6 @@ body {
 
 .sidebar header{
     position: relative;
-    margin-top: 10px;
 }
 
 .sidebar header .image-text{
@@ -120,11 +107,9 @@ header .image-text .profession{
     justify-content: center;
 }
 
-.sidebar header .image svg{
-    height: 25px;
+.sidebar header .image img{
     width: 40px;
     border-radius: 6px;
-    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
 }
 
 .sidebar header .toggle{
@@ -150,7 +135,7 @@ header .image-text .profession{
 }
 
 .sidebar .menu{
-    margin-top: 90px;
+    margin-top: 120px;
 }
 
 .sidebar li.search-box{
@@ -194,7 +179,7 @@ header .image-text .profession{
 }
 
 .sidebar .menu-bar{
-    height: calc(100% - 65px);
+    height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -212,7 +197,6 @@ header .image-text .profession{
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);
-    
 }
 .home .text{
     text-align: center;
@@ -220,8 +204,7 @@ header .image-text .profession{
     font-weight: 500;
     color: var(--text-color);
     padding: 30px;
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
+
 }
 
 .sidebar.close ~ .home{
@@ -247,33 +230,48 @@ header .image-text .profession{
     width: 400px;
     border-radius: 25px;
     background-color: var(--widget-color);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: 4px 3px 8px 1px #96969633;
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
-      animation-name: fadeIn;
-      animation-duration: 1.5s;
-
 }
  .widget1 h5 {
     margin-top: 20px;
     padding-bottom: 5px;
     font-size: 23px;
-    font-weight: 500;
     color: white;
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
-
+ .widget1 .username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+ }
+ 
+ .widget1 icon {
+    margin: 20px;
+    font-size: 23px;
+    color: white;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+ }
  .activite .text5 {
     margin-left: 35px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 25px;
     font-size: 23px;
     color: var(--widget-text);
-    font-weight: 500;
+    font-weight: 700;
  }
 
+ .widget1 user {
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+ }
+
+ .widget1 h8 grade{
+    color: #e63939;
+ }
 
  .widget1 h3 {
     padding-left: 25px;
@@ -312,8 +310,6 @@ header .image-text .profession{
     background-color: var(--widget-color);
     box-shadow: 4px 3px 8px 1px #96969633;
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
-      animation-name: fadeIn;
-      animation-duration: 1.5s;
 }
 
 
@@ -347,8 +343,6 @@ header .image-text .profession{
     align-items: center;
     justify-content: center;
     bottom: 0;
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
 }
 
 .footer .footer-text {
@@ -378,7 +372,3 @@ header .image-text .profession{
     background-size: 50%;
 }
 
-iframe {
-    height: 100vh;
-    width: 100%;
-}
