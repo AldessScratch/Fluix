@@ -31,7 +31,7 @@ if ((localStorage.getItem('searchmode')) === null) {
     location.href = 'settings.html'
   });
 function username(){
-  if (localStorage.getItem('username')===null){
+  if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null"){
     let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Veuillez éviter les caractères spéciaux")
     localStorage.setItem('username', result)
 }
