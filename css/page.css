@@ -854,6 +854,8 @@ header .image-text .profession{
     margin-left: 10px;
   }
   .intro {
+    display: flex;
+    justify-content: center;
     position: fixed;
     z-index: 200;
     top: 60px;
@@ -864,8 +866,18 @@ header .image-text .profession{
     transition: 1s;
     background-image:url("../img/loading.GIF") ;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center 50%;
     background-size: 50%;
+}
+.intro p {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    position: absolute;
+    top: 0;
+    margin-top: calc(50vh + 100px);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
 }
 #bgurl::placeholder {
     text-align: center;
