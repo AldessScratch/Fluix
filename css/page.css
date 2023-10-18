@@ -612,7 +612,7 @@ header .image-text .profession{
     background-image: url("../img/apps/cloudfare.jpg");
 }
 .cards .geodash{
-    background-image: url("https://raw.githubusercontent.com/3kh0/3kh0-Assets/main/geodash/geoscratchicon.png");
+    background-image: url("../games/geodash/geoscratchicon.png");
 }
 .error {
     margin: 60px;
