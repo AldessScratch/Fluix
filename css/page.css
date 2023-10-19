@@ -786,6 +786,9 @@ header .image-text .profession{
 .cards .nowgg{
     background-image: url("../img/cloud/nowgg.jpg");
 }
+.cards .draw{
+    background-image: url("../img/games/drawthehill.jpg");
+}
 
 .theme-switch {
     display: inline-block;
