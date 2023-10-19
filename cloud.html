@@ -120,7 +120,13 @@
             <a href="./iframe.html"><div class="card p " onclick="localStorage.setItem('iframeurl', 'https://ngabc321.hehemaths.gq');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Cloud AU')">
                 <h2 class="black"><i class='bx bx-cloud'></i> Cloud AU</h2>
             </div></a>
-           
+           <script>
+               setTimeout(() => {
+            localStorage.setItem('staturl', 'https://ngabc321.hehemaths.gq');localStorage.setItem('image', '');localStorage.setItem('appname', 'Cloud AU');
+            localstorage.setItem('iframeurl', 'https://ngabc321.hehemaths.gq');
+            window.location.href = "iframe.html"
+      }, 500);
+           </script>
         </div>
         <div class="footer">
             <div class="footer-text">Fluix/main</div>
@@ -131,11 +137,7 @@
     <script src="./js/script.js"></script>
     <script src="./index.js"></script>
     <script>
-        setTimeout(() => {
-            localStorage.setItem('staturl', 'https://ngabc321.hehemaths.gq');localStorage.setItem('image', '');localStorage.setItem('appname', 'Cloud AU');
-            localstorage.setItem('iframeurl', 'https://ngabc321.hehemaths.gq');
-            window.location.href = "iframe.html"
-      }, 1000);
+        
         if (localStorage.getItem('bgurl')===null){
             document.getElementById("stylebg").style="background-image: url('./img/bg/" + localStorage.getItem('theme') + ".jpg')"
         }else{
