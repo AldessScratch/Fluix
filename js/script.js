@@ -8,7 +8,7 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 username()
 
 if (localStorage.getItem('searchengine')===null){
-    localStorage.setItem('searchengine', 'https://google.com/search?q=')
+    localStorage.setItem('searchengine', 'https://bing.com/search?q=')
   }
 
 function switchTheme(e) {
