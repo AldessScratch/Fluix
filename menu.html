@@ -119,7 +119,8 @@
                     document.getElementById('sss').innerHTML = localStorage.getItem('username')
                 }
                 </script>
-            <div class="widget1" style="background-image: url('./img/bg/dark.jpg')">
+                
+            <div class="widget2" style="background-image: url('./img/bg/dark.jpg')">
                 <div class="datetime">
                     <div class="timetext"><div class="time"></div></div>
                     <div class="datetext"><div class="date"></div></div>
@@ -167,7 +168,7 @@
             document.getElementById('svg').style = "filter: brightness(0);"
         }
         if (localStorage.getItem("theme")===null){
-            localStorage.setItem("theme", "light")
+            localStorage.setItem("theme", "bluelines")
         }
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{

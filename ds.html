@@ -122,7 +122,7 @@
             document.getElementById('svg').style = "filter: brightness(0);"
         }
         if (localStorage.getItem("theme")===null){
-            localStorage.setItem("theme", "light")
+            localStorage.setItem("theme", "bluelines")
         }
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{

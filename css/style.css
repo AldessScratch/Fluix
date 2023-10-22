@@ -237,8 +237,27 @@ header .image-text .profession{
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .widget1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 90%;
+    border-radius: 25px;
+    background-color: var(--widget-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 4px 3px 8px 1px #96969633;
+  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+      animation-name: fadeIn;
+      animation-duration: 1.5s;
+
+}
+.widget2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -257,6 +276,13 @@ header .image-text .profession{
       animation-name: fadeIn;
       animation-duration: 1.5s;
 
+}
+.searchbar {
+    width: 80%;
+    height: 50px;
+    background-color: var(--primary-color-light);
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
 }
  .widget1 h5 {
     margin-top: 20px;
@@ -390,4 +416,79 @@ header .image-text .profession{
 iframe {
     height: 100vh;
     width: 100%;
+}
+.slideshow-container img {
+    border-radius: 20px;
+    vertical-align: middle;
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+    transition: transform 0.5s ease;
+  }
+  
+.slideshow-container {
+  width: 70vw;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 15px;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+  transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
