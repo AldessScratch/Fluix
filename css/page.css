@@ -257,7 +257,8 @@ header .image-text .profession{
     margin-right: 5px;
     padding-right: 10px;
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 600;
     text-decoration: none;
     color: var(--widget-text);
     background-color: var(--widget-color);
