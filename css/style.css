@@ -267,15 +267,14 @@ header .image-text .profession{
       animation-duration: 1.5s;
 
 }
-
- .widget1 h5 {
-    margin-top: 20px;
-    padding-bottom: 5px;
-    font-size: 23px;
-    font-weight: 500;
-    color: white;
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
- }
+.widget1 h5 {
+  margin-top: 20px;
+  padding-bottom: 5px;
+  font-size: 23px;
+  font-weight: 500;
+  color: white;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+}
 
  .activite .text5 {
     margin-left: 35px;
@@ -284,20 +283,21 @@ header .image-text .profession{
     font-size: 23px;
     color: var(--widget-text);
     font-weight: 500;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
  }
 
 
  .widget1 .usertext {
     
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    padding-bottom: 5px;
-    font-size: 20px;
-    font-weight: 500;
-    color: white;
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
- }
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+}
  .username{
     margin-left: 10px;
     margin-right: 10px;
@@ -346,6 +346,7 @@ header .image-text .profession{
     font-size: 20px;
     font-weight: 500;
     color: var(--widget-text);
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
 
 }
 
@@ -504,14 +505,14 @@ iframe {
     justify-content: space-between;
     align-items: center;
     padding: 0px 17px;
-    height: 51px;
+    height: 55px;
     width: 80%;
     margin-bottom: 30px;
     border-radius: 20px;
     background-color: var(--widget-color);
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
     backdrop-filter: blur(5px);
-    --webkit-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   ::placeholder{
     color: var(--text-color);

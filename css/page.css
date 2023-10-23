@@ -788,7 +788,15 @@ header .image-text .profession{
 .cards .drawhill{
     background-image: url("../img/games/drawthehill.jpg");
 }
-
+.cards .ctr{
+    background-image: url("../img/games/ctr.png");
+}
+.cards .craftmine{
+    background-image: url("../img/games/craftmine.png");
+}
+.cards .stickman{
+    background-image: url("../img/games/stickman.png");
+}
 
   .mode h3 {
     color: var(--widget-text);

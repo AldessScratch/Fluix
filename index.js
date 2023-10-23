@@ -13,7 +13,7 @@ if (localStorage.getItem('searchmode')==="proxy"){
 
 
         localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
-        localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/logo.PNG');localStorage.setItem('appname', 'Recherche')
+        localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Recherche')
           window.location.href = "./iframe.html"
     });
 });
@@ -32,7 +32,10 @@ function isUrl(val = '') {
     return false;
 };
 
-function openURL(url) {
+function openURL(appname, image, url) {
+  localStorage.setItem('staturl', './iframe.html');
+  localStorage.setItem('image', image);
+  localStorage.setItem('appname', appname)
     window.navigator.serviceWorker
     .register("./sw.js", {
       scope: __uv$config.prefix,
@@ -43,7 +46,12 @@ function openURL(url) {
           url = "http://" + url;
             localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
             window.location.href = "./iframe.html";
-          
-  
     });
 };
+function openiniframe(appname, image, iframeurl) {
+  localStorage.setItem('iframeurl', iframeurl);
+  localStorage.setItem('staturl', './iframe.html');
+  localStorage.setItem('image', image);
+  localStorage.setItem('appname', appname)
+  location.href = 'iframe.html'
+}

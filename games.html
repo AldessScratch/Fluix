@@ -9,7 +9,7 @@
     <link rel="stylesheet" id="themestyle" href="css/light.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./img/calculator.png">
     <link rel="manifest" href="manifest.json">
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -62,7 +62,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="cloud.html">
+                        <a href="iframe.html" onclick="localStorage.setItem('iframeurl', 'https://ngabc321.hehemaths.gq');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Cloud')">
                             <i class='bx bx-cloud icon' ></i>
                             <span class="text nav-text">Cloud</span>
                         </a>
@@ -111,11 +111,17 @@
             <h2 class="white"><i class='bx bx-cloud'></i> Jeux Multijoueurs</h2>
         </div>
         <div class="cards">
-            <a href="./iframe.html"><div class="card p deux" onclick="localStorage.setItem('iframeurl', 'games/2048/index.html');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/2048.jpg');localStorage.setItem('appname', '2048')">
-                <h2 class="black"><i class='bx bx-game'></i> 2048</h2>
+            <div class="card p deux" onclick="openiniframe('2048', './img/games/2048.jpg', 'games/2048/index.html');">
+                <h2 class="white"><i class='bx bx-game'></i> 2048</h2>
             </div></a>
-            <a href="./iframe.html"><div class="card p bloxd" onclick="localStorage.setItem('iframeurl', 'https://bloxd.io');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/bloxdio.JPG');localStorage.setItem('appname', 'Bloxd')">
-                <h2 class="white"><i class='bx bx-cloud'></i> Bloxd</h2>
+            <div class="card p bloxd" onclick="openiniframe('Bloxd', './img/games/bloxdio.JPG', 'https://bloxd.io')">
+                <h2 class="white"><i class='bx bx-game'></i> Bloxd</h2>
+            </div></a>
+            <div class="card p craftmine" onclick="openiniframe('CraftMine', './img/games/craftmine.png', 'games/craftmine/index.html');">
+                <h2 class="white"><i class='bx bx-game'></i> CraftMine</h2>
+            </div></a>
+            <div class="card p ctr" onclick="openiniframe('Cut The Rope', './img/games/ctr.png', 'games/ctr/index.html');">
+                <h2 class="white"><i class='bx bx-game'></i> Cut The Rope</h2>
             </div></a>
             <a href="./iframe.html"><div class="card p drawhill" onclick="localStorage.setItem('iframeurl', 'games/drawthehill/index.html');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/drawthehill.jpg');localStorage.setItem('appname', 'Draw The Hill')">
                 <h2 class="white"><i class='bx bx-game'></i> Draw The Hill</h2>
@@ -138,25 +144,28 @@
             <a href="./iframe.html"><div class="card p paper" onclick="localStorage.setItem('iframeurl', 'games/paperio2/index.html');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/paper2.png');localStorage.setItem('appname', 'Paper io')">
                 <h2 class="black"><i class='bx bx-cloud'></i> Paper io</h2>
             </div></a>
-            <div class="card p sand" onclick="openURL('https://sandspiel.club');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/sandspiel.jpg');localStorage.setItem('appname', 'SandSpiel')">
+            <div class="card p sand" onclick="openURL('SandSpiel','./img/games/sandspiel.jpg','https://sandspiel.club')">
                 <h2 class="white"><i class='bx bx-game'></i> SandSpiel</h2>
             </div>
             <a href="./iframe.html"><div class="card p school" onclick="localStorage.setItem('iframeurl', 'https://schoolbreak.io');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/schoolbreak.png');localStorage.setItem('appname', 'SchoolBreak')">
                 <h2 class="white"><i class='bx bx-cloud'></i> School
                     Break</h2>
             </div></a>
-            <div class="card p skkribl" onclick="openURL('https://skribbl.io');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/scribble.png');localStorage.setItem('appname', 'Skribbl')">
+            <div class="card p skkribl" onclick="openURL('Skribbl','./img/games/scribble.png','https://skribbl.io')">
                 <h2 class="white"><i class='bx bx-cloud'></i> Skribbl</h2>
             </div>
             <a href="./iframe.html"><div class="card p stack" onclick="localStorage.setItem('iframeurl', 'games/stack/index.html');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/stack.png');localStorage.setItem('appname', 'Stack')">
                 <h2 class="white"><i class='bx bx-game'></i> Stack</h2>
             </div></a>
-            <div class="card p yohoho" onclick="openURL('https://yohoho.io');localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', './img/games/yohoho.jpg');localStorage.setItem('appname', 'Yohoho')">
+            <div class="card p stickman" onclick="openiniframe('Stickman Hook', './img/games/stickman.png', 'games/stickman/index.html');">
+                <h2 class="white"><i class='bx bx-game'></i> Stickman Hook</h2>
+            </div></a>
+            <div class="card p yohoho" onclick="openURL('Yohoho','./img/games/yohoho.jpg','https://yohoho.io')">
                 <h2 class="white"><i class='bx bx-cloud'></i> Yohoho</h2>
             </div>
         </div>
         <div class="footer">
-            <div class="footer-text">Fluix/main</div>
+            <div class="footer-text">Fluix/main | 3kh0 for some games</div>
         </div>
     </section>
 
@@ -165,12 +174,11 @@
     <script src="./uv/uv.config.js"></script>
     <script src="./index.js"></script>
     <script>
-        if (localStorage.getItem('bgurl')===null){
-            document.getElementById("stylebg").style="background-image: url('./img/bg/" + localStorage.getItem('theme') + ".jpg')"
+         if (localStorage.getItem('bgurl')===null){
+            document.getElementById("stylebg").style="background-image: url('./img/bg/light.jpg')"
         }else{
             document.getElementById("stylebg").style="background-image: url('" + localStorage.getItem('bgurl') + "')"
         }
-        
         if (localStorage.getItem("theme")==="light"){
             document.getElementById('svg').style = "filter: brightness(0);"
         }

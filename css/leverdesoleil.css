@@ -1,0 +1,63 @@
+
+body {
+    background-image: url('../img/leverdesoleil.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.home {
+    background-image: url('../img/leverdesoleil.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.activite {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.widget1 {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.sidebar {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.text {
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+}
+
+.sidebar header .image svg{
+    height: 25px;
+    width: 40px;
+    border-radius: 6px;
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+    filter: brightness(0);
+}
+.topnav svg {
+    margin-top: 5px;
+ width: 20px;
+ margin-left: 20px;
+ filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 0.4));
+ filter: brightness(0);
+}
+
+:root{
+    --body-color: #f3f3f3;
+    --sidebar-color: #ffffffcc;
+    --primary-color: #000000;
+    --primary-color-light: #dfdfdf;
+    --toggle-color: #DDD;
+    --text-color: #222222;
+    --widget-text: #2e2e2e;
+    --widget-color: #ffffffcc;
+
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
