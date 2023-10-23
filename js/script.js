@@ -28,7 +28,7 @@ if ((localStorage.getItem('searchmode')) === null) {
 
   toggleSwitch.addEventListener('change', switchTheme, false);
   toggleSwitch.addEventListener('change', switchTheme =>{
-    location.href = 'settings.html'
+    location.href = 'menu.html'
   });
 function username(){
   if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null" || localStorage.getItem('username')===""){
