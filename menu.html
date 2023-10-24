@@ -99,6 +99,12 @@
         <div class="text">Accueil</div>
          
         <div class="widget">
+            
+            <div class="widget1 back" id="stylebg">
+                <h5>Bienvenue sur GetTechno</h5>
+                <div class="usertext"><i class='bx bx-user'></i><div id="sss" class="username"></div><i class='bx bx-edit-alt' onclick="username()"></i>
+                
+            </div>
             <div class="searchbar">
                 <i class='bx bx-search'></i>
                 <form id="uv-form" class="flex-center">
@@ -109,10 +115,6 @@
                   <div class="slider"><i class='bx bx-globe globe'></i></i><i class='bx bxs-face-mask mask' ></i></div>
                 </label>
               </div>
-            <div class="widget1 back" id="stylebg">
-                <h5>Bienvenue sur GetTechno</h5>
-                <div class="usertext"><i class='bx bx-user'></i><div id="sss" class="username"></div><i class='bx bx-edit-alt' onclick="username()"></i>
-            </div>
             </div>
             <script>
                 if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null" || localStorage.getItem('username')===""){
@@ -161,17 +163,13 @@
     <script src="./js/time.js"></script>
     
     <script>
+        settheme()
          if (localStorage.getItem('bgurl')===null){
             document.getElementById("stylebg").style="background-image: url('./img/bg/light.jpg')"
         }else{
             document.getElementById("stylebg").style="background-image: url('" + localStorage.getItem('bgurl') + "')"
         }
-        if (localStorage.getItem("theme")==="light"){
-            document.getElementById('svg').style = "filter: brightness(0);"
-        }
-        if (localStorage.getItem("theme")===null){
-            localStorage.setItem("theme", "bluelines")
-        }
+        
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");

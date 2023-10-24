@@ -39,5 +39,10 @@ function username(){
   location.href = 'menu.html'
 }
 
-
+function settheme(){
+  if (localStorage.getItem("theme")===null){
+    localStorage.setItem("theme", "light")
+  }
   
+}
+

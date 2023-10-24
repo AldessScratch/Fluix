@@ -36,14 +36,18 @@ body {
     width: 40px;
     border-radius: 6px;
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 0.4));
     filter: brightness(0);
+    -webkit-filter: brightness(0);
 }
 .topnav svg {
     margin-top: 5px;
  width: 20px;
  margin-left: 20px;
  filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 0.4));
+ -webkit-filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 0.4));
  filter: brightness(0);
+ -webkit-filter: brightness(0);
 }
 
 :root{

@@ -117,7 +117,7 @@
                 function initThemeSelector () {
                 const themeSelect = document.getElementById("themeSelect")
                 const themestyle = document.getElementById("themestyle")
-                const currentTheme = localStorage.getItem("theme") || "bluelines";
+                const currentTheme = localStorage.getItem("theme") || "light";
 
                 function activateTheme(cssname) {
                     themestyle.setAttribute("href", `css/${cssname}.css`);
@@ -197,9 +197,7 @@
     <script src="./index.js"></script>
     <script src="./js/time.js"></script>
     <script>
-        if (localStorage.getItem("theme")==="light"){
-            document.getElementById('svg').style = "filter: brightness(0);"
-        }
+    
         toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
 })

@@ -68,16 +68,11 @@
 
     </script>
     <script>
-        if (localStorage.getItem("theme")===null){
-            localStorage.setItem("theme", "bluelines")
-        }
+    settheme()
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
             
     </script>
     <script>
-       if (localStorage.getItem("theme")==="light"){
-            document.getElementById('svg').style = "filter: brightness(0);"
-        }
         var loader = document.getElementById("preloader");
         setTimeout(() => {
             loader.style.display = "none";

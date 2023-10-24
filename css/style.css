@@ -234,7 +234,7 @@ header .image-text .profession{
     align-items: center;
     margin-left: 30px;
     margin-bottom: 30px;
-    height: 200px;
+    height: 250px;
     width: 90%;
     border-radius: 25px;
     background-color: var(--widget-color);
@@ -268,7 +268,7 @@ header .image-text .profession{
 
 }
 .widget1 h5 {
-  margin-top: 20px;
+  margin-top: 50px;
   padding-bottom: 5px;
   font-size: 23px;
   font-weight: 500;
@@ -505,22 +505,23 @@ iframe {
     justify-content: space-between;
     align-items: center;
     padding: 0px 17px;
-    height: 55px;
-    width: 80%;
+    height: 45px;
+    margin-top: 20px;
+    width: 500px;
     margin-bottom: 30px;
     border-radius: 20px;
-    background-color: var(--widget-color);
+    background-color: #00000042;
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
   ::placeholder{
-    color: var(--text-color);
+    color: #fff;
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
     text-align: center;
   }
   .searchbar i {
-    color: var(--text-color);
+    color: #fff;
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
   }
   
@@ -530,7 +531,7 @@ iframe {
    border: 0;
    outline: 0;
    font-size: 15px;
-    color: var(--text-color);
+    color: #fff;
     width: 400px;
     text-align: center;
   }

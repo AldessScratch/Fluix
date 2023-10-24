@@ -110,13 +110,7 @@
     <script src="./js/script.js"></script>
     <script src="./index.js"></script>
     <script>
-        
-        if (localStorage.getItem("theme")==="light"){
-            document.getElementById('svg').style = "filter: brightness(0);"
-        }
-        if (localStorage.getItem("theme")===null){
-            localStorage.setItem("theme", "bluelines")
-        }
+        settheme()
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{
         sidebar.classList.toggle("close");

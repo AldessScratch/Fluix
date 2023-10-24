@@ -168,12 +168,7 @@
         }else{
             document.getElementById("stylebg").style="background-image: url('" + localStorage.getItem('bgurl') + "')"
         }
-        if (localStorage.getItem("theme")==="light"){
-            document.getElementById('svg').style = "filter: brightness(0);"
-        }
-        if (localStorage.getItem("theme")===null){
-            localStorage.setItem("theme", "bluelines")
-        }
+        settheme()
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{
         sidebar.classList.toggle("close");
