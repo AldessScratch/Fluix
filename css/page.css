@@ -717,12 +717,7 @@ header .image-text .profession{
     align-items: center;
     justify-content: flex-start;
 }
-.topnav svg {
-    margin-top: 5px;
- width: 20px;
- margin-left: 20px;
- filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 0.4));
-}
+
 .topnav .left i{
     color: var(--primary-color);
     padding: 10px;

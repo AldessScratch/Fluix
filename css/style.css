@@ -234,7 +234,7 @@ header .image-text .profession{
     align-items: center;
     margin-left: 30px;
     margin-bottom: 30px;
-    height: 250px;
+    height: 200px;
     width: 830px;
     border-radius: 25px;
     background-color: var(--widget-color);
@@ -247,6 +247,12 @@ header .image-text .profession{
       animation-duration: 1.5s;
 
 }
+@media screen and (max-width: 800px) {
+  .widget1 {
+    width: 600px;
+  }
+}
+
 .widget2 {
     display: flex;
     justify-content: center;
@@ -287,17 +293,7 @@ header .image-text .profession{
  }
 
 
- .widget1 .usertext {
-    
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  padding-bottom: 5px;
-  font-size: 20px;
-  font-weight: 500;
-  color: white;
-  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
-}
+
  .username{
     margin-left: 10px;
     margin-right: 10px;
@@ -598,3 +594,51 @@ iframe {
     display: flex;
     align-items: center;
   }
+  .userchange{
+    background-color:var(--widget-color);
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 20px;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+  .top {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  .usertext {
+    
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+  }
+
+.bottombar {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    height: 140px;
+    width: 830px;
+    border-radius: 25px;
+    background-color: var(--widget-color);
+    box-shadow: 4px 3px 8px 1px #96969633;
+  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+      animation-name: fadeIn;
+      animation-duration: 1.5s;
+}
+.bottombar img {
+  border-radius: 20px;
+  margin-left: 7px;
+  margin-right: 7px;
+  height: 100px;
+  box-shadow: 4px 3px 8px 1px #96969633;
+  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+}

@@ -55,3 +55,9 @@ function openiniframe(appname, image, iframeurl) {
   localStorage.setItem('appname', appname)
   location.href = 'iframe.html'
 }
+function openpage(appname, image, staturl) {
+  localStorage.setItem('staturl', staturl);
+  localStorage.setItem('image', image);
+  localStorage.setItem('appname', appname)
+  window.open(staturl)
+}
