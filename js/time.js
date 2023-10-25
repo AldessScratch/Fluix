@@ -54,6 +54,3 @@ setInterval(() => {
   dateElement.textContent = formatDate(now);
  
 }, 200);
-function datebg() {
-  
-}
