@@ -1,6 +1,7 @@
 const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
 
+
 /**
  * @param {Date} date
  */
@@ -51,5 +52,8 @@ setInterval(() => {
 
   timeElement.textContent = formatTime(now);
   dateElement.textContent = formatDate(now);
+ 
 }, 200);
-localStorage.setItem('time', date)
+function datebg() {
+  
+}
