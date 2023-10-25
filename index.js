@@ -7,22 +7,30 @@ const input = document.querySelector('input');
     window.navigator.serviceWorker.register('./sw.js', {
         scope: __uv$config.prefix
     }).then(() => {
+      if (localStorage.getItem('searchmode')==="proxy"){
         let url = input.value.trim();
         if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 
 
-        
-          if (localStorage.getItem('searchmode')==="proxy"){
-            localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
+        localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
         localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Recherche')
           window.location.href = "./iframe.html"
-          }
-          else{
-            window.open(url)
-          }
+      }else{
+        let url = input.value.trim();
+        if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
+        else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
+    window.open(url)
+      }
     });
-  });
+});
+
+
+
+function isUrl(val = '') {
+    if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+    return false;
+};
 
 function openURL(appname, image, url) {
   localStorage.setItem('staturl', './iframe.html');
