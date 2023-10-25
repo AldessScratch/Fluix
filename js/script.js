@@ -26,9 +26,6 @@ if ((localStorage.getItem('searchmode')) === null) {
   }
 
   toggleSwitch.addEventListener('change', switchTheme, false);
-  toggleSwitch.addEventListener('change', switchTheme =>{
-    location.href = 'menu.html'
-  });
 
 if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null") {
   localStorage.setItem('username', Guest)
@@ -41,7 +38,7 @@ function username(){
 
 function settheme(){
   if (localStorage.getItem("theme")===null){
-    localStorage.setItem("theme", "light")
+    localStorage.setItem("theme", "halloween")
   }
   
 }

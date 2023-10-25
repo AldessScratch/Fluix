@@ -33,10 +33,19 @@
             <img id="imageapp" src="">
             <p id="appname">App</p>
         </div>
+        <div class="searchbar">
+            <i class='bx bx-search'></i>
+            <form id="uv-form" class="flex-center">
+              <input id="uv-address" placeholder="Rechercher..." />
+            </form>
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox">
+              <div class="slider"><i class='bx bx-globe globe'></i></i><i class='bx bxs-face-mask mask' ></i></div>
+            </label>
+          </div>
         <div class="right">
             <i id="int" onclick="document.getElementById('iframeurl').contentWindow.location.reload(true);" class='bx bx-refresh medium'></i>
             <a target="_blank" href="" id="external"><i class='bx bx-link-external small'></i></a>
-            <i onclick="window.location.href = './settings.html'" class='bx bx-cog small' ></i>
             <i onclick="window.location.href = './calculatrice.html'" class='bx bx-exit small'></i>
         </div>
         <script>
@@ -58,7 +67,7 @@
             server: '1086990232349581434', 
             channel: '1158702584094261288', 
             username: localStorage.getItem('username'),
-            location: [0, -200],
+            location: [0, -130],
             glyph: ['https://fluix.netlify.app/img/widgetbot.png', '100%']
   })
 
@@ -69,10 +78,11 @@
     }else{
         document.getElementById('ext').style.display = "none"
     }
+    document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
     </script>
     <script>
-    refreshbutton()
-        document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
+        refreshbutton()
+       
     </script>
     <script>
         var loader = document.getElementById("preloader");
@@ -81,5 +91,9 @@
       }, 2000);
 
     </script>
+    <script src="./uv/uv.bundle.js"></script>
+    <script src="./uv/uv.config.js"></script>
+    <script src="./index.js"></script>
+    <script src="js/script.js"></script>
     </body>
 </html>

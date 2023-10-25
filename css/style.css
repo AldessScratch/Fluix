@@ -615,7 +615,7 @@ iframe {
     align-items: center;
     font-size: 15px;
     font-weight: 500;
-    color: #000;
+    color: var(--widget-text);
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
   }
 

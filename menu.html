@@ -129,9 +129,9 @@
                 }
                 </script>
             
-            <div id="timebg" class="widget2" style="background-image: url('./img/bg/dark.jpg')">
+            <div id="timebg" class="widget2">
                 <div class="datetime">
-                    <div class="timetext"><div class="time"></div></div>
+                    <div class="timetext"><div id="actualtime" class="time"></div></div>
                     <div class="datetext"><div class="date"></div></div>
                 </div>
             </div>
@@ -175,7 +175,21 @@
     <script src="./uv/uv.config.js"></script>
     <script src="./index.js"></script>
     <script src="./js/time.js"></script>
-    
+    <script>
+        if (document.getElementById('actualtime').innerHTML.includes('20:'|| '21:'|| '22:'|| '23:'|| '00:'|| '1:'|| '2:'|| '3:'|| '4:'|| '5:'|| '6:')){
+            document.getElementById('timebg').style = "background-image: url('./img/bg/dark.jpg')"
+        }else{
+            if (document.getElementById('actualtime').innerHTML.includes('18:'|| '19:')){
+            document.getElementById('timebg').style = "background-image: url('./img/bg/orange.jpg')"
+            }else{
+                if (document.getElementById('actualtime').innerHTML.includes('7:'|| '8:')){
+            document.getElementById('timebg').style = "background-image: url('./img/bg/rff.jpg')"
+            }else{
+                document.getElementById('timebg').style = "background-image: url('./img/bg/vert.jpg')"
+            }
+            }
+        }
+    </script>
     <script>
         settheme()
          if (localStorage.getItem('bgurl')===null){
