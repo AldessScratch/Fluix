@@ -795,6 +795,9 @@ header .image-text .profession{
 .cards .stickman{
     background-image: url("../img/games/stickman.png");
 }
+.cards .boxel{
+    background-image: url("../img/games/boxel.png");
+}
 
   .mode h3 {
     color: var(--widget-text);

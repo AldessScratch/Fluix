@@ -28,7 +28,7 @@ body {
 }
 .bottombar {
     backdrop-filter: blur(5px);
-    --webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .sidebar {
     backdrop-filter: blur(5px);
