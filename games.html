@@ -105,64 +105,88 @@
             </div>
             
         </div>
+        <div class="searchsection">
+            <div class="searchapp">
+                <i class='bx bx-search'></i>
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Rechercher un jeu ou une app...">
+            </div>
+        </div>
+        
         <div class="cards">
             <div class="card p deux" onclick="openiniframe('2048', './img/games/2048.jpg', 'games/2048/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> 2048</h2>
+                <h2 class="white">2048</h2>
             </div></a>
             <div class="card p bloxd" onclick="openiniframe('Bloxd', './img/games/bloxdio.JPG', 'https://bloxd.io')">
-                <h2 class="white"><i class='bx bx-game'></i> Bloxd</h2>
+                <h2 class="white">Bloxd</h2>
             </div></a>
             <div class="card p craftmine" onclick="openiniframe('CraftMine', './img/games/craftmine.png', 'games/craftmine/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> CraftMine</h2>
+                <h2 class="white">CraftMine</h2>
             </div></a>
             <div class="card p ctr" onclick="openiniframe('Cut The Rope', './img/games/ctr.png', 'games/ctr/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> Cut The Rope</h2>
+                <h2 class="white">Cut The Rope</h2>
             </div></a>
             <div class="card p drawhill" onclick="openiniframe('Draw The Hill', './img/games/drawthehill.jpg', 'games/drawthehill/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> Draw The Hill</h2>
+                <h2 class="white">Draw The Hill</h2>
             </div></a>
             <div class="card p drive" onclick="openiniframe('Drive Mad', './img/games/drivemad.jpg', 'games/drive-mad/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> Drive Mad</h2>
+                <h2 class="white">Drive Mad</h2>
             </div></a>
             <div class="card p eve" onclick="openiniframe('Ev', './img/games/eve.webp', 'https://ev.io');">
-                <h2 class="white"><i class='bx bx-cloud'></i> Ev</h2>
+                <h2 class="white">Ev</h2>
             </div></a>
             <div class="card p geodash" onclick="openiniframe('Geometry Dash', 'games/geodash/geoscratchicon.png', 'games/geodash/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> Geometry Dash</h2>
+                <h2 class="white">Geometry Dash</h2>
             </div></a>
             <div class="card p littlealchemy2" onclick="openiniframe('Little Alchemy 2', 'img/games/littlealchemy.png', 'https://littlealchemy2.com');">
-                <h2 class="white"><i class='bx bx-game'></i> Little Alchemy 2</h2>
+                <h2 class="white">Little Alchemy 2</h2>
             </div></a>
             <div class="card p beans" onclick="openiniframe('LolBeans', 'img/games/lolbeans.png', 'https://lolbeans.io');">
-                <h2 class="white"><i class='bx bx-cloud'></i> LolBeans</h2>
+                <h2 class="white">LolBeans</h2>
             </div></a>
             <div class="card p paper" onclick="openiniframe('Paper io', 'img/games/paper2.png', 'games/paperio2/index.html');">
-                <h2 class="white"><i class='bx bx-cloud'></i> Paper io</h2>
+                <h2 class="white">Paper io</h2>
             </div></a>
             <div class="card p sand" onclick="openURL('SandSpiel','./img/games/sandspiel.jpg','https://sandspiel.club')">
-                <h2 class="white"><i class='bx bx-game'></i> SandSpiel</h2>
+                <h2 class="white">SandSpiel</h2>
             </div>
             <div class="card p school" onclick="openiniframe('School Break', './img/games/schoolbreak.png', 'https://schoolbreak.io');">
-                <h2 class="white"><i class='bx bx-cloud'></i> School Break</h2>
+                <h2 class="white">School Break</h2>
             </div></a>
             <div class="card p skkribl" onclick="openURL('Skribbl','./img/games/scribble.png','https://skribbl.io')">
-                <h2 class="white"><i class='bx bx-cloud'></i> Skribbl</h2>
+                <h2 class="white">Skribbl</h2>
             </div>
             <div class="card p stack" onclick="openiniframe('Stack', './img/games/stack.png', 'games/stack/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> Stack</h2>
+                <h2 class="white">Stack</h2>
             </div></a>
             <div class="card p stickman" onclick="openiniframe('Stickman Hook', './img/games/stickman.png', 'games/stickman/index.html');">
-                <h2 class="white"><i class='bx bx-game'></i> Stickman Hook</h2>
+                <h2 class="white">Stickman Hook</h2>
             </div></a>
             <div class="card p yohoho" onclick="openURL('Yohoho','./img/games/yohoho.jpg','https://yohoho.io')">
-                <h2 class="white"><i class='bx bx-cloud'></i> Yohoho</h2>
+                <h2 class="white">Yohoho</h2>
             </div>
         </div>
         <div class="footer">
             <div class="footer-text">Fluix/main | 3kh0 for some games</div>
         </div>
     </section>
+    <script>
+        
+function searchFunction() {
+    let input = document.getElementById('searchInput');
+    let filter = input.value.toUpperCase();
+    let cards = document.getElementsByClassName('card');
 
+    for (i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName('h2')[0];
+        let txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+    </script>
     <script src="./js/script.js"></script>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>

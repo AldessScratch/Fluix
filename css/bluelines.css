@@ -32,6 +32,10 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+.bottombar {
+    backdrop-filter: blur(5px);
+    --webkit-backdrop-filter: blur(10px);
+}
 :root{
     --body-color: #18191a;
     --sidebar-color: #0f0f0faf;

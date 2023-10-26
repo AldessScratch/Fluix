@@ -106,52 +106,77 @@
             </div>
             
         </div>
+        <div class="searchsection">
+            <div class="searchapp">
+                <i class='bx bx-search'></i>
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Rechercher un jeu ou une app...">
+            </div>
+        </div>
+        
         <div class="cards">
        
                 <a target="_blank" href="https://aternos.org"><div class="card p aternos" onclick="localStorage.setItem('staturl', 'https://aternos.org');localStorage.setItem('image', './img/apps/aternos.jpg');localStorage.setItem('appname', 'Aternos')"> 
-                    <h2 class="white"><i class='bx bxs-grid'></i> Aternos</h2>
+                    <h2 class="white">Aternos</h2>
                 </div></a>
                 <a target="_blank" href="https://bing.com"><div class="card p bing" onclick="localStorage.setItem('staturl', 'https://bing.com');localStorage.setItem('image', './img/apps/bing.png');localStorage.setItem('appname', 'Bing')">
                     <h2 class="white"><i class='bx bx-search'></i> Bing</h2>
                 </div></a>
                 <a target="_blank" href="https://chat.openai.com"><div class="card p chatgpt" onclick="localStorage.setItem('staturl', 'https://chat.openai.com');localStorage.setItem('image', './img/apps/chatgpt.png');localStorage.setItem('appname', 'ChatGPT')">
-                    <h2 class="white"><i class='bx bxs-grid'></i> ChatGPT</h2>
+                    <h2 class="white">ChatGPT</h2>
                 </div></a>
                 <a target="_blank" href="http://discord.com/login"><div class="card p ds" onclick="localStorage.setItem('staturl', 'http://discord.com/login');localStorage.setItem('image', './img/apps/discord.jpg');localStorage.setItem('appname', 'Discord')">
-                    <h2 class="white"><i class='bx bx-video'></i> Discord</h2>
+                    <h2 class="white">Discord</h2>
                 </div></a>
                 <div class="card p ds" onclick="openURL('Discord','./img/apps/discord.jpg','http://discord.com/app')">
-                    <h2 class="white"><i class='bx bxs-face-mask mask'></i> Discord</h2>
+                    <h2 class="white"><i class='bx bxs-face-mask mask' ></i> Discord</h2>
                 </div>
                 <a target="_blank" href="http://google.com"><div class="card p google" onclick="localStorage.setItem('staturl', 'https://google.com');localStorage.setItem('image', './img/apps/google.png');localStorage.setItem('appname', 'Google')">
                     <h2 class="white"><i class='bx bx-search'></i> Google</h2>
                 </div></a>
                 <a target="_blank" href="https://nosdevoirs.fr"><div class="card p nosdevoirs" onclick="localStorage.setItem('staturl', 'https://nosdevoirs.fr');localStorage.setItem('image', './img/apps/nosdevoirs.png');localStorage.setItem('appname', 'Nosdevoirs')">
-                    <h2 class="white"><i class='bx bxs-grid'></i> Nos Devoirs</h2>
+                    <h2 class="white">Nos Devoirs</h2>
                 </div></a>
                 <a target="_blank" href="https://outlook.live.com"><div class="card p outlook" onclick="localStorage.setItem('staturl', 'https://outlook.live.com');localStorage.setItem('image', './img/apps/outlook.jpg');localStorage.setItem('appname', 'Outlook')"> 
-                    <h2 class="white"><i class='bx bxs-grid'></i> Outlook</h2>
+                    <h2 class="white">Outlook</h2>
                 </div></a>
                 <a target="_blank" href="https://il.ax"><div class="card p piped" onclick="localStorage.setItem('staturl', 'https://il.ax');localStorage.setItem('image', './img/apps/piped.png');localStorage.setItem('appname', 'Piped')">
-                    <h2 class="white"><i class='bx bx-video'></i> Piped</h2>
+                    <h2 class="white">Piped</h2>
                 </div></a>
                 <a target="_blank" href="https://nightflix.app/"><div class="card p nightflix" onclick="localStorage.setItem('staturl', 'https://nightflix.app/');localStorage.setItem('image', './img/apps/nightflix.png');localStorage.setItem('appname', 'NightFlix')">
-                    <h2 class="white"><i class='bx bx-video'></i> NightFlix</h2>
+                    <h2 class="white">NightFlix</h2>
                 </div></a>
                 <a target="_blank" href="https://spotify.com"><div class="card p spotify" onclick="localStorage.setItem('staturl', 'https://spotify.com');localStorage.setItem('image', './img/apps/spotify.png');localStorage.setItem('appname', 'Spotify')">
-                    <h2 class="white"><i class='bx bxl-twitch'></i> Spotify</h2>
+                    <h2 class="white">Spotify</h2>
                 </div></a>
                 <a target="_blank" href="https://twitch.tv"><div class="card p tv" onclick="localStorage.setItem('staturl', 'https://twitch.tv');localStorage.setItem('image', './img/apps/twitch.png');localStorage.setItem('appname', 'Twitch')">
-                    <h2 class="white"><i class='bx bxl-twitch'></i> Twitch</h2>
+                    <h2 class="white">Twitch</h2>
                 </div></a>
                 <div class="card p ytb" onclick="openURL('YouTube','./img/apps/youtube.jpg','https://youtube.com/?gl=fr&hl=fr')">
-                    <h2 class="white"><i class='bx bx-video'></i> YouTube</h2>
+                    <h2 class="white">YouTube</h2>
                 </div>
         </div>
         <div class="footer">
             <div class="footer-text">Fluix/main</div>
         </div>
     </section>
+    <script>
+        
+        function searchFunction() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let cards = document.getElementsByClassName('card');
+        
+            for (i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h2')[0];
+                let txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+            </script>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
     <script src="./js/script.js"></script>

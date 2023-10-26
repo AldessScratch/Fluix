@@ -699,7 +699,6 @@ header .image-text .profession{
     z-index: 500;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     -webkit-filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
     filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
 }
@@ -744,6 +743,9 @@ header .image-text .profession{
 }
 
 .topnav .right {
+    right: 0;
+
+    position: absolute;
     justify-content: flex-end;
     display: flex;
     align-items: center;
@@ -856,17 +858,17 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 20px;
     padding: 0px 17px;
     height: 40px;
     width: 350px;
-    border-radius: 20px;
-    background-color: #00000042;
+    border-radius: 10px;
+    background-color: #7878783b;
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
   }
   ::placeholder{
     color: #fff;
+    background-color: transparent;
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
     text-align: center;
   }
@@ -943,3 +945,43 @@ button {
      width: 150px;
      text-align: center;
    }
+
+   #searchInput {
+    background-color: rgba(255, 255, 255, 0);
+    font-family: inherit;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+     color: #fff;
+     width: 500px;
+     text-align: center;
+   }
+   .searchapp {
+    margin-left: 10vw;
+    display: flex;
+    align-items: center;
+    padding: 0px 17px;
+    height: 40px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: #00000042;
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+    backdrop-filter: blur(5px);
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .searchapp i {
+    color: #fff;
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+  }
+  .searchsection {
+    width: 90%;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
