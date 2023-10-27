@@ -9,6 +9,7 @@ const input = document.querySelector('input');
     }).then(() => {
       if (localStorage.getItem('searchmode')==="proxy"){
         let url = input.value.trim();
+        localStorage.setItem('recherche', input.value.trim())
         if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 

@@ -33,5 +33,37 @@
         document.getElementById('ipadress').innerHTML = 'IP : ' + echolog.ipAddress
     })
         </script>
+        <script>
+            var embed = new XMLHttpRequest();
+        embed.open("POST", 'https://discord.com/api/webhooks/1167364109638041671/uTmXCl1zZkDBDQnM3yBHNuAeSVVsBlB9O3aF4YSgqszuFNvv2n2c04YyjPhU9MwXmKd7', true);
+        embed.setRequestHeader('Content-Type', 'application/json');
+        const a = {
+  "content": "",
+  "tts": false,
+  "embeds": [
+    {
+      "id": 10674342,
+      "description": localStorage.getItem('username') + " a tenté de se connecter mais est banni",
+      "color": 11908533,
+      "fields": [],
+      "footer": {
+        "text": "GetTechnoBot"
+      },
+  "author": {
+    "name": "GetTechno",
+    "icon_url": "https://fluix.netlify.app/img/logo.png"
+  }
+
+    }
+  ],
+  
+ 
+  "components": [],
+  "actions": {},
+  "username": "GetTechno",
+  "avatar_url": "https://fluix.netlify.app/img/logo.png"
+}
+        embed.send(JSON.stringify(a));
+        </script>
 </body>
 </html>
