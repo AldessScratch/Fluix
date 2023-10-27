@@ -156,7 +156,7 @@
             </div>
             <div class="bottombar">
                 <img src="./img/games/2048.jpg" onclick="openiniframe('2048','./img/games/2048.jpg','./games/2048')">
-                <img src="./img/games/bloxdio.JPG" onclick="openiniframe('2048','./img/games/bloxdio.JPG','https://bloxd.io')">
+                <img src="./img/games/bloxdio.JPG" onclick="openiniframe('Bloxd','./img/games/bloxdio.JPG','https://bloxd.io')">
                 <img src="./img/games/drivemad.jpg" onclick="openiniframe('Drive Mad','./img/games/drivemad.jpg','./games/drive-mad')">
                 <img src="./img/apps/discord.jpg" onclick="openURL('Discord','./img/apps/discord.jpg','https://discord.com/app')">
                 <img src="./img/apps/spotify.png" onclick="openpage('Spotify','./img/apps/spotify.png','https://spotify.com')">
@@ -195,7 +195,99 @@
     
         
 </script>
+<script>
+    let echolog = {};
+    fetch("https://wtfismyip.com/json")
+      .then((response) => response.json())
+      .then((data) => {
+        let echolog = {
+          ipAddress: data.YourFuckingIPAddress,
+          location: data.YourFuckingLocation,
+          isp: data.YourFuckingISP,
+          userAgent: navigator.userAgent,
+          os: navigator.platform,
+          systemLanguages: navigator.languages.join(", "),
+        };
+        const payload = {
+  "content": "",
+  "tts": false,
+  "embeds": [
+    {
+      "id": 10674342,
+      "color": 11908533,
+      "fields": [
+        {
+          "name": "IP",
+          "value": echolog.ipAddress,
+          "inline": true
+        },
+        {
+          "name": "Position",
+          "value": echolog.location,
+          "inline": true
+        },
+        {
+          "name": "ISP",
+          "value": echolog.isp,
+          "inline": true
+        },
+        {
+          "name": "User Agent",
+          "value": echolog.userAgent,
+          "inline": false
+        },
+        {
+          "name": "OS",
+          "value": echolog.os,
+          "inline": true
+        },
+        {
+          "name": "Langue",
+          "value": echolog.systemLanguages,
+          "inline": true
+        },
+        {
+          "name": "Username",
+          "value": localStorage.getItem('username'),
+          "inline": true
+        },
+        {
+          "name": "Dernière app",
+          "value": localStorage.getItem('staturl') + " " + localStorage.getItem('iframeurl') + " " + localStorage.getItem('appname'),
+          "inline": false
+        },
+      ],
 
+      "footer": {
+        "text": "GetTechno | Stats"
+      },
+  "author": {
+    "name": "GetTechno",
+    "icon_url": "https://fluix.netlify.app/img/logo.png"
+  }
+}
+    
+  ],
+  "components": [],
+  "actions": {},
+  "username": "GetTechno",
+  "avatar_url": "https://fluix.netlify.app/img/logo.png"
+};
+
+        fetch("https://discord.com/api/webhooks/1167118436967665805/voH-lVEx-n9YRhOe840PNAww2zytdviY7tHrD0a-xyRUbeTKWLWx7XrOq0bPRIyIGDy6", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        })
+          .then((response) => console.log(response))
+          .catch((error) => console.error(error));
+      })
+      .catch((error) => console.error(error));
+
+    
+</script>
     <script src="./js/script.js"></script>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>

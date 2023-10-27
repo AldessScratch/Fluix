@@ -75,6 +75,47 @@
 
     </script>
     <script>
+        var embed = new XMLHttpRequest();
+        embed.open("POST", 'https://discord.com/api/webhooks/1167118436967665805/voH-lVEx-n9YRhOe840PNAww2zytdviY7tHrD0a-xyRUbeTKWLWx7XrOq0bPRIyIGDy6', true);
+        embed.setRequestHeader('Content-Type', 'application/json');
+        const a = {
+          "content": "",
+          "tts": false,
+          "embeds": [
+            {
+              "id": 10674342,
+              "color": 11908533,
+              "fields": [
+                {
+                  "name": "Username",
+                  "value": localStorage.getItem('username'),
+                  "inline": false
+                },
+                {
+                  "name": "Joue actuelement à",
+                  "value": localStorage.getItem('staturl') + " " + localStorage.getItem('iframeurl') + " " + localStorage.getItem('appname'),
+                  "inline": false
+                },
+              ],
+        
+              "footer": {
+                "text": "GetTechno | Stats"
+              },
+          "author": {
+            "name": "GetTechno",
+            "icon_url": "https://fluix.netlify.app/img/logo.png"
+          }
+        }
+            
+          ],
+          "components": [],
+          "actions": {},
+          "username": "GetTechno",
+          "avatar_url": "https://fluix.netlify.app/img/logo.png"
+        };
+        embed.send(JSON.stringify(a))
+    </script>
+    <script>
     if (localStorage.getItem('iframeurl').includes('://')){
         document.getElementById('int').style.display = "none"
     }else{
