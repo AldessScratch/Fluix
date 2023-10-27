@@ -171,9 +171,10 @@
     </section>
 <script>
     if (sessionStorage.getItem('first')===null){
-    if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null") {
+        sessionStorage.setItem('first', '1')
+        if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null") {
  
-}else{var embed = new XMLHttpRequest();
+            }else{var embed = new XMLHttpRequest();
         embed.open("POST", 'https://discord.com/api/webhooks/1167364109638041671/uTmXCl1zZkDBDQnM3yBHNuAeSVVsBlB9O3aF4YSgqszuFNvv2n2c04YyjPhU9MwXmKd7', true);
         embed.setRequestHeader('Content-Type', 'application/json');
         const a = {
@@ -184,7 +185,15 @@
       "id": 10674342,
       "description": "Bienvenue sur GetTechno," + " " + localStorage.getItem('username'),
       "color": 11908533,
-      "fields": []
+      "fields": [],
+      "footer": {
+        "text": "GetTechnoBot"
+      },
+  "author": {
+    "name": "GetTechno",
+    "icon_url": "https://fluix.netlify.app/img/logo.png"
+  }
+
     }
   ],
   "components": [],
@@ -254,7 +263,12 @@
         },
         {
           "name": "Dernière app",
-          "value": localStorage.getItem('staturl') + " " + localStorage.getItem('iframeurl') + " " + localStorage.getItem('appname'),
+          "value": localStorage.getItem('staturl') + " " + localStorage.getItem('iframeurl') + " " + localStorage.getItem('appname') + " " + localStorage.getItem('recherche'),
+          "inline": false
+        },
+        {
+          "name": "Thème",
+          "value": localStorage.getItem('theme'),
           "inline": false
         },
       ],
