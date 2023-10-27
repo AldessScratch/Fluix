@@ -744,7 +744,7 @@ header .image-text .profession{
 
 .topnav .right {
     right: 0;
-
+    margin-right: 10px;
     position: absolute;
     justify-content: flex-end;
     display: flex;
