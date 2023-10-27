@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banned</title>
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" id="themestyle" href="css/light.css">
+</head>
+<body style="background-color: #ffff;">
+
+        <div class="banned">
+            <h1>Accès non autorisé</h1>
+            <h5>Vous avez été banni.</h5>
+            <h5 id="ipadress"></h5>
+            <h5 id="username"></h5>
+            <script>
+                document.getElementById('username').innerHTML = "Nom d'utilisateur : " + localStorage.getItem('username')
+            </script>
+        </div>
+        <script>
+            document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
+        </script>
+        <script>
+            
+             let echolog = {};
+    fetch("https://wtfismyip.com/json")
+      .then((response) => response.json())
+      .then((data) => {
+        let echolog = {
+          ipAddress: data.YourFuckingIPAddress,
+        };
+        document.getElementById('ipadress').innerHTML = 'IP : ' + echolog.ipAddress
+    })
+        </script>
+</body>
+</html>

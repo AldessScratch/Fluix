@@ -207,6 +207,7 @@ function searchFunction() {
             document.getElementById("stylebg").style="background-image: url('" + localStorage.getItem('bgurl') + "')"
         }
         settheme()
+        banned()
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");

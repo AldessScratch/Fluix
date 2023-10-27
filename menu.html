@@ -170,6 +170,7 @@
         </div>
     </section>
 <script>
+    if (sessionStorage.getItem('first')===null){
     if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null") {
  
 }else{var embed = new XMLHttpRequest();
@@ -191,7 +192,7 @@
   "username": "GetTechno",
   "avatar_url": "https://fluix.netlify.app/img/logo.png"
 }
-        embed.send(JSON.stringify(a));}
+        embed.send(JSON.stringify(a));}}
     
         
 </script>
@@ -310,6 +311,7 @@
     </script>
     <script>
         settheme()
+        banned()
          if (localStorage.getItem('bgurl')===null){
             document.getElementById("stylebg").style="background-image: url('./img/bg/light.jpg')"
         }else{

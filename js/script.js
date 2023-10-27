@@ -28,7 +28,7 @@ if ((localStorage.getItem('searchmode')) === null) {
   toggleSwitch.addEventListener('change', switchTheme, false);
 
 if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null") {
-  localStorage.setItem('username', Guest)
+  username()
 }
 function username(){
   let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Veuillez éviter les caractères spéciaux")
@@ -42,4 +42,10 @@ function settheme(){
   }
   
 }
-
+function banned(){
+  if (localStorage.getItem('banned')===null){
+  
+  }else{
+    location.href = "banned.html"
+  }
+}

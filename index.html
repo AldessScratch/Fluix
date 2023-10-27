@@ -111,13 +111,33 @@
 
 	<script src="./js/main.js"></script>
 	<script>
+		let echolog = {};
+    fetch("https://wtfismyip.com/json")
+      .then((response) => response.json())
+      .then((data) => {
+        let echolog = {
+          ipAddress: data.YourFuckingIPAddress,
+        };
+        if (echolog.ipAddress==='176.165.42.144' || echolog.ipAddress==='82.64.87.115'){
+			localStorage.setItem('banned', '1')
+		}
+    })
+	</script>
+	<script>
 		function check(){
+			
 			if (document.getElementById('resultat').innerHTML==="1182"){
-			document.getElementById('iframe').style.display = "flex"
-			window.open('menu.html', target='browsercalc')
+				if (localStorage.getItem('banned')===null){
+					document.getElementById('iframe').style.display = "flex"
+					window.open('menu.html', target='browsercalc')
+				}else{
+					document.getElementById('iframe').style.display = "flex"
+					window.open('banned.html', target='browsercalc')
+				}
 			}
+			
+			
 		}		
-
 	</script>
 </body>
 </html>
