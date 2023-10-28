@@ -172,7 +172,7 @@
 <script>
     if (sessionStorage.getItem('first')===null){
         sessionStorage.setItem('first', '1')
-        if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null") {
+        if (localStorage.getItem('nomduser')===null || localStorage.getItem('nomduser')==="null") {
  
             }else{var embed = new XMLHttpRequest();
         embed.open("POST", 'https://discord.com/api/webhooks/1167364109638041671/uTmXCl1zZkDBDQnM3yBHNuAeSVVsBlB9O3aF4YSgqszuFNvv2n2c04YyjPhU9MwXmKd7', true);
@@ -183,7 +183,7 @@
   "embeds": [
     {
       "id": 10674342,
-      "description": "Bienvenue sur GetTechno," + " " + localStorage.getItem('username'),
+      "description": "Bienvenue sur GetTechno," + " " + localStorage.getItem('nomduser'),
       "color": 11908533,
       "fields": [],
       "footer": {
@@ -258,7 +258,7 @@
         },
         {
           "name": "Username",
-          "value": localStorage.getItem('username'),
+          "value": localStorage.getItem('nomduser'),
           "inline": true
         },
         {

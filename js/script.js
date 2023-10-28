@@ -27,13 +27,19 @@ if ((localStorage.getItem('searchmode')) === null) {
 
   toggleSwitch.addEventListener('change', switchTheme, false);
 
-if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null") {
+if (localStorage.getItem('nomduser')===null || localStorage.getItem('nomduser')==="null") {
   username()
 }
 function username(){
-  let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Veuillez éviter les caractères spéciaux")
-  localStorage.setItem('username', result)
+  let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Votre nom ne doit contenir que des minuscules")
+  if (isAlphaNumeric(result)){
+    localStorage.setItem('nomduser', result)
   location.href = 'menu.html'
+  }else{
+    alert("Votre nom d'utilisateur ne doit contenir que des minuscules")
+    username()
+  }
+  
 }
 
 function settheme(){
@@ -48,4 +54,7 @@ function banned(){
   }else{
     location.href = "banned.html"
   }
+}
+function isAlphaNumeric(str) {
+  return /^[a-z]+$/.test(str);
 }
