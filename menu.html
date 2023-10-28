@@ -122,11 +122,7 @@
               </div>
             </div>
             <script>
-                if (localStorage.getItem('username')===null || localStorage.getItem('username')==="null" || localStorage.getItem('username')===""){
-                    document.getElementById('sss').innerHTML = "Guest"
-                }else{
-                    document.getElementById('sss').innerHTML = localStorage.getItem('username')
-                }
+                    document.getElementById('sss').innerHTML = localStorage.getItem('nomduser')
                 </script>
             
             <div id="timebg" class="widget2">
