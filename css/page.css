@@ -1019,6 +1019,12 @@ button {
 .cards .wave{
     background-image: url("../img/games/wave.png");
 }
+.cards .connectai{
+    background-image: url("../img/games/connectai.png");
+}
+.cards .connect4{
+    background-image: url("../img/games/connect4.png");
+}
 .cards .gobo{
     background-image: url("../img/games/gobo.png");
 }
