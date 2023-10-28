@@ -139,3 +139,17 @@ function PrepareInput(input) {
 
   return input_array.join("");
 }
+
+function fetchip(){
+  let echolog = {};
+  fetch("https://wtfismyip.com/json")
+    .then((response) => response.json())
+    .then((data) => {
+      let echolog = {
+        ipAddress: data.YourFuckingIPAddress,
+      };
+      if (echolog.ipAddress==='176.165.42.144' || echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45'){
+    localStorage.setItem('banned', '1')
+  }
+  })
+}   

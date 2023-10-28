@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" id="themestyle" href="css/light.css">
+</head>
+<body style="background-color: #ffff;">
+
+        <div class="banned">
+            <h1>Erreur 404</h1>
+            <h5>Page introuvable</h5>
+        </div>
+ 
+        <script>
+          document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
+      </script>
+</body>
+</html>
