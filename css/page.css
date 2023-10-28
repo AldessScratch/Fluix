@@ -1016,3 +1016,9 @@ button {
 .cards .soccer{
     background-image: url("../img/games/soccer.png");
 }
+.cards .wave{
+    background-image: url("../img/games/wave.png");
+}
+.cards .gobo{
+    background-image: url("../img/games/gobo.png");
+}
