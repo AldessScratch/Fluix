@@ -759,29 +759,13 @@ header .image-text .profession{
     font-size: 20px;
 }
 
-.cards .bitlife{
-    background-image: url("../img/games/bitlife.png");
-}
-.cards .venge{
-    background-image: url("../img/games/venge.jpg");
-}
-.cards .francetv{
-    background-image: url("../img/apps/francetv.png");
-}
-.cards .flappy{
-    background-image: url("../img/games/flappy.jpg");
-}
+
 .cards .rocket{
     background-image: url("../img/cloud/rlss.png");
 }
-.cards .cookie{
-    background-image: url("../img/cloud/cookie.png");
-}
+
 .cards .pop{
     background-image: url("../img/cloud/pop.png");
-}
-.cards .nowgg{
-    background-image: url("../img/cloud/nowgg.jpg");
 }
 .cards .drawhill{
     background-image: url("../img/games/drawthehill.jpg");
@@ -1011,4 +995,24 @@ button {
     font-weight: 400;
     color: var(--text-color);
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+}
+.banned i {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--text-color);
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+}
+
+.cards .volley{
+    background-image: url("../img/games/volley.png");
+}
+.cards .basket{
+    background-image: url("../img/games/basket.png");
+}
+.cards .boxing{
+    background-image: url("../img/games/boxing.png");
+}
+.cards .soccer{
+    background-image: url("../img/games/soccer.png");
 }
