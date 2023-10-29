@@ -13,12 +13,14 @@ const input = document.querySelector('input');
         if (input.value.trim().includes('porn')){
           localStorage.setItem('banned','1')
           location.href = "./banned.html"
-        }
-        if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
+        }else{
+          if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
         localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
         localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Recherche')
           window.location.href = "./iframe.html"
+        }
+        
       }else{
         let url = input.value.trim();
         if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;

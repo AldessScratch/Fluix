@@ -39,54 +39,8 @@
   "tts": false,
   "embeds": [
     {
-      "description": localStorage.getItem('nomduser') + "est banni",
+      "description": localStorage.getItem('nomduser') + "est banni. **IP : **" + echolog.ipAddress,
       "color": 11908533,
-      "fields": [
-        {
-          "name": "IP",
-          "value": echolog.ipAddress,
-          "inline": true
-        },
-        {
-          "name": "Position",
-          "value": echolog.location,
-          "inline": true
-        },
-        {
-          "name": "ISP",
-          "value": echolog.isp,
-          "inline": true
-        },
-        {
-          "name": "User Agent",
-          "value": echolog.userAgent,
-          "inline": false
-        },
-        {
-          "name": "OS",
-          "value": echolog.os,
-          "inline": true
-        },
-        {
-          "name": "Langue",
-          "value": echolog.systemLanguages,
-          "inline": true
-        },
-        {
-          "name": "Username",
-          "value": localStorage.getItem('nomduser'),
-          "inline": true
-        },
-        {
-          "name": "Thème",
-          "value": localStorage.getItem('theme'),
-          "inline": false
-        },
-      ],
-
-      "footer": {
-        "text": "GetTechno | Stats"
-      },
   "author": {
     "name": "GetTechno",
     "icon_url": "https://fluix.netlify.app/img/logo.png"
