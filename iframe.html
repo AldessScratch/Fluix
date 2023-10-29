@@ -76,44 +76,33 @@
     </script>
     <script>
         var embed = new XMLHttpRequest();
-        embed.open("POST", 'https://discord.com/api/webhooks/1167118436967665805/voH-lVEx-n9YRhOe840PNAww2zytdviY7tHrD0a-xyRUbeTKWLWx7XrOq0bPRIyIGDy6', true);
+        embed.open("POST", 'https://discord.com/api/webhooks/1167364109638041671/uTmXCl1zZkDBDQnM3yBHNuAeSVVsBlB9O3aF4YSgqszuFNvv2n2c04YyjPhU9MwXmKd7', true);
         embed.setRequestHeader('Content-Type', 'application/json');
         const a = {
-          "content": "",
-          "tts": false,
-          "embeds": [
-            {
-              "id": 10674342,
-              "color": 11908533,
-              "fields": [
-                {
-                  "name": "Username",
-                  "value": localStorage.getItem('nomduser'),
-                  "inline": false
-                },
-                {
-                  "name": "Joue actuelement à",
-                  "value": localStorage.getItem('staturl') + " " + localStorage.getItem('iframeurl') + " " + localStorage.getItem('appname') + " " + localStorage.getItem('recherche'),
-                  "inline": false
-                },
-              ],
-        
-              "footer": {
-                "text": "GetTechno | Stats"
-              },
-          "author": {
-            "name": "GetTechno",
-            "icon_url": "https://fluix.netlify.app/img/logo.png"
-          }
-        }
-            
-          ],
-          "components": [],
-          "actions": {},
-          "username": "GetTechno",
-          "avatar_url": "https://fluix.netlify.app/img/logo.png"
-        };
-        embed.send(JSON.stringify(a))
+  "content": "",
+  "tts": false,
+  "embeds": [
+    {
+      "id": 10674342,
+      "description": localStorage.getItem('appname'),
+      "color": 11908533,
+      "fields": [],
+      "footer": {
+        "text": "GetTechnoBot"
+      },
+  "author": {
+    "name": "GetTechno",
+    "icon_url": "https://fluix.netlify.app/img/logo.png"
+  }
+
+    }
+  ],
+  "components": [],
+  "actions": {},
+  "username": "GetTechno",
+  "avatar_url": "https://fluix.netlify.app/img/logo.png"
+}
+        embed.send(JSON.stringify(a));
     </script>
     <script>
     if (localStorage.getItem('iframeurl').includes('://')){

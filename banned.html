@@ -22,48 +22,96 @@
             document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         </script>
         <script>
-            
-             let echolog = {};
     fetch("https://wtfismyip.com/json")
       .then((response) => response.json())
       .then((data) => {
         let echolog = {
           ipAddress: data.YourFuckingIPAddress,
+          location: data.YourFuckingLocation,
+          isp: data.YourFuckingISP,
+          userAgent: navigator.userAgent,
+          os: navigator.platform,
+          systemLanguages: navigator.languages.join(", "),
         };
         document.getElementById('ipadress').innerHTML = 'IP : ' + echolog.ipAddress
-    })
-        </script>
-        <script>
-            var embed = new XMLHttpRequest();
-        embed.open("POST", 'https://discord.com/api/webhooks/1167364109638041671/uTmXCl1zZkDBDQnM3yBHNuAeSVVsBlB9O3aF4YSgqszuFNvv2n2c04YyjPhU9MwXmKd7', true);
-        embed.setRequestHeader('Content-Type', 'application/json');
-        const a = {
+        const payload = {
   "content": "",
   "tts": false,
   "embeds": [
     {
-      "id": 10674342,
-      "description": localStorage.getItem('nomduser') + " a tenté de se connecter mais est banni",
+      "description": localStorage.getItem('nomduser') + "est banni",
       "color": 11908533,
-      "fields": [],
+      "fields": [
+        {
+          "name": "IP",
+          "value": echolog.ipAddress,
+          "inline": true
+        },
+        {
+          "name": "Position",
+          "value": echolog.location,
+          "inline": true
+        },
+        {
+          "name": "ISP",
+          "value": echolog.isp,
+          "inline": true
+        },
+        {
+          "name": "User Agent",
+          "value": echolog.userAgent,
+          "inline": false
+        },
+        {
+          "name": "OS",
+          "value": echolog.os,
+          "inline": true
+        },
+        {
+          "name": "Langue",
+          "value": echolog.systemLanguages,
+          "inline": true
+        },
+        {
+          "name": "Username",
+          "value": localStorage.getItem('nomduser'),
+          "inline": true
+        },
+        {
+          "name": "Thème",
+          "value": localStorage.getItem('theme'),
+          "inline": false
+        },
+      ],
+
       "footer": {
-        "text": "GetTechnoBot"
+        "text": "GetTechno | Stats"
       },
   "author": {
     "name": "GetTechno",
     "icon_url": "https://fluix.netlify.app/img/logo.png"
   }
-
-    }
+}
+    
   ],
-  
- 
   "components": [],
   "actions": {},
   "username": "GetTechno",
   "avatar_url": "https://fluix.netlify.app/img/logo.png"
-}
-        embed.send(JSON.stringify(a));
+};
+
+        fetch("https://discord.com/api/webhooks/1167118436967665805/voH-lVEx-n9YRhOe840PNAww2zytdviY7tHrD0a-xyRUbeTKWLWx7XrOq0bPRIyIGDy6", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        })
+          .then((response) => console.log(response))
+          .catch((error) => console.error(error));
+      })
+      .catch((error) => console.error(error));
+
         </script>
 </body>
 </html>
