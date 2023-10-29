@@ -800,22 +800,12 @@ header .image-text .profession{
     left: 0;
     width: 100%;
     height: calc(100vh - 60px);
-    background-color: #121111;
+    background-color: #000000;
     transition: 1s;
     background-image:url("../img/loading.GIF") ;
     background-repeat: no-repeat;
-    background-position: center 50%;
-    background-size: 50%;
-}
-.intro p {
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
-    position: absolute;
-    top: 0;
-    margin-top: calc(50vh + 100px);
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
+    background-position: center;
+    background-size: 60%;
 }
 #bgurl::placeholder {
     text-align: center;
