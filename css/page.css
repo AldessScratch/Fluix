@@ -491,7 +491,7 @@ header .image-text .profession{
     color: var(--widget-text);
  }
  .info {
-    width: 80vw;
+    max-width: 70vw;
     background-color: var(--widget-color);
     padding: 20px;
     border-radius: 20px;
@@ -720,8 +720,33 @@ header .image-text .profession{
     -webkit-filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
     filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
 }
-.home .text{
-    text-align: center;
+.show {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: var(--sidebar-color);
+    z-index: 999;
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
+    filter: drop-shadow(1px 1px 1px rgba(134, 134, 134, 0.4));
+    justify-content: center;
+    align-items: center;
+    display: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.show i {
+    font-size: 17px;
+    font-size: 30px;
+    color: var(--widget-text);
+
+   
+}
+.home .text{    text-align: center;
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);

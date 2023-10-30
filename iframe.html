@@ -25,7 +25,7 @@
     <div id="preloader" class="intro">
    
     </div>
-    <div class="topnav">  
+    <div id="topnav" class="topnav">  
         <div class="left">
             <i onclick="history.back()" class='bx bx-chevron-left'></i>
             <i id="ext" onclick="window.location.href = './iframe.html'" class='bx bx-refresh medium'></i>
@@ -46,7 +46,7 @@
             </label>
           </div>
         <div class="right">
-            
+            <i onclick="document.getElementById('iframeurl').style = 'margin-top: 0px; border: 0; height: 100vh;border-radius: 10px;left: 0; position: absolute; top: 0; width: 100%; bottom: 0;';document.getElementById('show').style.display = 'flex';document.getElementById('topnav').style.display = 'none'" class="bx bx-fullscreen small"></i>
             <a target="_blank" href="" id="external"><i class='bx bx-link-external small'></i></a>
             <i onclick="window.location.href = './calculatrice.html'" class='bx bx-exit small'></i>
         </div>
@@ -55,6 +55,9 @@
             document.getElementById("external").href=(localStorage.getItem('iframeurl'))
             document.getElementById("imageapp").src=(localStorage.getItem('image'))
         </script>
+    </div>
+    <div id="show" class="show" onclick="document.getElementById('iframeurl').style = ' border: 0; height: calc(100vh - 60px);border-radius: 10px;';document.getElementById('show').style.display = 'none';document.getElementById('topnav').style.display = 'flex'">
+      <i class="bx bx-show"></i>
     </div>
     <div class="iframe">
         <iframe id="iframeurl" src="" style="border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;"></iframe>
@@ -69,7 +72,7 @@
             server: '1086990232349581434', 
             channel: '1158702584094261288', 
             username: localStorage.getItem('nomduser'),
-            location: [0, -100],
+            location: [0, -130],
             glyph: ['https://fluix.netlify.app/img/widgetbot.png', '100%']
   })
 
@@ -92,7 +95,7 @@
         var loader = document.getElementById("preloader");
         setTimeout(() => {
             loader.style.display = "none";
-      }, 3500);
+      }, 2000);
 
     </script>
     <script src="./uv/uv.bundle.js"></script>
