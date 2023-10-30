@@ -1,5 +1,10 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input');
+const fs = require('fs');
+
+const file_path = 'https://raw.githubusercontent.com/rrgeorge-pdcontributions/NSFW-Words-List/master/nsfw_list.txt';
+const wordList = fs.readFileSync(file_path, 'utf-8').split('\n').map(line => line.trim());
+const foundWords = [];
 
 
   form.addEventListener('submit', async event => {
@@ -10,16 +15,21 @@ const input = document.querySelector('input');
       if (localStorage.getItem('searchmode')==="proxy"){
         let url = input.value.trim();
         localStorage.setItem('recherche', input.value.trim())
-        if (input.value.trim().includes('porn') || input.value.trim().includes('xxx')){
-          localStorage.setItem('banned','1')
-          location.href = "./banned.html"
-        }else{
+        wordList.forEach(word => {
+          if (input.value.trim().includes(word)) {
+              foundWords.push(word);
+          }
+          if (foundWords.length > 0) {
+            localStorage.setItem('banned','1')
+          location.href = "./banned.html";
+        } else {
           if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
-        else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
-        localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
-        localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Recherche')
-          window.location.href = "./iframe.html"
+          else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
+          localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
+          localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Recherche')
+            window.location.href = "./iframe.html"
         }
+      });
         
       }else{
         let url = input.value.trim();
@@ -67,3 +77,5 @@ function openpage(appname, image, staturl) {
   localStorage.setItem('appname', appname)
   window.open(staturl)
 }
+
+
