@@ -52,7 +52,7 @@ function banned(){
   if (localStorage.getItem('banned')===null){
   
   }else{
-    location.href = "banned.html"
+    location.href = "banned"
   }
 }
 function isAlphaNumeric(str) {
