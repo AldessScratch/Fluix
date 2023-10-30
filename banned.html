@@ -27,11 +27,6 @@
       .then((data) => {
         let echolog = {
           ipAddress: data.YourFuckingIPAddress,
-          location: data.YourFuckingLocation,
-          isp: data.YourFuckingISP,
-          userAgent: navigator.userAgent,
-          os: navigator.platform,
-          systemLanguages: navigator.languages.join(", "),
         };
         document.getElementById('ipadress').innerHTML = 'IP : ' + echolog.ipAddress
         const payload = {

@@ -485,7 +485,22 @@ header .image-text .profession{
     font-weight: 500;
     color: var(--widget-text);
  }
- 
+ .parametre p {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--widget-text);
+ }
+ .info {
+    width: 80vw;
+    background-color: var(--widget-color);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 4px 3px 8px 1px #96969633;
+    -webkit-box-shadow: 4px 3px 8px 1px #96969633;
+ }
+
  .parametre input{
      width: 500px;
      border-radius: 20px;

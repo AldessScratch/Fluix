@@ -102,8 +102,8 @@
         <br>
         
         <div class="parametre">
-            
-             <h4>Choisir un theme :</h4>
+            <div class="info">
+                <h4>Choisir un theme :</h4>
              <select id="themeSelect">
                 <option value="light">Clair</option>
                 <option value="dark">Sombre</option>
@@ -135,54 +135,91 @@
                 }
                 initThemeSelector();
              </script>
-        <br><br>
-             <h4>Image de bannière personalisée</h4>
-             <div class="inputurl">
-                <input type="text" id="bgurl" name="urlToOpen" size="150" placeholder="URL de l'image"></input>
-                <button onclick="applybg()">Appliquer</button>
-                <button onclick="resetbg()"><i class='bx bx-refresh'></i> Rénitialiser</button>
-              </div>
-              <script>
-                const applybg = () =>{
-                    var bgurl = document.getElementById("bgurl").value;
-                    localStorage.setItem('bgurl', bgurl)
-                    location.href = 'settings.html'
-                }
-                function resetbg(){
-                  localStorage.removeItem('bgurl')
-                  location.href = 'settings.html'
-                }
-            </script>
-            <br>
-            <h4>Aperçu</h4>
-            <img id="previewbg" alt="Aucune image appliqué" src="">
-            <script>
-                document.getElementById('previewbg').src = localStorage.getItem('bgurl')
-            </script>
-             <br><br>
+            </div>
              
-             <h4>Moteur de recherche :</h4>
-             <select id="searchengine">
-                <option value="https://google.com/search?q=">Google</option>
-                <option value="https://bing.com/search?q=">Bing</option>
-                <option value="https://duckduckgo.com/?q=">DuckduckGo</option>
-                <option value="https://qwant.com/?q=">Qwant</option>
-             </select>
+        <br>
+        <div class="info">
+            <h4>Image de bannière personalisée</h4>
+            <div class="inputurl">
+               <input type="text" id="bgurl" name="urlToOpen" size="150" placeholder="URL de l'image"></input>
+               <button onclick="applybg()">Appliquer</button>
+               <button onclick="resetbg()"><i class='bx bx-refresh'></i> Rénitialiser</button>
+             </div>
              <script>
-              function initEngineSelector () {
-              const searchengine = document.getElementById("searchengine")
-              const currentEngine = localStorage.getItem("searchengine") || "https://bing.com/search?q=";
-    
-              searchengine.addEventListener("change", () => {
-                  localStorage.setItem("searchengine", searchengine.value)
-                  location.href = 'settings.html'
-              });
-    
-              searchengine.value = currentEngine;
-    
-              }
-              initEngineSelector();
+               const applybg = () =>{
+                   var bgurl = document.getElementById("bgurl").value;
+                   localStorage.setItem('bgurl', bgurl)
+                   location.href = 'settings.html'
+               }
+               function resetbg(){
+                 localStorage.removeItem('bgurl')
+                 location.href = 'settings.html'
+               }
            </script>
+           <br>
+           <h4>Aperçu</h4>
+           <img id="previewbg" alt="Aucune image appliqué" src="">
+           <script>
+               document.getElementById('previewbg').src = localStorage.getItem('bgurl')
+           </script>
+        </div>
+            
+             <br>
+             <div class="info">
+                <h4>Moteur de recherche :</h4>
+                <select id="searchengine">
+                   <option value="https://google.com/search?q=">Google</option>
+                   <option value="https://bing.com/search?q=">Bing</option>
+                   <option value="https://duckduckgo.com/?q=">DuckduckGo</option>
+                   <option value="https://qwant.com/?q=">Qwant</option>
+                </select>
+                <script>
+                 function initEngineSelector () {
+                 const searchengine = document.getElementById("searchengine")
+                 const currentEngine = localStorage.getItem("searchengine") || "https://bing.com/search?q=";
+       
+                 searchengine.addEventListener("change", () => {
+                     localStorage.setItem("searchengine", searchengine.value)
+                     location.href = 'settings.html'
+                 });
+       
+                 searchengine.value = currentEngine;
+       
+                 }
+                 initEngineSelector();
+              </script>
+             </div>
+            
+           <br>
+           <div class="info">
+            <h4>Infos</h4>
+            <p>En utilisant ce site, vous consentez à ce que votre adresse ip et autres données soit récolté. Les données récoltés sont disponibles ci-dessous. Le thème sélectionné, le moteur de recherche sélectionné, votre nom d'utilisateur et vos progrès dans les jeux seront locallement enregistrés sur votre appareil. En cas d'abus, votre accès sera suspendu immédiatement et définitivement. (C'est très long)</p>
+            <br>
+            <p>By using this site, you agree that your ip adress and other data will be collected. The collected data is available below. The selected theme, the selected search engine, your username and your progresses ingame will be saved locally on your device. In case of abuse, your access will be  suspended immediately and for ever. (It's very long)</p>
+            <br>
+            <p id="ip"></p>
+            <p id="location"></p>
+            <p id="isp"></p>
+            <p id="userAgent"></p>
+            <p id="username"></p>
+            
+           </div>
+           <script>
+            fetch("https://wtfismyip.com/json")
+              .then((response) => response.json())
+              .then((data) => {
+                let echolog = {
+                  ipAddress: data.YourFuckingIPAddress,
+                  location: data.YourFuckingLocation,
+                  userAgent: navigator.userAgent,
+                };
+                document.getElementById('ip').innerHTML = "IP : " + echolog.ipAddress
+                document.getElementById('location').innerHTML = "Position (basée sur l'IP) : " + echolog.location
+                document.getElementById('userAgent').innerHTML = "UserAgent : " + echolog.userAgent
+                document.getElementById('username').innerHTML = "Nom d'utilisatuer : " + localStorage.getItem('nomduser')
+            });
+        
+                </script>
            <br><br>
         </div>
         <br>

