@@ -10,7 +10,8 @@ const input = document.querySelector('input');
       if (localStorage.getItem('searchmode')==="proxy"){
         let url = input.value.trim();
         localStorage.setItem('recherche', input.value.trim())
-        if (input.value.trim().includes('porn') || input.value.trim().includes('xxx')){
+        if (input.value.trim().toLowerCase()
+        .includes('porn'.toLowerCase())){
           localStorage.setItem('banned','1')
           location.href = "./banned.html"
         }else{
