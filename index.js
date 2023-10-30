@@ -11,7 +11,8 @@ const input = document.querySelector('input');
         let url = input.value.trim();
         localStorage.setItem('recherche', input.value.trim())
         if (input.value.trim().toLowerCase()
-        .includes('porn'.toLowerCase())){
+        .includes('porn'.toLowerCase()) || input.value.trim().toLowerCase()
+        .includes('hentai'.toLowerCase())){
           localStorage.setItem('banned','1')
           location.href = "./banned.html"
         }else{
