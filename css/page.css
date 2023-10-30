@@ -445,9 +445,12 @@ header .image-text .profession{
     flex-wrap: wrap;
     animation-name: fadeIn;
     animation-duration: 1.5s;
+    margin-top: 20px;
 }
 
 .classif h2 {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     margin-left: 18px;
     margin-bottom: 18px;
     border-radius: 15px;
@@ -1017,4 +1020,7 @@ button {
 }
 .cards .gobo{
     background-image: url("../img/games/gobo.png");
+}
+.cards .hideandseek{
+    background-image: url("../img/games/hideandseek.png");
 }
