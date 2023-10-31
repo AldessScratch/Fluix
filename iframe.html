@@ -46,17 +46,26 @@
             </label>
           </div>
         <div class="right">
-            <i onclick="document.getElementById('iframeurl').style = 'margin-top: 0px; border: 0; height: 100vh;border-radius: 10px;left: 0; position: absolute; top: 0; width: 100%; bottom: 0;';document.getElementById('show').style.display = 'flex';document.getElementById('topnav').style.display = 'none'" class="bx bx-fullscreen small"></i>
+            <i class='bx bx-chat small'></i>
+            <i onclick="hidediscord();document.getElementById('iframeurl').style = 'margin-top: 0px; border: 0; height: 100vh;border-radius: 10px;left: 0; position: absolute; top: 0; width: 100%; bottom: 0;';document.getElementById('show').style.display = 'flex';document.getElementById('topnav').style.display = 'none'" class="bx bx-fullscreen small"></i>
             <a target="_blank" href="" id="external"><i class='bx bx-link-external small'></i></a>
             <i onclick="window.location.href = './calculatrice.html'" class='bx bx-exit small'></i>
         </div>
+        <script>
+            function showdiscord(){
+                crate.show();
+            }
+            function hidediscord(){
+                crate.hide();
+            }
+        </script>
         <script>
             document.getElementById("appname").innerHTML = (localStorage.getItem('appname'))
             document.getElementById("external").href=(localStorage.getItem('iframeurl'))
             document.getElementById("imageapp").src=(localStorage.getItem('image'))
         </script>
     </div>
-    <div id="show" class="show" onclick="document.getElementById('iframeurl').style = ' border: 0; height: calc(100vh - 60px);border-radius: 10px;';document.getElementById('show').style.display = 'none';document.getElementById('topnav').style.display = 'flex'">
+    <div id="show" class="show" onclick="showdiscord();document.getElementById('iframeurl').style = ' border: 0; height: calc(100vh - 60px);border-radius: 10px;';document.getElementById('show').style.display = 'none';document.getElementById('topnav').style.display = 'flex';">
       <i class="bx bx-show"></i>
     </div>
     <div class="iframe">

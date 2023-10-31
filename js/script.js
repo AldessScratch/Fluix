@@ -44,7 +44,7 @@ function username(){
 
 function settheme(){
   if (localStorage.getItem("theme")===null){
-    localStorage.setItem("theme", "halloween")
+    localStorage.setItem("theme", "terre")
   }
   
 }
