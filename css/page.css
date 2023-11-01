@@ -1064,3 +1064,6 @@ button {
 .cards .hideandseek{
     background-image: url("../img/games/hideandseek.png");
 }
+.cards .bubble{
+    background-image: url("../img/games/bubble.png");
+}
