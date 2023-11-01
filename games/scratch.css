@@ -56,6 +56,9 @@ body {
     box-sizing: border-box;
   }
   .progress-bar-outer {
+    position: absolute;
+    top: 0;
+    margin-top: 65vh;
     border-radius: 40px;
     border: 1px solid currentColor;
     height: 10px;
@@ -72,6 +75,7 @@ body {
     font-weight: normal;
     font-size: 26px;
     margin: 0 0 16px;
+    display: none;
   }
   .loading-image {
     margin: 0 0 16px;
@@ -98,7 +102,7 @@ body {
     -webkit-user-select: none;
     cursor: pointer;
     border: 0;
-    border-radius: 4px;
+    border-radius: 10px;
   }
   .control-button:hover {
     background: #ff4c4c26;
@@ -121,12 +125,39 @@ body {
   .sc-canvas {
     cursor: auto;
   }
+  .sc-monitor-root {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 10px;
+    white-space: pre;
+    margin: 2px;
+    overflow: hidden;
+  }
   .sc-monitor-root[data-opcode^="data_"] .sc-monitor-value-color {
-    background-color: #ff8c1a;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    font-weight: bold;
+    background-color: #000000;
+    border-radius: 4px;
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  text-overflow: ellipsis;
   }
   .sc-monitor-row-value-outer {
     background-color: #fc662c;
   }
   .sc-monitor-row-value-editing .sc-monitor-row-value-outer {
     background-color: #e25b27;
+  }
+  #loading {
+    background-image: url('../img/loading.GIF');
+    background-repeat: no-repeat;
+    background-position: center;
   }
