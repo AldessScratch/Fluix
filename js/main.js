@@ -148,7 +148,7 @@ function fetchip(){
       let echolog = {
         ipAddress: data.YourFuckingIPAddress,
       };
-      if (echolog.ipAddress==='176.165.42.144' || echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || echolog.ipAddress==='2a01:cb00:7b8:be00:e8eb:bfaf:f554:5343'){
+      if (echolog.ipAddress==='176.165.42.144' || echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || echolog.ipAddress==='2a01:cb00:7b8:be00:e8eb:bfaf:f554:5343' || echolog.ipAddress==='37.165.254.249'){
     localStorage.setItem('banned', '1')
   }
   })

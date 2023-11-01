@@ -1067,3 +1067,19 @@ button {
 .cards .bubble{
     background-image: url("../img/games/bubble.png");
 }
+.progress-bar-outer {
+    position: absolute;
+    top: 0;
+    margin-top: 65vh;
+    border-radius: 40px;
+    border: 1px solid currentColor;
+    height: 10px;
+    width: 200px;
+    max-width: 200px;
+  }
+  .progress-bar-inner {
+    border-radius: 40px;
+    height: 100%;
+    width: 0;
+    background-color: currentColor;
+  }
