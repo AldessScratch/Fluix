@@ -299,6 +299,7 @@ header .image-text .profession{
     margin-right: 10px;
  }
  .datetime .timetext {
+  
     justify-content: center;
     display: flex;
     color: white;
@@ -312,6 +313,7 @@ header .image-text .profession{
 
 
  .datetime .datetext {
+  
     padding-left: 25px;
     padding-top: 25px;
     color: white;
@@ -641,4 +643,55 @@ iframe {
   height: 100px;
   box-shadow: 4px 3px 8px 1px #96969633;
   	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+}
+
+@media screen and (max-width: 820px) {
+
+  .searchbar{
+      display: none;
+  }
+  
+  .widget1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 400px;
+    border-radius: 25px;
+    background-color: var(--widget-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 4px 3px 8px 1px #96969633;
+  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+      animation-name: fadeIn;
+      animation-duration: 1.5s ;
+
+  }
+  .widget1 h5 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
+  }
+}
+@media screen and (max-width: 1000px) {
+
+  .bottombar{
+      display: none;
+  }
+
+}
+@media screen and (max-width: 300px) {
+  .appname {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sidebar header .toggle{
+    display: none;
+}
 }

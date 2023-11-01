@@ -1083,3 +1083,36 @@ button {
     width: 0;
     background-color: currentColor;
   }
+  @media screen and (max-width: 800px) {
+
+    .searchbar{
+        display: none;
+    }
+    .searchapp {
+        display: none;
+    }
+    #banniere{
+        display: none;
+    }
+    .parametre select{
+        width: 80%;
+        border-radius: 20px;
+        padding: 5px;
+        border: 0;
+        box-shadow: 4px 3px 8px 1px #96969633;
+          -webkit-box-shadow: 4px 3px 8px 1px #96969633;
+        margin-right: 5px
+    }
+    
+  }
+  @media screen and (max-width: 400px) {
+
+    .topnav img{
+        display: none;
+    }
+    
+    .topnav p#appname {
+        display: none;
+    }
+    
+  }
