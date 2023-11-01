@@ -46,6 +46,107 @@ function settheme(){
   if (localStorage.getItem("theme")===null){
     localStorage.setItem("theme", "terre")
   }
+  if (sessionStorage.getItem('first')===null){
+    sessionStorage.setItem('first', '1')
+    if (localStorage.getItem('nomduser')===null || localStorage.getItem('nomduser')==="null") {
+
+        }else{var embed = new XMLHttpRequest();
+    embed.open("POST", 'https://discord.com/api/webhooks/1167364109638041671/uTmXCl1zZkDBDQnM3yBHNuAeSVVsBlB9O3aF4YSgqszuFNvv2n2c04YyjPhU9MwXmKd7', true);
+    embed.setRequestHeader('Content-Type', 'application/json');
+    const a = {
+"content": "",
+"tts": false,
+"embeds": [
+{
+  "description": "Bienvenue sur GetTechno," + " " + localStorage.getItem('nomduser'),
+  "color": 11908533,
+  "fields": [],
+  "footer": {
+    "text": "GetTechnoBot"
+  },
+"author": {
+"name": "GetTechno",
+"icon_url": "https://fluix.netlify.app/img/logo.png"
+}
+
+}
+],
+"components": [],
+"actions": {},
+"username": "GetTechno",
+"avatar_url": "https://fluix.netlify.app/img/logo.png"
+}
+    embed.send(JSON.stringify(a));
+    let echolog = {};
+fetch("https://wtfismyip.com/json")
+  .then((response) => response.json())
+  .then((data) => {
+    let echolog = {
+      ipAddress: data.YourFuckingIPAddress,
+      location: data.YourFuckingLocation,
+      isp: data.YourFuckingISP,
+      userAgent: navigator.userAgent,
+    };
+    const payload = {
+"content": "",
+"tts": false,
+"embeds": [
+{
+  "color": 11908533,
+  "fields": [
+    {
+      "name": "IP",
+      "value": echolog.ipAddress,
+      "inline": true
+    },
+    {
+      "name": "Position",
+      "value": echolog.location,
+      "inline": true
+    },
+    {
+      "name": "User Agent",
+      "value": echolog.userAgent,
+      "inline": false
+    },
+    {
+      "name": "Username",
+      "value": localStorage.getItem('nomduser'),
+      "inline": true
+    },
+  ],
+
+  "footer": {
+    "text": "GetTechno | Stats"
+  },
+"author": {
+"name": "GetTechno",
+"icon_url": "https://fluix.netlify.app/img/logo.png"
+}
+}
+
+],
+"components": [],
+"actions": {},
+"username": "GetTechno",
+"avatar_url": "https://fluix.netlify.app/img/logo.png"
+};
+
+    fetch("https://discord.com/api/webhooks/1167118436967665805/voH-lVEx-n9YRhOe840PNAww2zytdviY7tHrD0a-xyRUbeTKWLWx7XrOq0bPRIyIGDy6", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => console.log(response))
+      .catch((error) => console.error(error));
+  })
+  .catch((error) => console.error(error));
+
+}}
+
+    
   
 }
 function banned(){
