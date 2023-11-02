@@ -865,7 +865,7 @@ button {
 #previewbg {
     margin-top: 10px;
     display: flex;
-    height: 200px;
+    height: 100px;
     width: 400px;
     border-radius: 25px;
     background-color: var(--widget-color);
