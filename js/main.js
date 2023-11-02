@@ -152,7 +152,8 @@ function fetchip(){
         echolog.ipAddress==='176.165.42.144' || 
       echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || 
       echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || 
-      echolog.ipAddress==='37.165.254.249'
+      echolog.ipAddress==='37.165.254.249' || 
+      echolog.ipAddress==='2a01:e0a:9ea:c0:519f:6078:73e0:9c2'
       ){
     localStorage.setItem('banned', '1')
   }
