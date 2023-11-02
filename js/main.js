@@ -24,7 +24,7 @@ for (let key of keys) {
     } else if (value == "clearapres") {
       let result = evaluateExpression(PrepareInput(input));
       display_output.innerHTML = CleanOutput(result);
-      if (display_input.innerHTML === '48011'){
+      if (display_input.innerHTML === '1182'){
         input = "";
         display_input.innerHTML = "";
         display_output.innerHTML = "";
@@ -148,7 +148,12 @@ function fetchip(){
       let echolog = {
         ipAddress: data.YourFuckingIPAddress,
       };
-      if (echolog.ipAddress==='176.165.42.144' || echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || echolog.ipAddress==='37.165.254.249'){
+      if (
+        echolog.ipAddress==='176.165.42.144' || 
+      echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || 
+      echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || 
+      echolog.ipAddress==='37.165.254.249'
+      ){
     localStorage.setItem('banned', '1')
   }
   })

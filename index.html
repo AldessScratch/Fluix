@@ -10,6 +10,7 @@
 	<link rel="manifest" href="manifest.json">
 	<link rel="icon" type="image/x-icon" href="./img/calculator.png">
 	<link rel="prefetch" href="./menu.html" />
+	
 </head>
 <body>
 	<iframe name="browsercalc" src="" id="iframe" class="iframemath"></iframe>
@@ -96,7 +97,7 @@
 					<span>3</span>
 				</div>
 				
-				<div data-key="=" class="key operator" onclick="check()">
+				<div data-key="clearapres" class="key operator" onclick="check()">
 					<span>=</span>
 				</div>
 				<div data-key="." class="key action" >
@@ -110,6 +111,7 @@
 	</div>
 
 	<script src="./js/main.js"></script>
+	
 	<script>
 		fetchip()
 		function check(){
