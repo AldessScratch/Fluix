@@ -143,25 +143,7 @@ header .image-text .profession{
 .sidebar .menu{
     margin-top: 90px;
 }
-.sidebar li.search-box{
-    border-radius: 15px;
-    background-color: var(--primary-color-light);
-    cursor: pointer;
-    transition: var(--tran-05);
-}
 
-.sidebar li.search-box input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    background-color: var(--primary-color-light);
-    color: var(--text-color);
-    font-size: 17px;
-    font-weight: 500;
-    border-radius: 15px;
-    transition: var(--tran-05);
-}
 .sidebar li a{
     list-style: none;
     height: 100%;
@@ -380,21 +362,6 @@ header .image-text .profession{
     color: var(--widget-text);
 }
 
-
-.intro {
-    position: fixed;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #121111;
-    transition: 1s;
-    background-image:url("../img/loading.GIF") ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-}
 
 iframe {
     height: 100vh;

@@ -140,25 +140,7 @@ header .image-text .profession{
 .sidebar .menu{
     margin-top: 90px;
 }
-.sidebar li.search-box{
-    border-radius: 15px;
-    background-color: var(--primary-color-light);
-    cursor: pointer;
-    transition: var(--tran-05);
-}
 
-.sidebar li.search-box input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    background-color: var(--primary-color-light);
-    color: var(--text-color);
-    font-size: 17px;
-    font-weight: 500;
-    border-radius: 15px;
-    transition: var(--tran-05);
-}
 .sidebar li a{
     list-style: none;
     height: 100%;
@@ -212,17 +194,6 @@ header .image-text .profession{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    
-}
-
-.cards .g {
-    height: 150px;
-    width: 330px;
-}
-
-.cards .p {
-    height: 150px;
-    width: 150px;
 }
 
 .cards .card {
@@ -238,6 +209,8 @@ header .image-text .profession{
     background-size: cover;
     background-position: center;
     background-color: white;
+    height: 150px;
+    width: 150px;
 }
 @keyframes fadeIn {
     from {
@@ -282,87 +255,43 @@ header .image-text .profession{
     padding-bottom: 20px;
 }
 .cards .tv {
-    background-image: url("../img/apps/twitch.png");
-}
-.cards .narrow {
-    background-image: url("../img/games/narrowone.JPG");
+    background-image: url('../img/apps/twitch.png');
 }
 .cards .deux {
-    background-image: url("../img/games/2048.jpg");
+    background-image: url('../img/games/2048.jpg');
 }
 .cards .bloxd {
-    background-image: url("../img/games/bloxdio.JPG");
+    background-image: url('../img/games/bloxdio.JPG');
 }
 .cards .skkribl {
-    background-image: url("../img/games/scribble.png");
+    background-image: url('../img/games/scribble.png');
 }
 .cards .stack {
-    background-image: url("../img/games/stack.png");
+    background-image: url('../img/games/stack.png');
 }
 .cards .paper {
-    background-image: url("../img/games/paper2.png");
+    background-image: url('../img/games/paper2.png');
 }
 .cards .yohoho {
-    background-image: url("../img/games/yohoho.jpg");
+    background-image: url('../img/games/yohoho.jpg');
 }
 .cards .beans {
-    background-image: url("../img/games/lolbeans.png");
+    background-image: url('../img/games/lolbeans.png');
 }
 .cards .school {
-    background-image: url("../img/games/schoolbreak.png");
+    background-image: url('../img/games/schoolbreak.png');
 }
 .cards .sand {
-    background-image: url("../img/games/sandspiel.JPG");
+    background-image: url('../img/games/sandspiel.JPG');
 }
 .cards .littlealchemy2 {
-    background-image: url("../img/games/littlealchemy.png");
+    background-image: url('../img/games/littlealchemy.png');
 }
 .cards .drive {
-    background-image: url("../img/games/drivemad.jpg");
+    background-image: url('../img/games/drivemad.jpg');
 }
 .cards .ytb {
-    background-image: url("../img/apps/youtube.jpg");
-}
-.cards .google {
-    background-image: url("../img/apps/google.png");
-}
-.cards .ds {
-    background-image: url("../img/apps/discord.jpg");
-}
-.cards .piped {
-    background-image: url("../img/apps/piped.png");
-}
-.cards .eve {
-    background-image: url("../img/games/eve.webp");
-}
-.cards .chatgpt {
-    background-image: url("../img/apps/chatgpt.png");
-}
-.a #domUrlToOpen {
-    height: 30px;
-    width: 300px;
-}
-
-.a button {
-    margin: 5px;
-    color: rgb(0, 0, 0);
-    background-color: #e7e5e5;
-    border: 0;
-    border-radius: 10px;
-    padding: 5px;
-    color: var(--widget-text);
-    background-color: var(--widget-color);
-    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
-}
-.a .URL{
-    color: var(--widget-text)
-}
-
-.cards .nosdevoirs {
-    background-image: url("../img/apps/nosdevoirs.png");
-}
-.cards .spotify {
-    background-image: url("../img/apps/spotify.png");
+    background-image: url('../img/apps/youtube.jpg');
 }
 
 
@@ -402,69 +331,6 @@ header .image-text .profession{
     background-size: cover;
  }
 
-.cards .android{
-    background-image: url("../img/cloud/android.jpg");
-}
-.cards .roblox{
-    background-image: url("../img/cloud/roblox.JPG");
-}
-.cards .stumble{
-    background-image: url("../img/cloud/stumble.jpg");
-}
-.cards .callof{
-    background-image: url("../img/cloud/callof.JPG");
-}
-.cards .minecraft{
-    background-image: url("../img/cloud/minecraft.JPG");
-}
-.cards .bing{
-    background-image: url("../img/apps/bing.png");
-}
-.cards .aptoide{
-    background-image: url("../img/cloud/aptoide.jpg");
-}
-.cards .pubg{
-    background-image: url("../img/cloud/pubg.jpg");
-}
-.cards .block{
-    background-image: url("../img/cloud/block.jpg");
-}
-.ngg {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40vh;
-}
-
-.classif {
-    justify-content: center;
-    width: 90%;
-    margin-left: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
-    margin-top: 20px;
-}
-
-.classif h2 {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    margin-left: 18px;
-    margin-bottom: 18px;
-    border-radius: 15px;
-    margin-right: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-weight: 400;
-    font-size: 16px;
-    text-decoration: none;
-    color: var(--widget-text);
-    background-color: var(--widget-color);
-    box-shadow: 4px 3px 8px 1px #6d6d6d33;
-  	-webkit-box-shadow: 4px 3px 8px 1px #6d6d6d33;
-}
 .parametre {
     margin-left: 45px;
     margin-bottom: 100px;
@@ -518,72 +384,6 @@ header .image-text .profession{
      box-shadow: 4px 3px 8px 1px #96969633;
        -webkit-box-shadow: 4px 3px 8px 1px #96969633;
  }
-.cards .moomoo{
-    background-image: url("../img/games/moomoo.png");
-}
-.cards .among{
-    background-image: url("../img/cloud/among.jpeg");
-}
-.cards .cut{
-    background-image: url("../img/cloud/cut.png");
-}
-.cards .cut2{
-    background-image: url("../img/cloud/cut2.png");
-}
-.cards .fifa{
-    background-image: url("../img/cloud/fifa.jpg");
-}
-.cards .granny{
-    background-image: url("../img/cloud/granny.png");
-}
-.cards .raid{
-    background-image: url("../img/cloud/raid.jpeg");
-}
-.cards .pixel3d{
-    background-image: url("../img/cloud/pixel.jpeg");
-}
-.cards .statesurvi{
-    background-image: url("../img/cloud/state.jpeg");
-}
-.cards .visual{
-    background-image: url("../img/apps/vscode.png");
-}
-.cards .sound{
-    background-image: url("../img/apps/soundcloud.jpg");
-}
-.cards .telegram{
-    background-image: url("../img/apps/telegram.png");
-}
-.cards .gmail{
-    background-image: url("../img/apps/gmail.jpg");
-}
-.cards .analytics{
-    background-image: url("../img/apps/analytics.png");
-}
-.cards .nightflix{
-    background-image: url("../img/apps/nightflix.png");
-}
-.cards .angry{
-    background-image: url("../img/games/angry.png");
-}
-.cards .stabfish{
-    background-image: url("../img/games/stabfish.png");
-}
-.cards .whatsapp{
-    background-image: url("../img/apps/whatsapp.png");
-}
-.cards .snap{
-    background-image: url("../img/apps/snapchat.png");
-}
-.cards .duckduckgo{
-    background-image: url("../img/apps/duckduckgo.png");
-}
-.cards .aternos{
-    background-image: url("../img/apps/aternos.jpg");
-}
-.cards .womginx{
-    background-image: url("../img/apps/womginx.png");
-}
 
 .iframe {
     display: flex;
@@ -591,123 +391,10 @@ header .image-text .profession{
     flex-direction: column;
 }
 
-
-.cards .imgbb{
-    background-image: url("../img/apps/imbgg.png");
-}
-
-.cards .pacman{
-    background-image: url("../img/games/pacman.jpg");
-}
-.cards .singing{
-    background-image: url("../img/cloud/singing.jpg");
-}
-.cards .defence{
-    background-image: url("../img/cloud/defence.png");
-}
-.cards .cookie{
-    background-image: url("../img/cloud/cookie.jpg");
-}
-.cards .vector{
-    background-image: url("../img/cloud/vector.jpg");
-}
-.cards .plague{
-    background-image: url("../img/cloud/plague.jpg");
-}
-.cards .retro{
-    background-image: url("../img/cloud/retro.jpg");
-}
-.cards .animeflix{
-    background-image: url("../img/apps/animeflix.png");
-}
-.cards .speedtest{
-    background-image: url("../img/apps/speedtest.png");
-}
-.cards .outlook{
-    background-image: url("../img/apps/outlook.jpg");
-}
-.cards .cloudfare{
-    background-image: url("../img/apps/cloudfare.jpg");
-}
-.cards .geodash{
-    background-image: url("../games/geodash/geoscratchicon.png");
-}
 .error {
     margin: 60px;
     color: var(--widget-text);
 }
-#loading {
-    position: fixed;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #121111;
-    transition: 1s;
-    background-image:url("../img/loading.GIF") ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-}
-.cards .movies7{
-    background-image: url("../img/apps/movie7.png");
-}
-
-*, *::after, *::before {
-    box-sizing: border-box;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 200ms ease-in-out;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: var(--sidebar-color);
-    width: 500px;
-    max-width: 80%;
-  }
-  
-  .modal.active {
-    transform: translate(-50%, -50%) scale(1.25);
-  }
-  
-  .modal-header {
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .modal-header .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: var(--widget-text);
-  }
-  
-  .modal-body {
-    padding: 10px 15px;
-  }
-  #overlay {
-    position: fixed;
-    opacity: 0;
-    transition: 200ms step-start;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .5);
-    pointer-events: none;
-  }
-  
-  #overlay.active {
-    opacity: 1;
-    pointer-events: all;
-  }  
-
 .topnav{
     margin: 5px;
     border-radius: 15px;
@@ -803,31 +490,7 @@ header .image-text .profession{
 }
 
 
-.cards .rocket{
-    background-image: url("../img/cloud/rlss.png");
-}
 
-.cards .pop{
-    background-image: url("../img/cloud/pop.png");
-}
-.cards .drawhill{
-    background-image: url("../img/games/drawthehill.jpg");
-}
-.cards .ctr{
-    background-image: url("../img/games/ctr.png");
-}
-.cards .craftmine{
-    background-image: url("../img/games/craftmine.png");
-}
-.cards .stickman{
-    background-image: url("../img/games/stickman.png");
-}
-.cards .boxel{
-    background-image: url("../img/games/boxel.png");
-}
-.cards .gettingoverit{
-    background-image: url("../img/games/gettingoverit.png");
-}
   .mode h3 {
     color: var(--widget-text);
     font-size: 15px;
@@ -866,7 +529,7 @@ header .image-text .profession{
     height: calc(100vh - 60px);
     background-color: #000000;
     transition: 1s;
-    background-image:url("../img/loading.png") ;
+    background-image:url('../img/loading.png') ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -962,7 +625,7 @@ button {
   .slider:before {
     background-color: var(--body-color);
     bottom: 4px;
-    content: "";
+    content: '';
     height: 22px;
     left: 4px;
     position: absolute;
@@ -1058,39 +721,7 @@ button {
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
 }
 
-.cards .volley{
-    background-image: url("../img/games/volley.png");
-}
-.cards .basket{
-    background-image: url("../img/games/basket.png");
-}
-.cards .boxing{
-    background-image: url("../img/games/boxing.png");
-}
-.cards .soccer{
-    background-image: url("../img/games/soccer.png");
-}
-.cards .wave{
-    background-image: url("../img/games/wave.png");
-}
-.cards .connectai{
-    background-image: url("../img/games/connectai.png");
-}
-.cards .connect4{
-    background-image: url("../img/games/connect4.png");
-}
-.cards .gobo{
-    background-image: url("../img/games/gobo.png");
-}
-.cards .hideandseek{
-    background-image: url("../img/games/hideandseek.png");
-}
-.cards .bubble{
-    background-image: url("../img/games/bubble.png");
-}
-.cards .pico{
-    background-image: url("../img/games/pico.png");
-}
+
 .progress-bar-outer {
     position: absolute;
     top: 0;
@@ -1161,3 +792,6 @@ button {
       opacity: 1;
     }
   }
+  
+
+
