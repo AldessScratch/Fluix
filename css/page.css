@@ -836,7 +836,6 @@ header .image-text .profession{
   }
   .intro {
     scale: 1;
-    opacity: 1;
     display: flex;
     justify-content: center;
     position: fixed;

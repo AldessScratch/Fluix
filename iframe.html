@@ -29,7 +29,7 @@
         <div class="left">
             <i onclick="history.back()" class='bx bx-chevron-left'></i>
             <i id="ext" onclick="window.location.href = './iframe.html'" class='bx bx-refresh medium'></i>
-            <i id="int" onclick="document.getElementById('preloader').style.display = 'flex';document.getElementById('iframeurl').contentWindow.location.reload(true);checkload();" class='bx bx-refresh medium'></i>
+            <i id="int" onclick="document.getElementById('preloader').classList.remove('fadein-animation');document.getElementById('preloader').style.display = 'flex';document.getElementById('iframeurl').contentWindow.location.reload(true);checkload();" class='bx bx-refresh medium'></i>
             <i onclick="window.location.href = './menu.html'" class='bx bx-home small'></i>
             <img id="imageapp" src="">
             <p id="appname">App</p>
