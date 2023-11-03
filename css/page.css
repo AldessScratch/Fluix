@@ -835,6 +835,8 @@ header .image-text .profession{
     margin-left: 10px;
   }
   .intro {
+    scale: 1;
+    opacity: 1;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -845,7 +847,27 @@ header .image-text .profession{
     height: calc(100vh - 60px);
     background-color: #000000;
     transition: 1s;
-    background-image:url("../img/loading.GIF") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    
+}
+.imgloading {
+    scale: 1;
+    transition: all 0.2s ease-in-out;
+    animation-name: size;
+    animation-duration: .2s;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 210;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #000000;
+    transition: 1s;
+    background-image:url("../img/loading.png") ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -1067,6 +1089,9 @@ button {
 .cards .bubble{
     background-image: url("../img/games/bubble.png");
 }
+.cards .pico{
+    background-image: url("../img/games/pico.png");
+}
 .progress-bar-outer {
     position: absolute;
     top: 0;
@@ -1115,4 +1140,25 @@ button {
         display: none;
     }
     
+  }
+  .fadein-animation {
+    transition: all 0.2s ease-in-out;
+    animation-name: fadeout;
+    animation-duration: 1s;
+  }
+  @keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes size {
+    from {
+       scale: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }

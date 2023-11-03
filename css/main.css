@@ -93,11 +93,11 @@
 	display: block;
 	height: 0;
 	padding-top: 100%;
-	background-color: #dfdfdf;
+	background-color: #fdfdfd;
 	border-radius: 15px;
 	transition: 0.2s;
 	user-select: none;
-
+	box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 .keys .key span {
@@ -112,9 +112,6 @@
 
 }
 
-.keys .key:hover {
-	box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
 
 .keys .key.operator span {
 	color: #ad5a5a;

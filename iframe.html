@@ -21,15 +21,15 @@
 </script>
     <title>GetTechno | Iframe page</title> 
 </head>
-<body style="height: 99vh;" onload="onload()">
+<body style="height: 99vh;">
     <div id="preloader" class="intro">
-        <div class="progress-bar-outer"><div class="progress-bar-inner" id="loading-inner"></div></div>
+        <div class="imgloading"></div>
     </div>
     <div id="topnav" class="topnav">  
         <div class="left">
             <i onclick="history.back()" class='bx bx-chevron-left'></i>
             <i id="ext" onclick="window.location.href = './iframe.html'" class='bx bx-refresh medium'></i>
-            <i id="int" onclick="document.getElementById('iframeurl').contentWindow.location.reload(true);" class='bx bx-refresh medium'></i>
+            <i id="int" onclick="document.getElementById('preloader').style.display = 'flex';document.getElementById('iframeurl').contentWindow.location.reload(true);checkload();" class='bx bx-refresh medium'></i>
             <i onclick="window.location.href = './menu.html'" class='bx bx-home small'></i>
             <img id="imageapp" src="">
             <p id="appname">App</p>
@@ -69,7 +69,7 @@
       <i class="bx bx-show"></i>
     </div>
     <div class="iframe">
-        <iframe onload="" id="iframeurl" src="" style="border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;"></iframe>
+        <iframe id="iframeurl" src="" style="border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;"></iframe>
         <script>
             document.getElementById("iframeurl").src=(localStorage.getItem('iframeurl'))
             
@@ -131,9 +131,20 @@
     </script>
     <script>
         function onload() {
-            document.getElementById("preloader").style.display = "none";
+            document.getElementById("preloader").classList.add('fadein-animation');
+            setTimeout(() => {
+                document.getElementById("preloader").style.display = "none";
+            }, 1000);
+            
         }
-
+        setTimeout(() => {
+            document.getElementById('iframeurl').contentWindow.onload = onload()
+}, 500);
+        function checkload(){
+            setTimeout(() => {
+            document.getElementById('iframeurl').contentWindow.onload = onload()
+}, 500);
+        }
     </script>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
