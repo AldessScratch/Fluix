@@ -314,7 +314,7 @@ button {
         <div class="left">
             <i onclick="history.back()" class='bx bx-chevron-left'></i>
             <i id="ext" onclick="window.location.href = './iframe.html'" class='bx bx-refresh medium'></i>
-            <i id="int" onclick="document.getElementById('preloader').classList.remove('fadein-animation');document.getElementById('preloader').style.display = 'flex';document.getElementById('iframeurl').contentWindow.location.reload(true);checkload();" class='bx bx-refresh medium'></i>
+            <i id="int" onclick="document.getElementById('preloader').classList.remove('fadein-animation');document.getElementById('preloader').style.display = 'flex';document.getElementById('iframeurl').contentWindow.location.reload(true);document.getElementById('preloader').style.display = 'none';" class='bx bx-refresh medium'></i>
             <i onclick="window.location.href = './menu.html'" class='bx bx-home small'></i>
             <img id="imageapp" src="">
             <p id="appname">App</p>
@@ -354,7 +354,7 @@ button {
       <i class="bx bx-show"></i>
     </div>
     <div class="iframe">
-        <iframe id="iframeurl" src="" style="border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;"></iframe>
+        <iframe id="iframeurl" src="" style="background-color: white;border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;"></iframe>
         <script>
             document.getElementById("iframeurl").src=(localStorage.getItem('iframeurl'))
             
@@ -425,14 +425,7 @@ button {
         window.addEventListener('DOMContentLoaded', () => {
             onload()
         })
-        
-        function checkload(){
-            setTimeout(() => {
-                window.addEventListener('DOMContentLoaded', () => {
-            onload()
-        })
-}, 500);
-        }
+
     </script>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
