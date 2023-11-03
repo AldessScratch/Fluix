@@ -419,11 +419,14 @@ button {
             document.getElementById("preloader").classList.add('fadein-animation');
             setTimeout(() => {
                 document.getElementById("preloader").style.display = "none";
-            }, 500);
+            }, 1000);
             
         }
         window.addEventListener('DOMContentLoaded', () => {
-            onload()
+            setTimeout(() => {
+                onload()
+            }, 500);
+            
         })
 
     </script>
