@@ -473,27 +473,5 @@ button {
     }
     
   }
-  .fadein-animation {
-    transition: all 0.2s ease-in-out;
-    animation-name: fadeout;
-    animation-duration: 1s;
-  }
-  @keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-  @keyframes size {
-    from {
-       scale: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
 
 

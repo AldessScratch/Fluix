@@ -22,6 +22,20 @@
 </head>
 <body style="height: 99vh;">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
         .topnav{
     margin: 5px;
     border-radius: 15px;
@@ -147,7 +161,7 @@
     height: calc(100vh - 60px);
     background-color: #000000;
     transition: 1s;
-    background-image:url('../img/loading.png') ;
+    background-image:url('./img/loading.png') ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -269,6 +283,28 @@ button {
      width: 150px;
      text-align: center;
    }
+   .fadein-animation {
+    transition: all 0.2s ease-in-out;
+    animation-name: fadeout;
+    animation-duration: 1s;
+  }
+  @keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes size {
+    from {
+       scale: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
 
     </style>
     <div id="preloader" class="intro">
@@ -386,12 +422,15 @@ button {
             }, 1000);
             
         }
-        setTimeout(() => {
-            document.getElementById('iframeurl').contentWindow.onload = onload()
-}, 500);
+        window.addEventListener('DOMContentLoaded', () => {
+            onload()
+        })
+        
         function checkload(){
             setTimeout(() => {
-            document.getElementById('iframeurl').contentWindow.onload = onload()
+                window.addEventListener('DOMContentLoaded', () => {
+            onload()
+        })
 }, 500);
         }
     </script>
