@@ -157,7 +157,10 @@ body {
     background-color: #e25b27;
   }
   #loading {
-    background-image: url('../img/loading.GIF');
+    background-image: url('../img/loading.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 60%;
+    
   }
+  
