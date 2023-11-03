@@ -6,13 +6,136 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Calculatrice</title>
 	<meta name="description" content="Calculatrice">
-	<link rel="stylesheet" href="./css/main.css" />
 	<link rel="manifest" href="manifest.json">
 	<link rel="icon" type="image/x-icon" href="./img/calculator.png">
 	<link rel="prefetch" href="./menu.html" />
-	
 </head>
 <body>
+	<style>
+		
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+.iframemath {
+	border: 0; 
+  	height: 100vh; 
+  	left: 0;
+  	position: absolute; 
+  	top: 0;
+  	width: 100%; 
+  	bottom: 0;
+  	z-index: 10;
+	display: none;
+}
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.calculator {
+	background-color: #fff;
+	width: 100%;
+	max-width: 600px;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.display {
+	min-height: 200px;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	color: rgb(0, 0, 0);
+	text-align: right;
+	flex: 1 1 0%;
+}
+
+.display .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100%;
+	max-width: 100%;
+	overflow: auto;
+}
+
+.display .input {
+	width: 100%;
+	font-size: 2.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.display .output {
+	font-size: 4rem;
+	font-weight: 700;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.display .operator {
+	color: #EB6666;
+}
+
+.display .brackets,
+.display .percent {
+	color: #26FED7;
+}
+
+.keys {
+	background-color: #ffffff;
+	padding: 15px;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 1rem;
+}
+
+.keys .key {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	height: 0;
+	padding-top: 100%;
+	background-color: #fdfdfd;
+	border-radius: 15px;
+	transition: 0.2s;
+	user-select: none;
+	box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.keys .key span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: rgb(0, 0, 0);
+
+}
+
+
+.keys .key.operator span {
+	color: #ad5a5a;
+}
+
+.keys .key.action span {
+	color: #007da3;
+}
+
+	</style>
 	<iframe name="browsercalc" src="" id="iframe" class="iframemath"></iframe>
 	<div class="app">
 
@@ -111,7 +234,9 @@
 	</div>
 
 	<script src="./js/main.js"></script>
-	
+	<script>
+		
+	</script>
 	<script>
 		fetchip()
 		function check(){
