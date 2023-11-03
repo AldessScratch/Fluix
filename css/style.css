@@ -356,46 +356,6 @@ header .image-text .profession{
     padding-bottom: 20px;
 }
 
-
-.part {
-    margin-left: 60px;
-    color: var(--widget-text);
-}
-
-
-iframe {
-    height: 100vh;
-    width: 100%;
-}
-.slideshow-container img {
-    border-radius: 20px;
-    vertical-align: middle;
-    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
-    transition: transform 0.5s ease;
-  }
-  
-.slideshow-container {
-  width: 70vw;
-  position: relative;
-  margin: auto;
-  margin-top: 20px;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
