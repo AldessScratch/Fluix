@@ -288,6 +288,12 @@ button {
      width: 150px;
      text-align: center;
    }
+   #iframeurl{
+    background-image:url('./img/loading.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+   }
    .fadein-animation {
     transition: all 0.2s ease-in-out;
     animation-name: fadeout;
@@ -359,7 +365,7 @@ button {
       <i class="bx bx-show"></i>
     </div>
     <div class="iframe">
-        <iframe id="iframeurl" src="" style="background-color: white;border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;"></iframe>
+        <iframe id="iframeurl" src="" style="background-color: black;border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;"></iframe>
         <script>
             document.getElementById("iframeurl").src=(localStorage.getItem('iframeurl'))
             
@@ -430,12 +436,6 @@ button {
         agrandissement()
     </script>
     <script>
-        function onload() {
-            document.getElementById("preloader").classList.add('fadein-animation');
-            setTimeout(() => {
-                document.getElementById("preloader").style.display='none';
-            }, 1000);
-        }
         function waitload(){
           agrandissement()
           setTimeout(() => {
@@ -444,15 +444,10 @@ button {
                 document.getElementById("preloader").style.display='none';
                 document.getElementById("agrandissement").style.display='none';
             }, 1000);
-            
-            }, 1000);
-            
-           
+          }, 2000);
+
         }
-        window.addEventListener('DOMContentLoaded', () => {
-            onload()
-            
-        })
+        waitload()
 
     </script>
     <script src="./uv/uv.bundle.js"></script>

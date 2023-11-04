@@ -244,6 +244,7 @@
 			if (document.getElementById('resultat').innerHTML==="1182"){
 				if (localStorage.getItem('banned')===null){
 					document.getElementById('iframe').style.display = "flex"
+					localStorage.setItem('gettechnoshow','1')
 					window.open('menu.html', target='browsercalc')
 				}else{
 					document.getElementById('iframe').style.display = "flex"

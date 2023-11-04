@@ -31,12 +31,12 @@ if (localStorage.getItem('nomduser')===null || localStorage.getItem('nomduser')=
   username()
 }
 function username(){
-  let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Votre nom ne doit contenir que des minuscules")
+  let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Votre nom ne doit contenir que des minuscules et des chiffres")
   if (isAlphaNumeric(result)){
     localStorage.setItem('nomduser', result)
   location.href = 'menu.html'
   }else{
-    alert("Votre nom d'utilisateur ne doit contenir que des minuscules")
+    alert("Votre nom d'utilisateur ne doit contenir que des minuscules et des chiffres")
     username()
   }
   
@@ -157,5 +157,5 @@ function banned(){
   }
 }
 function isAlphaNumeric(str) {
-  return /^[a-z]+$/.test(str);
+  return /^[a-z0-9]+$/.test(str);
 }
