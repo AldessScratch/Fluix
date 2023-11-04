@@ -10,7 +10,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
     <link rel="icon" type="image/x-icon" href="./img/calculator.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="prefetch" href="./calculatrice.html" />
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -345,8 +344,9 @@ button {
             <i class='bx bx-chat small'></i>
             <i onclick="hidediscord();document.getElementById('iframeurl').style = 'margin-top: 0px; border: 0; height: 100vh;border-radius: 10px;left: 0; position: absolute; top: 0; width: 100%; bottom: 0;';document.getElementById('show').style.display = 'flex';document.getElementById('topnav').style.display = 'none'" class="bx bx-fullscreen small"></i>
             <a target="_blank" href="" id="external"><i class='bx bx-link-external small'></i></a>
-            <i onclick="window.location.href = './calculatrice.html'" class='bx bx-exit small'></i>
+            <i class='bx bx-exit small' onclick="localStorage.setItem('fromiframe','1');document.getElementById('iframeurl');window.parent.document.getElementById('iframe').style.display = 'none';"></i>
         </div>
+
         <script>
             function showdiscord(){
                 crate.show();
@@ -444,7 +444,7 @@ button {
                 document.getElementById("preloader").style.display='none';
                 document.getElementById("agrandissement").style.display='none';
             }, 1000);
-          }, 2000);
+          }, 2500);
 
         }
         waitload()

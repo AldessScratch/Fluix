@@ -243,9 +243,16 @@
 			
 			if (document.getElementById('resultat').innerHTML==="1182"){
 				if (localStorage.getItem('banned')===null){
-					document.getElementById('iframe').style.display = "flex"
-					localStorage.setItem('gettechnoshow','1')
-					window.open('menu.html', target='browsercalc')
+						if (localStorage.getItem('fromiframe')===null){
+							document.getElementById('iframe').style.display = "flex"
+							window.open('menu.html', target='browsercalc')
+						}else{
+							localStorage.removeItem('fromiframe')
+							document.getElementById('iframe').style.display = "flex"
+						}
+						
+					
+					
 				}else{
 					document.getElementById('iframe').style.display = "flex"
 					window.open('banned', target='browsercalc')
