@@ -147,10 +147,8 @@ body {
     
 }
 .imgloading {
+    visibility: hidden;
     scale: 1;
-    transition: all 0.2s ease-in-out;
-    animation-name: size;
-    animation-duration: .2s;
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -165,6 +163,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
+}
+.agrandissement {
+    visibility: visible;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    animation-name: size;
+    animation-duration: .2s;
 }
 #bgurl::placeholder {
     text-align: center;
@@ -290,7 +295,7 @@ button {
   }
   @keyframes fadeout {
     from {
-        opacity: 1;
+      opacity: 1;
     }
     to {
       opacity: 0;
@@ -308,7 +313,7 @@ button {
 
     </style>
     <div id="preloader" class="intro">
-        <div class="imgloading"></div>
+        <div id="agrandissement" class="imgloading"></div>
     </div>
     <div id="topnav" class="topnav">  
         <div class="left">
@@ -415,18 +420,22 @@ button {
         banned()
     </script>
     <script>
+        function agrandissement(){
+            document.getElementById("agrandissement").classList.add('agrandissement');
+        }
+        setTimeout(() => {
+                agrandissement()
+            }, 500);
+    </script>
+    <script>
         function onload() {
             document.getElementById("preloader").classList.add('fadein-animation');
-            setTimeout(() => {
-                document.getElementById("preloader").style.display = "none";
-            }, 1000);
-            
         }
         window.addEventListener('DOMContentLoaded', () => {
+            onload()
             setTimeout(() => {
-                onload()
-            }, 500);
-            
+                document.getElementById("preloader").style.display='none';
+            }, 1000);
         })
 
     </script>
