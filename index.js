@@ -12,9 +12,11 @@ const input = document.querySelector('input');
         localStorage.setItem('recherche', input.value.trim())
         if (input.value.trim().toLowerCase()
         .includes('p' + 'or' + 'n') || input.value.trim().toLowerCase()
-        .includes('hen' + 'tai')){
+        .includes('hen' + 'tai') || input.value.trim().toLowerCase()
+        .includes('s' + 'ex') || input.value.trim().toLowerCase()
+        .includes('x' + 'xx')){
           localStorage.setItem('banned','1')
-          location.href = "./banned.html"
+          location.href = "./banned/"
         }else{
           if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
