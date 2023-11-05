@@ -416,6 +416,7 @@ button {
         document.getElementById('int').style.display = "none"
     }else{
         document.getElementById('ext').style.display = "none"
+        document.getElementById('iframeurl').onload = localStorage.setItem('iframeurl', document.getElementById('iframeurl').contentWindow.location.href)
     }
     document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
     </script>
@@ -441,8 +442,9 @@ button {
           setTimeout(() => {
             document.getElementById("preloader").classList.add('fadein-animation');
             setTimeout(() => {
+              document.getElementById("agrandissement").style.display='none';
                 document.getElementById("preloader").style.display='none';
-                document.getElementById("agrandissement").style.display='none';
+                
             }, 1000);
           }, 2500);
 
