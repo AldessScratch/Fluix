@@ -141,7 +141,7 @@ header .image-text .profession{
 }
 
 .sidebar .menu{
-    margin-top: 90px;
+    margin-top: 16vh;
 }
 
 .sidebar li a{
@@ -568,6 +568,8 @@ header .image-text .profession{
  
 }
 .homecard {
+  display: flex;
+  justify-content: center;
   height: 100px;
   width: 100px;
   overflow: hidden;
@@ -610,14 +612,31 @@ header .image-text .profession{
     filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
   .bottombar{
-      display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+   height: auto;
+    width: 830px;
+    margin-right: 30px;
+    border-radius: 25px;
+    background-color: var(--widget-color);
+    box-shadow: 4px 3px 8px 1px #96969633;
+  	-webkit-box-shadow: 4px 3px 8px 1px #96969633;
+      animation-name: fadeIn;
+      animation-duration: 1.5s;
+      flex-wrap: wrap;
+  }
+  .homecard {
+    margin: 7px;
   }
 
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
   .appname {
     display: none;
   }

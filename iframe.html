@@ -314,7 +314,26 @@ button {
       scale: 1;
     }
   }
-  
+  @media screen and (max-width: 400px) {
+
+.topnav img{
+    display: none;
+}
+
+.topnav p#appname {
+    display: none;
+}
+
+}
+  @media screen and (max-width: 800px) {
+    .searchbar{
+        display: none;
+    }
+    .searchapp {
+        display: none;
+    }
+    
+  }
 
     </style>
     <div id="preloader" class="intro">
@@ -341,7 +360,6 @@ button {
             </label>
           </div>
         <div class="right">
-            <i class='bx bx-chat small'></i>
             <i onclick="hidediscord();document.getElementById('iframeurl').style = 'background-color: black;margin-top: 0px; border: 0; height: 100vh;border-radius: 10px;left: 0; position: absolute; top: 0; width: 100%; bottom: 0;';document.getElementById('show').style.display = 'flex';document.getElementById('topnav').style.display = 'none'" class="bx bx-fullscreen small"></i>
             <a target="_blank" href="" id="external"><i class='bx bx-link-external small'></i></a>
             <i class='bx bx-exit small' onclick="window.parent.document.getElementById('iframe').style.display = 'none';"></i>
@@ -416,7 +434,7 @@ button {
         document.getElementById('int').style.display = "none"
     }else{
         document.getElementById('ext').style.display = "none"
-
+        document.getElementById('external').style.display = "none"
     }
     document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
     </script>
