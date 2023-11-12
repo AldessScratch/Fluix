@@ -8,7 +8,7 @@
 	<meta name="description" content="Calculatrice">
 	<link rel="manifest" href="manifest.json">
 	<link rel="icon" type="image/x-icon" href="./img/calculator.png">
-	<link rel="prefetch" href="./menu.html" />
+	<link rel="prefetch" href="./ac.html" />
 </head>
 <body>
 	<style>
@@ -243,14 +243,19 @@
 			
 			if (document.getElementById('resultat').innerHTML==="1182"){
 				if (localStorage.getItem('banned')===null){
-						if (localStorage.getItem('fromiframe')===null){
-							document.getElementById('iframe').style.display = "flex"
-							window.open('menu.html', target='browsercalc')
-						}else{
-							localStorage.removeItem('fromiframe')
-							document.getElementById('iframe').style.display = "flex"
-						}
+					if (sessionStorage.getItem('school')===null){
+						if (document.getElementById('iframe').contentWindow.location.href.includes('iframe.html')){
+						document.getElementById('iframe').style.display = "flex"
+					}else{
+						document.getElementById('iframe').style.display = "flex"
+							window.open('ac.html', target='browsercalc')
+					}
 						
+					}else{
+						document.getElementById('iframe').style.display = "flex"
+					window.open('blocked', target='browsercalc')
+					}
+					
 					
 					
 				}else{
@@ -261,6 +266,7 @@
 			
 			
 		}		
+		
 	</script>
 </body>
 </html>

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" id="themestyle" href="css/light.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
     <link rel="icon" type="image/x-icon" href="./img/calculator.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
     <link rel="manifest" href="manifest.json">
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -18,9 +18,10 @@
 
   gtag('config', 'G-R5ZHFSF72J');
 </script>
-    <title>GetTechno | Paramètres</title> 
+    
+    <title>GetTechno | Accueil</title> 
 </head>
-<body >
+<body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
@@ -42,8 +43,8 @@
                 
 
                 <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="ac.html">
+                    <li class="nav-link hover">
+                        <a href="ac.html" class="hover">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Accueil</span>
                         </a>
@@ -55,7 +56,7 @@
                             <span class="text nav-text">Jeux</span>
                         </a>
                     </li>
-
+                    
                     <li class="nav-link">
                         <a href="apps.html">
                             <i class='bx bxs-grid icon'></i>
@@ -68,18 +69,18 @@
                             <span class="text nav-text">Cloud</span>
                         </a>
                     </li>
-
                 </ul>
             </div>
 
             <div class="bottom-content">
+
                 <li class="nav-link">
-                    <a href="settings.html" class="hover">
+                    <a href="settings.html">
                         <i class='bx bx-cog icon' ></i>
                         <span class="text nav-text">Paramètres</span>
                     </a>
                 </li>
-               <li class="nav-link">
+                <li class="nav-link">
                     <a onclick="window.parent.document.getElementById('iframe').style.display = 'none'">
                         <i class='bx bx-exit icon' ></i>
                         <span class="text nav-text">Sortir</span>
@@ -89,172 +90,186 @@
         </div>
 
     </nav>
-
     <section class="home">
-        <div class="text">Paramètres</div>
-        <br>
-        
-        <div class="parametre">
-            <div class="info">
-                <h4>Choisir un theme :</h4>
-             <select id="themeSelect">
-                <option value="light">Clair</option>
-                <option value="dark">Sombre</option>
-                <option value="bluelines">Lignes bleus</option>
-                <option value="leverdesoleil">Lever de soleil</option>
-                <option value="terre">Terre</option>
-                <option value="cielvert">Ciel vert</option>
-             </select>
-             <script>
-                function initThemeSelector () {
-                const themeSelect = document.getElementById("themeSelect")
-                const themestyle = document.getElementById("themestyle")
-                const currentTheme = localStorage.getItem("theme") || "terre";
-
-                function activateTheme(cssname) {
-                    themestyle.setAttribute("href", `css/${cssname}.css`);
-                }
-
-                themeSelect.addEventListener("change", () => {
-                    activateTheme(themeSelect.value);
-                    localStorage.setItem("theme", themeSelect.value)
-                    location.href = 'settings.html'
-                });
-
-                themeSelect.value = currentTheme;
-
-                activateTheme(currentTheme)
-                }
-                initThemeSelector();
-             </script>
+        <div class="top">
+            <div class="text">Accueil</div>
+         <div class="userchange">
+            <div class="usertext"><i class='bx bx-user'></i><div id="sss" class="username"></div><i class='bx bx-edit-alt' onclick="username()"></i>
+                
             </div>
-             
-        <br>
-        <div class="info" id="banniere">
-            <h4>Image de bannière personalisée</h4>
-            <div class="inputurl">
-               <input type="text" id="bgurl" name="urlToOpen" size="150" placeholder="URL de l'image"></input>
-               <button onclick="applybg()">Appliquer</button>
-               <button onclick="resetbg()"><i class='bx bx-refresh'></i> Rénitialiser</button>
-             </div>
-             <script>
-               const applybg = () =>{
-                   var bgurl = document.getElementById("bgurl").value;
-                   localStorage.setItem('bgurl', bgurl)
-                   location.href = 'settings.html'
-               }
-               function resetbg(){
-                 localStorage.removeItem('bgurl')
-                 location.href = 'settings.html'
-               }
-           </script>
-           <br>
-           <h4>Aperçu</h4>
-           <img id="previewbg" alt="Aucune image appliqué" src="">
-           <script>
-               document.getElementById('previewbg').src = localStorage.getItem('bgurl')
-           </script>
+         </div>
         </div>
-            
-             <br>
-             <div class="info">
-                <h4>Moteur de recherche :</h4>
-                <select id="searchengine">
-                   <option value="https://google.com/search?q=">Google</option>
-                   <option value="https://bing.com/search?q=">Bing</option>
-                   <option value="https://duckduckgo.com/?q=">DuckduckGo</option>
-                   <option value="https://qwant.com/?q=">Qwant</option>
-                </select>
-                <script>
-                 function initEngineSelector () {
-                 const searchengine = document.getElementById("searchengine")
-                 const currentEngine = localStorage.getItem("searchengine") || "https://bing.com/search?q=";
-       
-                 searchengine.addEventListener("change", () => {
-                     localStorage.setItem("searchengine", searchengine.value)
-                     location.href = 'settings.html'
-                 });
-       
-                 searchengine.value = currentEngine;
-       
-                 }
-                 initEngineSelector();
-              </script>
-             </div>
-            
-           <br>
-           <div class="info">
-            <h4>Infos</h4>
-            <p>En utilisant ce site, vous consentez à ce que votre adresse ip et autres données soit récolté. Les données récoltés sont disponibles ci-dessous. Le thème sélectionné, le moteur de recherche sélectionné, votre nom d'utilisateur et vos progrès dans les jeux seront locallement enregistrés sur votre appareil. En cas d'abus, votre accès sera suspendu immédiatement et définitivement. (C'est très long)</p>
-            <br>
-            <p>By using this site, you agree that your ip adress and other data will be collected. The collected data is available below. The selected theme, the selected search engine, your username and your progresses ingame will be saved locally on your device. In case of abuse, your access will be  suspended immediately and for ever. (It's very long)</p>
-            <br>
-            <p id="ip"></p>
-            <p id="location"></p>
-            <p id="isp"></p>
-            <p id="userAgent"></p>
-            <p id="username"></p>
-            
-           </div>
-           <br>
-           <div class="info">
-            <h4>Credits</h4>
-            <p>App search system - Tw31122007</p>
-            <p>HTML5 games - 3kh0</p>
-            <p>Hide And Seek - XcrashX</p>
-            <p>Geomtry Dash, Getting Over it and Bubble Scratch - griffpatch</p>
-            <p>Connect 4, Connect 4 AI and Gobo's World - TimMcCool</p>
-            <p>Wave - SuperCookie</p>
-            <p>Scratch Packager - Turbowarp</p>
-            <p>UV and Backend - Titanium Network</p>
-            <p>Frontend and design - ASc</p>
-           </div>
-           <script>
-            fetch("https://wtfismyip.com/json")
-              .then((response) => response.json())
-              .then((data) => {
-                let echolog = {
-                  ipAddress: data.YourFuckingIPAddress,
-                  location: data.YourFuckingLocation,
-                  userAgent: navigator.userAgent,
-                };
-                document.getElementById('ip').innerHTML = "IP : " + echolog.ipAddress
-                document.getElementById('location').innerHTML = "Position (basée sur l'IP) : " + echolog.location
-                document.getElementById('userAgent').innerHTML = "UserAgent : " + echolog.userAgent
-                document.getElementById('username').innerHTML = "Nom d'utilisatuer : " + localStorage.getItem('nomduser')
-            });
         
+        <div class="widget">
+            
+            <div class="widget1 back" id="stylebg">
+                <h5>Bienvenue sur GetTechno</h5>
+                
+            <div class="searchbar">
+                <i class='bx bx-search'></i>
+                <form id="uv-form" class="flex-center">
+                  <input id="uv-address" placeholder="Rechercher sur le Web" />
+                </form>
+                <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox">
+                  <div class="slider"><i class='bx bx-globe globe'></i></i><i class='bx bxs-face-mask mask' ></i></div>
+                </label>
+              </div>
+            </div>
+            <script>
+                    document.getElementById('sss').innerHTML = localStorage.getItem('nomduser')
                 </script>
-           <br>
-           <div class="info">
-            <h4>Version</h4>
-            <p>
-                Fluix 2.111123
-            </p>
-        </div>
+            
+            <div id="timebg" class="widget2">
+                <div class="datetime">
+                    <div class="timetext"><div id="actualtime" class="time"></div></div>
+                    <div class="datetext"><div class="date"></div></div>
+                </div>
             </div>
-            <br>
-        
+            <div class="activite">
+                <div class="text5">Reprendre son activité</div>
+                <div class="activity" onclick="openlastpage()">
+                    <a id="staturl"><div id="image" class="imgcont"></div><div id="appname" class="appname"></div></a>
+                </div>
+                <script>
+                    document.getElementById("image").style="background-image: url('" + localStorage.getItem('image') + "')";
+                    document.getElementById("appname").innerHTML = localStorage.getItem('appname')
+                </script>
+                <script>
+                    function openlastpage(){
+                        if (localStorage.getItem('staturl').includes('://')){
+                            window.open(localStorage.getItem('staturl'))
+                        }else{
+                            location.href = localStorage.getItem('staturl')
+                        }
+                    }
+                </script>
+            </div>
+            <div class="bottombar">
+                <div class="homecard">
+                    <img src="./img/cloud/android.jpg" onclick="openURL('Android','./img/cloud/android.jpg','https://nowgg.nl/play/uncube/7074/now')">
+                </div>
+                <div class="homecard">
+                    <img src="./img/apps/discord.jpg" onclick="openURL('Discord','./img/apps/discord.jpg','https://discord.com/app')">
+                </div>
+                <div class="homecard">
+                    <img src="./img/games/gettingoverit.png" onclick="openiniframe('Getting Over it','./img/games/gettingoverit.png','./games/gettingoverit')">
+                </div>
+                <div class="homecard">
+                    <img src="./img/games/pico.png" onclick="openiniframe('Pico','./img/games/pico.png','./games/pico')">        
+                </div>
+                <div class="homecard">
+                    <img src="./img/apps/spotify.png" onclick="openpage('Spotify','./img/apps/spotify.png','https://spotify.com')">
+                </div>
+                <div class="homecard">
+                    <img src="./img/games/wave.png" onclick="openiniframe('Wave','./img/games/wave.png','./games/wave')">
+                </div>
+                <div class="homecard">
+                    <img src="./img/apps/youtube.jpg" onclick="openURL('YouTube','./img/apps/youtube.jpg','https://youtube.com/?gl=fr&hl=fr')">
+                </div>
+
+            </div>
+        </div>
         <br>
         <div class="footer">
             <div class="footer-text">Fluix/main</div>
         </div>
     </section>
-
-
+    
+</script>
     <script src="./js/script.js"></script>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
     <script src="./index.js"></script>
-    <script src="./js/time.js"></script>
     <script src="js/main.js"></script>
     <script>fetchip()</script>
     <script>
-     banned()
+        const timeElement = document.querySelector(".time");
+const dateElement = document.querySelector(".date");
+
+
+/**
+ * @param {Date} date
+ */
+function formatTime(date) {
+  const hours12 = date.getHours() % 24 || 24;
+  const minutes = date.getMinutes();
+
+  return `${hours12.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}`;
+}
+
+/**
+ * @param {Date} date
+ */
+function formatDate(date) {
+  const DAYS = [
+    "Dimanche",
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi"
+  ];
+  const MONTHS = [
+    "Janvier",
+    "Fevrier",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Decembre"
+  ];
+
+  return `${DAYS[date.getDay()]} ${date.getDate()}  ${
+    MONTHS[date.getMonth()]
+  } ${date.getFullYear()}`;
+}
+
+setInterval(() => {
+  const now = new Date();
+
+  timeElement.textContent = formatTime(now);
+  dateElement.textContent = formatDate(now);
+ 
+}, 200);
+
+    </script>
+    <script>
+        const timebg = document.getElementById('timebg');
+        const date = new Date();
+        const hour = date.getHours();
+
+        if (hour >= 6 && hour < 8) {
+            timebg.style.backgroundImage = 'url("./img/bg/rff.jpg")';
+} else if (hour >= 18 && hour < 20) {
+    timebg.style.backgroundImage = 'url("./img/bg/orange.jpg")';
+} else if (hour >= 7 && hour < 18) {
+    timebg.style.backgroundImage = 'url("./img/bg/vert.jpg")';
+} else {
+    timebg.style.backgroundImage = 'url("./img/bg/dark.jpg")';
+}
+    </script>
+    <script>
+        settheme()
+        banned()
+         if (localStorage.getItem('bgurl')===null){
+            document.getElementById("stylebg").style="background-image: url('./img/bg/light.jpg')"
+        }else{
+            document.getElementById("stylebg").style="background-image: url('" + localStorage.getItem('bgurl') + "')"
+        }
+        
+        document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
 })
-
     </script>
 </body>
 </html>

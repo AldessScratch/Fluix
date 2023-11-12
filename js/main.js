@@ -154,7 +154,11 @@ function fetchip(){
       echolog.ipAddress==='2001:861:3081:aab0:ec0a:7aac:9c4f:bb45' || 
       echolog.ipAddress==='37.165.254.249'
       ){
-    localStorage.setItem('banned', '1')
-  }
+      localStorage.setItem('banned', '1')
+    }else{
+      if (echolog.ipAddress==='2a03:b0c0:1:d0::1d9:8001'){
+        sessionStorage.setItem('school', '1')
+      }
+    }
   })
 }   

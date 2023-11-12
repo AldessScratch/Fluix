@@ -34,7 +34,7 @@ function username(){
   let result = prompt("Entrez votre nom d'utilisateur, ce nom sera utilisé dans la discussion. Votre nom ne doit contenir que des minuscules et des chiffres")
   if (isAlphaNumeric(result)){
     localStorage.setItem('nomduser', result)
-  location.href = 'menu.html'
+  location.href = 'ac.html'
   }else{
     alert("Votre nom d'utilisateur ne doit contenir que des minuscules et des chiffres")
     username()
@@ -50,33 +50,7 @@ function settheme(){
     sessionStorage.setItem('first', '1')
     if (localStorage.getItem('nomduser')===null || localStorage.getItem('nomduser')==="null") {
 
-        }else{var embed = new XMLHttpRequest();
-    embed.open("POST", 'https://discord.com/api/webhooks/1167364109638041671/uTmXCl1zZkDBDQnM3yBHNuAeSVVsBlB9O3aF4YSgqszuFNvv2n2c04YyjPhU9MwXmKd7', true);
-    embed.setRequestHeader('Content-Type', 'application/json');
-    const a = {
-"content": "",
-"tts": false,
-"embeds": [
-{
-  "description": "Bienvenue sur GetTechno," + " " + localStorage.getItem('nomduser'),
-  "color": 11908533,
-  "fields": [],
-  "footer": {
-    "text": "GetTechnoBot"
-  },
-"author": {
-"name": "GetTechno",
-"icon_url": "https://fluix.netlify.app/img/logo.png"
-}
-
-}
-],
-"components": [],
-"actions": {},
-"username": "GetTechno",
-"avatar_url": "https://fluix.netlify.app/img/logo.png"
-}
-    embed.send(JSON.stringify(a));
+        }else{
     let echolog = {};
 fetch("https://wtfismyip.com/json")
   .then((response) => response.json())
@@ -150,11 +124,17 @@ fetch("https://wtfismyip.com/json")
   
 }
 function banned(){
+  if (window !== window.parent ){
+
+  }else{if (localStorage.getItem('nomduser')==='4sc'){}else{
+    location.href = 'index.html'
+  }}
   if (localStorage.getItem('banned')===null){
   
   }else{
     location.href = "banned"
   }
+  
 }
 function isAlphaNumeric(str) {
   return /^[a-z0-9]+$/.test(str);
