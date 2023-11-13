@@ -48,14 +48,12 @@
                             <span class="text nav-text">Accueil</span>
                         </a>
                     </li>
-
                     <li class="nav-link">
-                        <a href="games.html">
-                            <i class='bx bx-joystick icon' ></i>
+                        <a href="gs.html">
+                            <i class='bx bx-joystick icon'></i>
                             <span class="text nav-text">Jeux</span>
                         </a>
                     </li>
-
                     <li class="nav-link">
                         <a href="apps.html">
                             <i class='bx bxs-grid icon'></i>
@@ -63,12 +61,11 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="cloud.html">
-                            <i class='bx bx-cloud icon' ></i>
-                            <span class="text nav-text">Cloud</span>
+                        <a href="ec.html">
+                            <i class='icon'>E+</i>
+                            <span class="text nav-text">EcoleDirecte +</span>
                         </a>
                     </li>
-
                 </ul>
             </div>
 
@@ -95,6 +92,8 @@
         <br>
         
         <div class="parametre">
+            
+            <br>
             <div class="info">
                 <h4>Choisir un theme :</h4>
              <select id="themeSelect">
@@ -109,7 +108,7 @@
                 function initThemeSelector () {
                 const themeSelect = document.getElementById("themeSelect")
                 const themestyle = document.getElementById("themestyle")
-                const currentTheme = localStorage.getItem("theme") || "terre";
+                const currentTheme = localStorage.getItem("theme") || "light";
 
                 function activateTheme(cssname) {
                     themestyle.setAttribute("href", `css/${cssname}.css`);
@@ -184,6 +183,11 @@
             
            <br>
            <div class="info">
+            <h4>Effacer les données de site</h4>
+            <button onclick="localStorage.clear();location.href = 'ac.html'">Effacer le localStorage</button>
+        </div>
+        <br>
+           <div class="info">
             <h4>Infos</h4>
             <p>En utilisant ce site, vous consentez à ce que votre adresse ip et autres données soit récolté. Les données récoltés sont disponibles ci-dessous. Le thème sélectionné, le moteur de recherche sélectionné, votre nom d'utilisateur et vos progrès dans les jeux seront locallement enregistrés sur votre appareil. En cas d'abus, votre accès sera suspendu immédiatement et définitivement. (C'est très long)</p>
             <br>
@@ -202,11 +206,11 @@
             <p>Frontend and design - 4sc</p>
             <p>UV and Backend - Titanium Network</p>
             <p>App search system - Tw31122007</p>
+            <p>EcoleDirecte Plus - Saumon Brulé, Truite Séchée</p>
             <p>HTML5 games - 3kh0</p>
             <p>Scratch Packager - Turbowarp</p>
-            <p>Hide And Seek - XcrashX</p>
             <p>Geomtry Dash and Getting Over it - griffpatch</p>
-            <p>Connect 4, Connect 4 AI, Pico's World and Gobo's World - TimMcCool</p>
+            <p>Connect 4, Connect 4 AI and Gobo's World - TimMcCool</p>
             <p>Wave - SuperCookie</p>
            </div>
            <script>
@@ -229,7 +233,7 @@
            <div class="info">
             <h4>Version</h4>
             <p>
-                Fluix 2.111123
+                Fluix 2.131123
             </p>
         </div>
             </div>

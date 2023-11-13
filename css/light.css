@@ -1,0 +1,25 @@
+.sidebar header .image svg{
+    height: 25px;
+    width: 40px;
+    border-radius: 6px;
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 0.4));
+    filter: brightness(0);
+    -webkit-filter: brightness(0);
+}
+
+:root{
+    --body-color: #f3f3f3;
+    --sidebar-color: #FFF;
+    --primary-color: #000000;
+    --primary-color-light: #dfdfdf;
+    --toggle-color: #DDD;
+    --text-color: #222222;
+    --widget-text: #2e2e2e;
+    --widget-color: #f7f7f7e7;
+
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
