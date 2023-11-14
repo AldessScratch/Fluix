@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
     <link rel="icon" type="image/x-icon" href="./img/calculator.png">
-    <link rel="manifest" href="manifest.json">
+ 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <i class='bx bx-chevron-right toggle'></i>
+            <i class='bx bx-chevron-left toggle'></i>
         </header>
         
         <div class="menu-bar">
@@ -49,7 +49,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="gs.html" class="hover">
+                        <a href="gs.html">
                             <i class='bx bx-joystick icon'></i>
                             <span class="text nav-text">Jeux</span>
                         </a>
@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="me.html">
+                        <a href="me.html" class="hover">
                             <i class='bx bxs-doughnut-chart icon'></i>
                             <span class="text nav-text">Moyennes ED</span>
                         </a>
@@ -78,7 +78,7 @@
             <div class="bottom-content">
 
                 <li class="nav-link">
-                    <a href="settings.html">
+                    <a href="settings.html" >
                         <i class='bx bx-cog icon' ></i>
                         <span class="text nav-text">Paramètres</span>
                     </a>
@@ -96,103 +96,18 @@
     </nav>
 
     <section class="home">
-
-        <div class="searchsection">
-            <div class="searchapp">
-                <i class='bx bx-search'></i>
-                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Rechercher un jeu ou une app...">
-            </div>
-        </div>
-        
-        <div class="cards">
-            <div style="background-image: url('./img/games/2048.jpg');" class="card" onclick="openiniframe('2048', './img/games/2048.jpg', 'games/2048/index.html');">
-                <h2 class="white">2048</h2>
-            </div>
-            <div style="background-image: url('./img/games/connect4.png');" class="card" onclick="openiniframe('Connect 4', './img/games/connect4.png', 'games/connect4/index.html');">
-                <h2 class="white">Connect 4</h2>
-            </div>
-            <div style="background-image: url('./img/games/connectai.png');" class="card" onclick="openiniframe('Connect AI', './img/games/connectai.png', 'games/connectai/index.html');">
-                <h2 class="white">Connect 4 AI</h2>
-            </div>
-            <div style="background-image: url('./img/games/craftmine.png');" class="card" onclick="openiniframe('CraftMine', './img/games/craftmine.png', 'games/craftmine/index.html');">
-                <h2 class="white">CraftMine</h2>
-            </div>
-            <div style="background-image: url('./img/games/ctr.png');" class="card" onclick="openiniframe('Cut The Rope', './img/games/ctr.png', 'games/ctr/index.html');">
-                <h2 class="white">Cut The Rope</h2>
-            </div>
-           
-            <div style="background-image: url('./img/games/drawthehill.jpg');" class="card" onclick="openiniframe('Draw The Hill', './img/games/drawthehill.jpg', 'games/drawthehill/index.html');">
-                <h2 class="white">Draw The Hill</h2>
-            </div>
-            <div style="background-image: url('./img/games/drivemad.jpg');" class="card" onclick="openiniframe('Drive Mad', './img/games/drivemad.jpg', 'games/drive-mad/index.html');">
-                <h2 class="white">Drive Mad</h2>
-            </div>
-            <div style="background-image: url('./img/games/fifa.jpg');" class="card" onclick="openURL('EA FC Mobile','./img/games/fifa.jpg','https://now.gg/play/electronic-arts/1353/fifa-soccer')">
-                <h2 class="white">EA FC Mobile</h2>
-            </div>
-            <div style="background-image: url('./games/geodash/geoscratchicon.png');" class="card" onclick="openiniframe('Geometry Dash', 'games/geodash/geoscratchicon.png', 'games/geodash/index.html');">
-                <h2 class="white">Geometry Dash</h2>
-            </div>
-            <div style="background-image: url('./img/games/gettingoverit.png');" class="card" onclick="openiniframe('Getting Over It', 'img/games/gettingoverit.png', 'games/gettingoverit/index.html');">
-                <h2 class="white">Getting Over It</h2>
-            </div>
-            <div style="background-image: url('./img/games/gobo.png');" class="card" onclick="openiniframe('Gobo', './img/games/gobo.png', 'games/gobo/index.html');">
-                <h2 class="white">Gobo's World</h2>
-            </div>
-            <div style="background-image: url('./img/games/paper2.png');" class="card" onclick="openiniframe('Paper io', 'img/games/paper2.png', 'games/paperio2/index.html');">
-                <h2 class="white">Paper io</h2>
-            </div>
-            <div style="background-image: url('./img/games/roblox.JPG');" class="card" onclick="openURL('Roblox','./img/games/roblox.JPG','https://now.gg/play/roblox-corporation/5349/roblox')">
-                <h2 class="white">Roblox</h2>
-            </div>
-            <div style="background-image: url('./img/games/rlss.png');" class="card" onclick="openURL('Rocket League','./img/games/rlss.png','https://now.gg/play/psyonix-studios/4656/rocket-league')">
-                <h2 class="white">Rocket League</h2>
-            </div>
-            <div style="background-image: url('./img/games/sandspiel.JPG');" class="card" onclick="openURL('SandSpiel','./img/games/sandspiel.JPG','https://sandspiel.club')">
-                <h2 class="white">SandSpiel</h2>
-            </div>
-            <div style="background-image: url('./img/games/stack.png');" class="card" onclick="openiniframe('Stack', './img/games/stack.png', 'games/stack/index.html');">
-                <h2 class="white">Stack</h2>
-            </div>
-            <div style="background-image: url('./img/games/stickman.png');" class="card" onclick="openiniframe('Stickman Hook', './img/games/stickman.png', 'games/stickman/index.html');">
-                <h2 class="white">Stickman Hook</h2>
-            </div>
-            <div style="background-image: url('./img/games/stumble.jpg');" class="card" onclick="openURL('Stumble Guys','./img/games/stumble.jpg','https://now.gg/play/kitka-games/7999/stumble-guys')">
-                <h2 class="white">Stumble Guys</h2>
-            </div>
-            <div style="background-image: url('./img/games/wave.png');" class="card" onclick="openiniframe('Wave','./img/games/wave.png','games/wave')">
-                <h2 class="white">Wave</h2>
-            </div>
-            <div style="background-image: url('./img/games/yohoho.jpg');" class="card" onclick="openURL('Yohoho','./img/games/yohoho.jpg','https://yohoho.io')">
-                <h2 class="white">Yohoho</h2>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-text">Fluix/main</div>
-        </div>
-    </section>
-    <script>
-        
-        function searchFunction() {
-            let input = document.getElementById('searchInput');
-            let filter = input.value.toUpperCase();
-            let cards = document.getElementsByClassName('card');
-        
-            for (i = 0; i < cards.length; i++) {
-                let title = cards[i].getElementsByTagName('h2')[0];
-                let txtValue = title.textContent || title.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
+        <div class="iframe">
+            <iframe src="https://moyennesed.my.to" style="background-color: white;border-radius: 10px;border: 0; height: 99vh; left: 0; position: absolute; top: 0; width: 100%; bottom: 0;"></iframe>
+        </div>  
+        <script>
+            if (localStorage.getItem('firstinfo')===null){
+                alert("EcoleDirecte Plus est un client EcoleDirecte avec plus de fonctionnalités. En cours de developpement. Developpé par Saumon Brulé et Truite Séchée. EcoleDirecte Plus ne recupère aucune information personnel. Non compatible avec IpadOS 14.")
+                localStorage.setItem('firstinfo', '1')
             }
-        }
-            </script>
-    <script src="./uv/uv.bundle.js"></script>
-    <script src="./uv/uv.config.js"></script>
+            
+        </script>
+    </section>
     <script src="./js/script.js"></script>
-    <script src="./index.js"></script>
     <script src="js/main.js"></script>
     <script>fetchip()</script>
     <script>
@@ -200,7 +115,7 @@
         banned()
         document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
         toggle.addEventListener("click" , () =>{
-        sidebar.classList.toggle("close");
+        sidebar.classList.toggle("show");
 })
 
     </script>
