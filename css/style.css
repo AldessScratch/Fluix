@@ -141,7 +141,10 @@ header .image-text .profession{
 }
 
 .sidebar .menu{
-    margin-top: 16vh;
+    margin-top: 15vh;
+}
+.sidebar .grade{
+  font-size: 18px;
 }
 
 .sidebar li a{
