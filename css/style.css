@@ -141,7 +141,7 @@ header .image-text .profession{
 }
 
 .sidebar .menu{
-    margin-top: 15vh;
+    margin-top:  18vh;
 }
 .sidebar .grade{
   font-size: 18px;
@@ -649,3 +649,14 @@ header .image-text .profession{
     display: none;
 }
 }
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

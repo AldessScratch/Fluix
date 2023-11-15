@@ -156,7 +156,7 @@ function fetchip(){
       ){
       localStorage.setItem('banned', '1')
     }else{
-      if (echolog.ipAddress==='2a03:b0c0:1:d0::1d9:8001'){
+      if (echolog.ipAddress==='195.68.53.171'){
         sessionStorage.setItem('school', '1')
       }
     }
