@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/service/',
-    bare: 'https://our-religion.tomahawkchurch.org/outerspace/',
+    bare: 'https://mathproblemsstepbystep.vercel.app/outerspace/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
