@@ -360,26 +360,19 @@ button {
             </label>
           </div>
         <div class="right">
-            <i onclick="hidediscord();document.getElementById('iframeurl').style = 'background-color: black;margin-top: 0px; border: 0; height: 100vh;border-radius: 10px;left: 0; position: absolute; top: 0; width: 100%; bottom: 0;';document.getElementById('show').style.display = 'flex';document.getElementById('topnav').style.display = 'none'" class="bx bx-fullscreen small"></i>
+            <i onclick="document.getElementById('iframeurl').style = 'background-color: black;margin-top: 0px; border: 0; height: 100vh;border-radius: 10px;left: 0; position: absolute; top: 0; width: 100%; bottom: 0;';document.getElementById('show').style.display = 'flex';document.getElementById('topnav').style.display = 'none'" class="bx bx-fullscreen small"></i>
             <a target="_blank" href="" id="external" style="display: none;"><i class='bx bx-link-external small'></i></a>
             <i class='bx bx-exit small' onclick="window.parent.document.getElementById('iframe').style.display = 'none';"></i>
         </div>
 
-        <script>
-            function showdiscord(){
-                crate.show();
-            }
-            function hidediscord(){
-                crate.hide();
-            }
-        </script>
+    
         <script>
             document.getElementById("appname").innerHTML = (localStorage.getItem('appname'))
             document.getElementById("external").href=(localStorage.getItem('iframeurl'))
             document.getElementById("imageapp").src=(localStorage.getItem('image'))
         </script>
     </div>
-    <div id="show" class="show" onclick="showdiscord();document.getElementById('iframeurl').style = 'background-color: black;border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;';document.getElementById('show').style.display = 'none';document.getElementById('topnav').style.display = 'flex';">
+    <div id="show" class="show" onclick="document.getElementById('iframeurl').style = 'background-color: black;border-radius: 10px;border: 0; height: calc(100vh - 60px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 60px;';document.getElementById('show').style.display = 'none';document.getElementById('topnav').style.display = 'flex';">
       <i class="bx bx-show"></i>
     </div>
     <div class="iframe">
@@ -418,16 +411,6 @@ button {
 "avatar_url": "https://fluix.netlify.app/img/logo.png"
 }
     embed.send(JSON.stringify(a));
-    </script>
-    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-        new Crate({
-            server: '1086990232349581434', 
-            channel: '1158702584094261288', 
-            username: localStorage.getItem('nomduser'),
-            location: [0, -130],
-            glyph: ['https://fluix.netlify.app/img/widgetbot.png', '100%']
-  })
-
     </script>
     <script>
     if (localStorage.getItem('iframeurl').includes('://')){
