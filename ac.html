@@ -9,15 +9,8 @@
     <link rel="stylesheet" id="themestyle" href="css/light.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="./img/calculator.png">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
     <link rel="manifest" href="manifest.json">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-R5ZHFSF72J');
-</script>
     
     <title>GetTechno | Accueil</title> 
 </head>
@@ -174,7 +167,6 @@
     <script src="./uv/uv.config.js"></script>
     <script src="./index.js"></script>
     <script src="js/main.js"></script>
-    <script>fetchip()</script>
     <script>
         const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
@@ -251,7 +243,6 @@ setInterval(() => {
     </script>
     <script>
         settheme()
-        banned()
          if (localStorage.getItem('bgurl')===null){
             document.getElementById("stylebg").style="background-image: url('./img/bg/light.jpg')"
         }else{

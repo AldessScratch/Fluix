@@ -8,16 +8,9 @@
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" id="themestyle" href="css/light.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
     <link rel="icon" type="image/x-icon" href="./img/calculator.png">
     <link rel="manifest" href="manifest.json">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-R5ZHFSF72J');
-</script>
     <title>GetTechno | Paramètres</title> 
 </head>
 <body >
@@ -180,48 +173,6 @@
            <div class="info">
             <button onclick="localStorage.clear();location.href = 'ac.html'">Réinitialiser les paramètres du site</button>
         </div>
-        <br>
-           <div class="info">
-            <h4>Infos</h4>
-            <p>En utilisant ce site, vous consentez à ce que votre adresse ip et autres données soit récolté. Les données récoltés sont disponibles ci-dessous. Le thème sélectionné, le moteur de recherche sélectionné, votre nom d'utilisateur et vos progrès dans les jeux seront locallement enregistrés sur votre appareil. En cas d'abus, votre accès sera suspendu immédiatement et définitivement. (C'est très long)</p>
-            <br>
-            <p>By using this site, you agree that your ip adress and other data will be collected. The collected data is available below. The selected theme, the selected search engine, your username and your progresses ingame will be saved locally on your device. In case of abuse, your access will be  suspended immediately and for ever. (It's very long)</p>
-            <br>
-            <p id="ip"></p>
-            <p id="location"></p>
-            <p id="isp"></p>
-            <p id="userAgent"></p>
-            <p id="username"></p>
-            
-           </div>
-           <br>
-           <div class="info">
-            <h4>Credits</h4>
-            <p>Frontend and design - 4sc</p>
-            <p>UV and Backend - Titanium Network</p>
-            <p>App search system - Tw31122007</p>
-            <p>HTML5 games - 3kh0</p>
-            <p>Scratch Packager - Turbowarp</p>
-            <p>Geomtry Dash and Getting Over it - griffpatch</p>
-            <p>Connect 4, Connect 4 AI and Gobo's World - TimMcCool</p>
-            <p>Wave - SuperCookie</p>
-           </div>
-           <script>
-            fetch("https://wtfismyip.com/json")
-              .then((response) => response.json())
-              .then((data) => {
-                let echolog = {
-                  ipAddress: data.YourFuckingIPAddress,
-                  location: data.YourFuckingLocation,
-                  userAgent: navigator.userAgent,
-                };
-                document.getElementById('ip').innerHTML = "IP : " + echolog.ipAddress
-                document.getElementById('location').innerHTML = "Position (basée sur l'IP) : " + echolog.location
-                document.getElementById('userAgent').innerHTML = "UserAgent : " + echolog.userAgent
-                document.getElementById('username').innerHTML = "Nom d'utilisatuer : " + localStorage.getItem('nomduser')
-            });
-        
-                </script>
            <br>
            <div class="info">
             <h4>Version</h4>
@@ -245,9 +196,7 @@
     <script src="./index.js"></script>
     <script src="./js/time.js"></script>
     <script src="js/main.js"></script>
-    <script>fetchip()</script>
     <script>
-     banned()
         toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
 })

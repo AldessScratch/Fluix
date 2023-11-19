@@ -238,36 +238,16 @@
 		
 	</script>
 	<script>
-		fetchip()
+		
 		function check(){
 			
 			if (document.getElementById('resultat').innerHTML==="1182"){
-				if (localStorage.getItem('banned')===null){
-					if (sessionStorage.getItem('school')===null){
-						if (document.getElementById('iframe').contentWindow.location.href.includes('iframe.html')){
+					if (document.getElementById('iframe').contentWindow.location.href.includes('iframe.html')){
 						document.getElementById('iframe').style.display = "flex"
 					}else{
 						document.getElementById('iframe').style.display = "flex"
 							window.open('ac.html', target='browsercalc')
-					}
-					}else{
-						document.getElementById('iframe').style.display = "flex"
-					window.open('banned', target='browsercalc')
-					}
-					
-						
-				
-					
-					
-					
-				}else{
-					document.getElementById('iframe').style.display = "flex"
-					window.open('banned', target='browsercalc')
-				}
-			}
-			
-			
-		}		
+					}}}
 		
 	</script>
 </body>

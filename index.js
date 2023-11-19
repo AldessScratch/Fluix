@@ -9,21 +9,12 @@ const input = document.querySelector('input');
     }).then(() => {
       if (localStorage.getItem('searchmode')==="proxy"){
         let url = input.value.trim();
-        localStorage.setItem('recherche', input.value.trim())
-        if (input.value.trim().toLowerCase()
-        .includes('p' + 'or' + 'n') || input.value.trim().toLowerCase()
-        .includes('hen' + 'tai') || input.value.trim().toLowerCase()
-        .includes('s' + 'ex') || input.value.trim().toLowerCase()
-        .includes('x' + 'xx')){
-          localStorage.setItem('banned','1')
-          location.href = "./banned/"
-        }else{
           if (!isUrl(url)) url = localStorage.getItem('searchengine') + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
         localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
         localStorage.setItem('staturl', './iframe.html');localStorage.setItem('image', '');localStorage.setItem('appname', 'Recherche')
           window.location.href = "./iframe.html"
-        }
+        
         
       }else{
         let url = input.value.trim();

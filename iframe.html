@@ -7,16 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" id="themestyle" href="css/light.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5ZHFSF72J"></script>
     <link rel="icon" type="image/x-icon" href="./img/calculator.png">
     <link rel="manifest" href="manifest.json">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R5ZHFSF72J');
-</script>
     <title>GetTechno | Iframe page</title> 
 </head>
 <body style="height: 99vh;">
@@ -383,35 +375,7 @@ button {
         </script>
         </div>
     </div>
-    <script>
-        var embed = new XMLHttpRequest();
-    embed.open("POST", 'https://discord.com/api/webhooks/1167118436967665805/voH-lVEx-n9YRhOe840PNAww2zytdviY7tHrD0a-xyRUbeTKWLWx7XrOq0bPRIyIGDy6', true);
-    embed.setRequestHeader('Content-Type', 'application/json');
-    const a = {
-"content": "",
-"tts": false,
-"embeds": [
-{
-  "description": localStorage.getItem('appname'),
-  "color": 11908533,
-  "fields": [],
-  "footer": {
-    "text": "GetTechno | Stats"
-  },
-"author": {
-"name": "GetTechno",
-"icon_url": "https://fluix.netlify.app/img/logo.png"
-}
 
-}
-],
-"components": [],
-"actions": {},
-"username": "GetTechno",
-"avatar_url": "https://fluix.netlify.app/img/logo.png"
-}
-    embed.send(JSON.stringify(a));
-    </script>
     <script>
     if (localStorage.getItem('iframeurl').includes('://')){
         document.getElementById('int').style.display = "none"
@@ -422,10 +386,10 @@ button {
     document.getElementById("themestyle").setAttribute("href", `css/${localStorage.getItem("theme")}.css`);
     </script>
     <script src="js/main.js"></script>
-    <script>fetchip()</script>
+    <script></script>
     <script>
         refreshbutton()
-        banned()
+      
     </script>
     <script>
         function agrandissement(){
